@@ -1,0 +1,426 @@
+# ============================================================================
+# LAMACO — Traductions Françaises (Langue par défaut)
+# ============================================================================
+
+# ── Navigation ──
+nav:
+    home: Accueil
+    products: Produits
+    services: Services
+    projects: Projets
+    about: À propos
+    contact: Contact
+    request_quote: Demander un Devis
+    aria_label: Navigation principale
+    back_home: "LAMACO — Retour à l'accueil"
+
+# ── Méta / Site ──
+site:
+    title: "LAMACO Construction | Bâtir l'Avenir du Sénégal"
+    description: "LAMACO est le partenaire de référence pour les matériaux de construction haut de gamme, la logistique d'engins lourds et la gestion de chantiers au Sénégal et en Afrique de l'Ouest."
+    og_title: "LAMACO Construction | Bâtir l'Avenir du Sénégal"
+    og_description: "Partenaire de référence pour les matériaux de construction, les engins lourds et la logistique de chantiers au Sénégal."
+
+# ── Footer ──
+footer:
+    brand_description: "Fournisseur de matériaux de construction haut de gamme et de solutions logistiques au Sénégal depuis 2009."
+    services: Services
+    basalt_supply: Fourniture de Basalte
+    sand_delivery: Livraison de Sable
+    excavator_rental: Location de Pelleteuses
+    project_logistics: Logistique de Chantier
+    company: Entreprise
+    about_us: À Propos
+    our_projects: Nos Projets
+    fleet_details: Notre Flotte
+    careers: Carrières
+    headquarters: Siège Social
+    address: "Avenue Cheikh Anta Diop, BP 5005, Dakar, Sénégal"
+    hours: "Lun - Ven : 08h00 - 18h00"
+    copyright: "© %year% LAMACO Construction SARL. Tous droits réservés."
+    privacy_policy: Politique de Confidentialité
+    terms_of_service: Conditions Générales
+    visit_website: Visiter notre site
+    share: Partager
+    email_us: Nous envoyer un e-mail
+
+# ── WhatsApp FAB ──
+whatsapp:
+    aria_label: Contactez-nous sur WhatsApp
+    title: Discuter avec nous sur WhatsApp
+
+# ── Partagé : Formulaire de contact ──
+form:
+    full_name: Nom Complet
+    company_name: Nom de l'Entreprise
+    email_address: Adresse E-mail
+    phone_number: Numéro de Téléphone
+    your_message: Votre Message
+    send_message: Envoyer le Message
+    placeholder_name: "Jean Dupont"
+    placeholder_company: "Votre Entreprise S.A."
+    placeholder_email: "email@entreprise.com"
+    placeholder_phone: "+221 ..."
+    placeholder_message: "Décrivez-nous les besoins de votre projet..."
+    send_us_message: "Envoyez-nous un Message"
+    form_default_description: "Remplissez le formulaire ci-dessous et nos spécialistes vous contacteront sous 24 heures."
+
+# ── Page d'accueil ──
+home:
+    hero:
+        title_start: "Bâtir l'avenir du "
+        title_highlight: "Sénégal"
+        title_end: " avec Fiabilité."
+        description: "LAMACO est le partenaire de référence pour les matériaux de construction haut de gamme, la logistique d'engins lourds et la gestion de chantiers en Afrique de l'Ouest."
+        btn_services: Nos Services
+        btn_quote: Demander un Devis
+
+    about:
+        subtitle: Qui Sommes-Nous
+        title: Votre Partenaire Solide en Construction
+        paragraph1: "LAMACO a bâti sa réputation sur les piliers de la fiabilité, de la précision et de l'efficacité. Basée à Dakar, nous desservons l'ensemble du territoire sénégalais, fournissant l'ossature essentielle aux projets immobiliers et d'infrastructure les plus ambitieux du pays."
+        paragraph2: "Qu'il s'agisse de fourniture de basalte et de sable haut de gamme ou de logistique complexe d'engins lourds, nous veillons à ce que votre chantier ne s'arrête jamais. Notre engagement envers la qualité est ce qui fait de nous le partenaire privilégié des promoteurs internationaux et locaux."
+        certified_materials: Matériaux Certifiés
+        rapid_logistics: Logistique Rapide
+        expert_team: Équipe d'Experts
+        nationwide_reach: Couverture Nationale
+        alt_image: "Pelleteuse sur un chantier LAMACO au Sénégal"
+
+    services:
+        subtitle: Ce Que Nous Offrons
+        title: Solutions Spécialisées
+        construction_materials: Matériaux de Construction
+        construction_materials_desc: "Fourniture de basalte, sable et granulats de première qualité répondant aux normes les plus strictes."
+        equipment_rental: Location d'Engins
+        equipment_rental_desc: "Flotte moderne de pelleteuses, grues et engins spécialisés pour tous types de projets."
+        construction_logistics: Logistique de Construction
+        construction_logistics_desc: "Transport optimisé et coordination logistique pour une livraison fluide vers les sites les plus éloignés."
+        site_supply: Gestion des Approvisionnements
+        site_supply_desc: "Suivi complet des stocks et de la chaîne d'approvisionnement pour éviter les arrêts et le surstockage."
+        learn_more: En Savoir Plus
+
+    materials:
+        subtitle: NOS MATÉRIAUX
+        title: "Sable & Pierre de Qualité Supérieure"
+        description: "LAMACO s'engage à fournir du silex, du basalte et du sable haut de gamme, essentiels pour une construction durable et sûre. Nous approvisionnons nos matériaux auprès de carrières premium pour garantir le respect des normes techniques les plus élevées."
+        dust_free: Matériaux Sans Poussière
+        reliable_supply: Approvisionnement Fiable en Gros
+        fast_delivery: Livraison Rapide sur Chantier
+        alt_image: "Matériaux de construction premium — basalte et sable des carrières LAMACO"
+
+    stats:
+        projects_completed: Projets Réalisés
+        heavy_units: Engins Lourds
+        years_experience: Années d'Expérience
+
+    testimonials:
+        subtitle: AVIS CLIENTS
+        title: Ce Que Disent Nos Partenaires
+        quote: "LAMACO est notre fournisseur principal pour le projet de développement de Diamniadio. Leur fiabilité dans la livraison de basalte haut de gamme et la gestion logistique des chantiers a été essentielle à notre succès. Un partenaire véritablement professionnel dans la croissance du Sénégal."
+        name: Amadou Diallo
+        role: "Directeur, Sénégal Urban Dev"
+        prev_testimonial: Témoignage précédent
+        next_testimonial: Témoignage suivant
+        testimonial_nav: Navigation des témoignages
+        testimonial_number: "Témoignage %index%"
+        photo_of: "Photo de %name%"
+
+    partners:
+        title: Partenaires Stratégiques
+        subtitle: "La Confiance des Principaux Promoteurs & Entrepreneurs"
+        alt_logo: Logo de Partenaire Stratégique
+
+    contact:
+        title: Contactez-Nous
+        description: "Des questions sur nos stocks ou la disponibilité de nos engins ? Notre équipe est prête à vous fournir des informations détaillées et des tarifs compétitifs."
+        call_us: Appelez-Nous
+        email_us: Écrivez-Nous
+        visit_us: Rendez-Nous Visite
+        first_name: Prénom
+        last_name: Nom de Famille
+        work_email: E-mail Professionnel
+        service_required: Service Souhaité
+        construction_materials: Matériaux de Construction
+        equipment_rental: Location d'Engins
+        logistics: Logistique
+        general_inquiry: Demande Générale
+        message: Message
+
+    cta:
+        title: "Prêt à lancer votre prochain grand projet ?"
+        description: "Recevez un devis personnalisé de matériaux et logistique sous 24 heures."
+        btn_quote: Demander un Devis
+
+# ── Page Produits ──
+products:
+    meta:
+        title: "Catalogue Produits & Matériaux | LAMACO Construction Sénégal"
+        description: "Découvrez le catalogue complet de matériaux de construction LAMACO — silex, sable, calcaire, granulats de basalte — et location d'engins lourds au Sénégal."
+        og_title: "Catalogue Produits & Matériaux | LAMACO Construction"
+        og_description: "Granulats de haute qualité, sables et engins lourds pour les projets de construction les plus ambitieux du Sénégal."
+
+    hero:
+        title: "Nos Matériaux & Équipements"
+        description: "Des chaînes d'approvisionnement fiables pour les projets de construction les plus ambitieux du Sénégal. Granulats, sables et engins lourds de haute qualité livrés avec précision."
+        btn_catalog: Explorer le Catalogue
+
+    catalog_nav:
+        flint: Béton de Silex
+        sand: Variétés de Sable
+        limestone: Calcaire
+        basalt: "Basalte (Renforcé)"
+        equipment: Location d'Engins
+
+    flint:
+        title: Silex ou Béton Mapaté
+        badge: Construction Générale
+        product_8_16: "Granulométrie 8/16"
+        alt_8_16: "Granulats 8/16 — Béton de silex pour usage structurel"
+        desc_8_16: "Granulats de qualité supérieure, sans poussière, idéaux pour le béton structurel et les fondations routières."
+        product_3_8: "Granulométrie 3/8"
+        alt_3_8: "Granulats 3/8 — Grains de riz fins pour béton"
+        desc_3_8: "Grains de riz parfaitement fins pour les finitions spécialisées et les mélanges de béton haute densité."
+        product_0_3: "Granulométrie 0/3"
+        alt_0_3: "Granulats 0/3 — Poudre de granulat pour terrassement"
+        desc_0_3: "Poudre de granulat, idéale pour le terrassement, le nivellement et la préparation de mortier de qualité."
+        stocked: EN STOCK
+        order_now: Commander
+
+    sand:
+        title: Variétés de Sable
+        badge: "Maçonnerie & Fondations"
+        tasseb_name: Sable Tasseb
+        tasseb_alt: "Sable Tasseb — Sable fin de haute pureté pour maçonnerie"
+        tasseb_desc: "Sable fin, de haute pureté, spécifiquement sélectionné pour les travaux professionnels de maçonnerie et d'enduit."
+        dakar_name: Sable de Dakar
+        dakar_alt: "Sable de Dakar — Sable grossier résistant pour fondations"
+        dakar_desc: "Sable grossier et résistant, conçu pour des fondations solides et des composants structurels de maçonnerie lourde."
+        request_quote: Demander un Devis
+
+    limestone:
+        title: Calcaire ou Béton Blanc
+        badge: Infrastructure
+        gravel_5_15: "Gravier 5/15"
+        sub_5_15: Granulat de Calcaire
+        desc_5_15: "Calcaire blanc premium dimensionné pour la construction standard et les couches de base structurelles."
+        gravel_3_8: "Gravier 3/8"
+        sub_3_8: Grains de première qualité
+        desc_3_8: "Grains de calcaire blanc fins pour les finitions architecturales spécialisées et le béton décoratif."
+        gravel_15_25: "Gravier 15/25"
+        sub_15_25: Infrastructure Lourde
+        desc_15_25: "Granulat de calcaire grand format conçu pour les fondations lourdes et la construction routière."
+        gravel_0_3: "Gravier 0/3"
+        sub_0_3: Sable de Calcaire
+        desc_0_3: "Sable de calcaire blanc de haute pureté, idéal pour les mélanges de mortier premium et les travaux de finition."
+        order_now: Commander
+
+    basalt:
+        badge: Choix Premium
+        title: Basalte ou Béton Armé
+        subtitle: "Communément appelé Béton Noir — Le choix le plus solide pour la longévité."
+        product_8_16: "Basalte 8/16"
+        desc_8_16: "Hautement fiable pour les structures renforcées et les chaussées à fort trafic."
+        product_3_8: "Basalte 3/8"
+        desc_3_8: "Les grains de basalte les plus fins disponibles pour le moulage industriel détaillé et le béton préfabriqué."
+        product_0_3: "Basalte 0/3"
+        desc_0_3: "Charge premium pour le terrassement et les applications de fabrication de briques lourdes."
+        order: "Commander %name%"
+
+    equipment:
+        title: Location d'Engins Lourds
+        alt_image: "Pelleteuse professionnelle disponible à la location chez LAMACO"
+        badge: "Disponible à la Location"
+        rental_title: Location de Pelleteuses Professionnelles
+        rental_desc: "Pelleteuses haute performance prêtes pour le terrassement, le creusement de tranchées et le défrichage de sites à travers le Sénégal. Entretenues selon les normes industrielles les plus élevées avec opérateurs expérimentés disponibles."
+        feature_support: "Support & Maintenance 24h/24 7j/7"
+        feature_terms: "Conditions de Location Flexibles (Jour/Mois)"
+        feature_delivery: "Livraison & Installation sur Site"
+        check_availability: Vérifier la Disponibilité
+
+    consulting:
+        title: Conseil en Quantité de Matériaux
+        description: "Vous ne savez pas combien il vous faut ? Nos experts fournissent des services d'évaluation précise des besoins en béton et sable basés sur vos plans techniques, garantissant zéro gaspillage et un budget optimal."
+        expert_audit: Audit Expert
+        audit_desc: Évaluations détaillées de site
+        save_15: "Économisez 15%"
+        save_desc: Réduction moyenne des déchets
+        book_consultation: Réserver une Consultation
+
+    detail:
+        bulk_pricing: Demander un Prix de Gros
+        request_quote: Demander un Devis pour ce Produit
+        order_whatsapp: Commander via WhatsApp
+        whatsapp_message: "Bonjour, je souhaite commander "
+        project_context: Contexte Projet
+        recently_used: "Récemment utilisé dans :"
+        related_products: Produits Similaires
+        view_details: Voir les Détails
+        breadcrumb_home: Accueil
+        breadcrumb_catalog: Catalogue
+        tech_specs: Spécifications Techniques
+        closeup_view: "Vue rapprochée"
+        view_index: "Vue %index%"
+
+    cta:
+        title: "Prêt à démarrer votre projet ?"
+        description: "Demandez un devis complet incluant les frais de livraison vers votre chantier partout à Dakar ou dans les régions intérieures."
+        btn_quote: Obtenir un Devis Personnalisé
+        btn_contact: Contacter l'Équipe Commerciale
+
+# ── Page À Propos ──
+about:
+    meta:
+        title: "À Propos de LAMACO | Expertise Construction & Logistique au Sénégal"
+        description: "Découvrez la mission, la vision, les valeurs et la direction de LAMACO. Un partenaire sénégalais de confiance dans la construction depuis 2009."
+        og_title: "À Propos de LAMACO | Expertise Construction & Logistique"
+        og_description: "Découvrez notre parcours, nos valeurs fondamentales et l'équipe derrière l'entreprise de logistique de construction la plus fiable du Sénégal."
+
+    hero:
+        subtitle: Notre Parcours
+        title: À Propos de LAMACO
+        description: "Bâtir l'avenir du Sénégal grâce à une logistique de construction fiable, des matériaux premium et un engagement sans faille envers l'excellence."
+
+    story:
+        alt_image: "Siège de LAMACO à Dakar, Sénégal"
+        badge: Fondée en
+        badge_year: "2009"
+        title: "Fondée sur la Fiabilité, Grandie par l'Excellence"
+        paragraph1: "LAMACO a commencé son parcours à Dakar avec une vision claire : combler le fossé de la chaîne d'approvisionnement de la construction au Sénégal. En partant d'une seule unité logistique, nous avons grandi pour devenir un leader multifacette de l'industrie, fournissant des matériaux essentiels et des engins lourds aux projets d'infrastructure les plus critiques du pays."
+        paragraph2: "Notre histoire est celle d'un engagement constant envers nos partenaires. Nous comprenons que dans la construction, le temps et la qualité des matériaux sont les fondations du succès. En investissant dans une flotte moderne et en sécurisant les meilleures sources de basalte et de sable, LAMACO est devenu le pilier de confiance des promoteurs internationaux et des entrepreneurs locaux."
+        quote: "\"Notre mission est de bâtir l'avenir du Sénégal en veillant à ce qu'aucun chantier ne s'arrête jamais à cause de la logistique ou de l'approvisionnement.\""
+
+    mission:
+        title: Notre Mission
+        description: "Fournir des matériaux de construction et des solutions logistiques de classe mondiale qui permettent aux promoteurs de réaliser leurs projets en toute sécurité, dans les délais et dans les limites du budget. Nous nous efforçons d'être le maillon le plus fiable de la chaîne d'approvisionnement de la construction sénégalaise."
+
+    vision:
+        title: Notre Vision
+        description: "Devenir le leader incontesté de la logistique de construction en Afrique de l'Ouest, reconnu pour notre innovation, notre excellence opérationnelle et notre contribution à la construction d'une infrastructure moderne et durable pour la prochaine génération."
+
+    values:
+        subtitle: Principes Fondamentaux
+        title: Les Valeurs qui Nous Animent
+        reliability: Fiabilité
+        reliability_desc: "Nous livrons ce que nous promettons, quand nous le promettons. La constance est la marque de notre service."
+        innovation: Innovation
+        innovation_desc: "Nous optimisons la logistique grâce à la technologie et à la gestion moderne de flotte pour une efficacité maximale."
+        professionalism: Professionnalisme
+        professionalism_desc: "Notre équipe incarne les plus hauts standards d'intégrité et d'expertise dans chaque interaction."
+        safety: Sécurité
+        safety_desc: "Approche zéro compromis en matière de sécurité sur site et de bien-être de nos opérateurs et partenaires."
+
+    leadership:
+        subtitle: Direction
+        title: Notre Équipe Dirigeante
+        managing_director: Directeur Général
+        head_operations: Directrice des Opérations
+        logistics_director: Directeur Logistique
+
+    partners:
+        title: Partenaires Stratégiques
+        subtitle: "La Confiance des Principaux Promoteurs & Entrepreneurs"
+        alt_logo: Logo de Partenaire Stratégique
+
+# ── Page Contact ──
+contact:
+    meta:
+        title: "Contactez-Nous | LAMACO Construction & Logistique Sénégal"
+        description: "Contactez LAMACO pour les matériaux de construction, la location d'engins lourds et la logistique au Sénégal. Obtenez un devis ou contactez-nous par téléphone, e-mail ou WhatsApp."
+        og_title: "Contactez-Nous | LAMACO Construction & Logistique"
+        og_description: "Contactez LAMACO pour des devis, consultations ou demandes d'engins. Notre équipe est prête à soutenir votre prochain projet au Sénégal."
+
+    hero:
+        title: Contactez-Nous
+        description: "Notre équipe est prête à soutenir votre prochain grand projet d'infrastructure au Sénégal. Contactez-nous pour des devis, des consultations ou des demandes d'engins."
+
+    info:
+        headquarters: Siège Social
+        address: "Avenue Cheikh Anta Diop, BP 5005,"
+        address2: "Dakar, Sénégal"
+        view_map: Voir sur Google Maps
+        phone_whatsapp: "Téléphone & WhatsApp"
+        email_hours: "E-mail & Horaires"
+        business_hours: Heures d'Ouverture
+        hours_weekday: "Lun – Ven : 08h00 – 18h00"
+        hours_saturday: "Sam : 09h00 – 13h00"
+
+    map:
+        title: "Localisation LAMACO — Dakar, Sénégal"
+
+# ── Page Devis ──
+quote:
+    meta:
+        title: "Demander un Devis | LAMACO Construction & Logistique Sénégal"
+        description: "Demandez un devis professionnel pour les matériaux de construction, la location d'engins lourds ou les services logistiques complets de LAMACO au Sénégal."
+        og_title: "Demander un Devis | LAMACO Construction & Logistique"
+        og_description: "Obtenez une estimation gratuite pour le basalte, le sable, la location d'engins et la logistique de chantier. Notre équipe répond sous 24 heures."
+
+    hero:
+        title: Demander un Devis
+        description: "Décrivez-nous les besoins de votre projet et obtenez une estimation professionnelle de nos experts."
+
+    form:
+        select_service: Choisir une Catégorie de Service
+        materials_supply: Fourniture de Matériaux
+        materials_supply_desc: "Livraison de basalte, sable, latérite"
+        equipment_rental: Location d'Engins
+        equipment_rental_desc: "Pelleteuses, niveleuses, chargeuses"
+        both_services: Les Deux Services
+        both_services_desc: "Logistique complète & approvisionnement"
+        project_location: Localisation du Projet
+        select_region: Sélectionnez une Région du Sénégal
+        start_date: Date de Début Estimée
+        requirements: "Besoins (Quantité/Type)"
+        requirements_placeholder: "Décrivez les matériaux ou engins nécessaires (ex : 500 tonnes de Basalte 0/31.5, 2x Pelleteuses 20T pour 3 mois)"
+        contact_info: Coordonnées
+        company_name: Nom de l'Entreprise
+        company_placeholder: "Entrez le nom de l'entreprise"
+        contact_person: Personne à Contacter
+        contact_placeholder: Nom complet
+        phone_number: Numéro de Téléphone
+        email_address: Adresse E-mail
+        submit: Envoyer la Demande
+        legal: "En soumettant, vous acceptez nos Conditions Générales et notre Politique de Confidentialité."
+
+    sidebar:
+        why_partner: "Pourquoi Choisir LAMACO ?"
+        reliability_title: "Fiabilité depuis 2009"
+        reliability_desc: "Plus d'une décennie d'approvisionnement ininterrompu des principaux chantiers de construction au Sénégal."
+        support_title: Support en Temps Réel
+        support_desc: "Assistance WhatsApp directe pour les demandes urgentes et le suivi de flotte."
+        quality_title: Qualité Garantie
+        quality_desc: "Matériaux provenant de carrières premium et engins entretenus aux normes les plus élevées."
+        project_hubs: Zones de Projets Récents
+        alt_hq: Siège de LAMACO
+        need_help: "Besoin d'aide avec ce formulaire ?"
+        team_ready: Notre équipe logistique est prête à vous aider.
+
+# ── Page Projets ──
+projects:
+    meta:
+        title: "Projets | LAMACO Construction Sénégal"
+        description: "Découvrez le portfolio de projets de construction de LAMACO à travers le Sénégal — infrastructure, résidentiel, commercial et développements industriels réalisés avec excellence."
+
+    hero:
+        title: Nos Projets
+        description: "Un portfolio d'excellence structurelle à travers l'Afrique de l'Ouest — des pôles d'infrastructure aux développements premium."
+        btn_portfolio: Voir le Portfolio
+
+    cta:
+        title: "Prêt à Bâtir l'Avenir ?"
+        description: "Contactez LAMACO dès aujourd'hui pour des solutions complètes de construction et de logistique adaptées aux exigences uniques de votre projet."
+        btn_quote: Demander un Devis
+        btn_contact: Contacter l'Équipe Commerciale
+
+    detail:
+        duration: Durée
+        category: Catégorie
+        location: Localisation
+        status: Statut
+        narrative: Récit du Projet
+        highlights: Points Forts du Projet
+        gallery: Galerie du Projet
+        resources: Ressources LAMACO Utilisées
+        inspired: "Inspiré par ce projet ?"
+        btn_similar_quote: Obtenir un Devis Similaire
+        btn_chat_expert: Discuter avec un Expert

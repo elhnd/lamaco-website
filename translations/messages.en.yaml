@@ -1,0 +1,426 @@
+# ============================================================================
+# LAMACO — English Translations
+# ============================================================================
+
+# ── Navigation ──
+nav:
+    home: Home
+    products: Products
+    services: Services
+    projects: Projects
+    about: About
+    contact: Contact
+    request_quote: Request a Quote
+    aria_label: Main navigation
+    back_home: "LAMACO — Back to homepage"
+
+# ── Meta / Site ──
+site:
+    title: "LAMACO Construction | Building Senegal's Future"
+    description: "LAMACO is the premier partner for high-grade construction materials, heavy equipment logistics, and site management across Senegal and West Africa."
+    og_title: "LAMACO Construction | Building Senegal's Future"
+    og_description: "Premier partner for construction materials, heavy equipment and site logistics in Senegal."
+
+# ── Footer ──
+footer:
+    brand_description: "Providing high-end construction materials and logistics solutions throughout Senegal since 2009."
+    services: Services
+    basalt_supply: Basalt Supply
+    sand_delivery: Sand Delivery
+    excavator_rental: Excavator Rental
+    project_logistics: Project Logistics
+    company: Company
+    about_us: About Us
+    our_projects: Our Projects
+    fleet_details: Fleet Details
+    careers: Careers
+    headquarters: Headquarters
+    address: "Avenue Cheikh Anta Diop, BP 5005, Dakar, Senegal"
+    hours: "Mon - Fri: 08:00 - 18:00"
+    copyright: "© %year% LAMACO Construction SARL. All Rights Reserved."
+    privacy_policy: Privacy Policy
+    terms_of_service: Terms of Service
+    visit_website: Visit our website
+    share: Share
+    email_us: Email us
+
+# ── WhatsApp FAB ──
+whatsapp:
+    aria_label: Contact us on WhatsApp
+    title: Chat with us on WhatsApp
+
+# ── Shared: Contact Form ──
+form:
+    full_name: Full Name
+    company_name: Company Name
+    email_address: Email Address
+    phone_number: Phone Number
+    your_message: Your Message
+    send_message: Send Message
+    placeholder_name: "John Doe"
+    placeholder_company: "Your Company S.A."
+    placeholder_email: "email@company.com"
+    placeholder_phone: "+221 ..."
+    placeholder_message: "Tell us about your project requirements..."
+    send_us_message: "Send us a Message"
+    form_default_description: "Fill out the form below and our specialists will contact you within 24 hours."
+
+# ── Home Page ──
+home:
+    hero:
+        title_start: "Building "
+        title_highlight: "Senegal's"
+        title_end: " Future with Reliability."
+        description: "LAMACO is the premier partner for high-grade construction materials, heavy equipment logistics, and site management across West Africa."
+        btn_services: Our Services
+        btn_quote: Get a Quote
+
+    about:
+        subtitle: Who We Are
+        title: Your Solid Partner in Construction
+        paragraph1: "LAMACO has built its reputation on the pillars of reliability, precision, and efficiency. Based in Dakar, we serve the entire Senegalese territory, providing the essential backbone for the nation's most ambitious real estate and infrastructure projects."
+        paragraph2: "Whether it's high-grade basalt and sand supply or complex heavy machinery logistics, we ensure your site never stops moving. Our commitment to quality is what makes us the preferred partner for leading international and local developers."
+        certified_materials: Certified Materials
+        rapid_logistics: Rapid Logistics
+        expert_team: Expert Team
+        nationwide_reach: Nationwide Reach
+        alt_image: "Heavy machinery excavator on a LAMACO construction site in Senegal"
+
+    services:
+        subtitle: What We Offer
+        title: Specialized Solutions
+        construction_materials: Construction Materials
+        construction_materials_desc: "Top-tier supply of Basalt, Sand, and aggregate materials meeting rigorous quality standards."
+        equipment_rental: Equipment Rental
+        equipment_rental_desc: "Modern fleet of excavators, cranes, and specialized construction machinery for any project size."
+        construction_logistics: Construction Logistics
+        construction_logistics_desc: "Optimized transport and logistical coordination for seamless material delivery to remote sites."
+        site_supply: Site Supply Management
+        site_supply_desc: "Comprehensive inventory and supply chain oversight to prevent downtime and overstocking."
+        learn_more: Learn More
+
+    materials:
+        subtitle: OUR MATERIALS
+        title: "Superior Quality Sand & Stone"
+        description: "LAMACO is committed to supplying high-grade flint, basalt, and sand essential for durable and safe construction. We source our materials from premium quarries to ensure they meet the highest technical standards required for modern infrastructure."
+        dust_free: Dust-Free Materials
+        reliable_supply: Reliable Bulk Supply
+        fast_delivery: Fast Site Delivery
+        alt_image: "Premium construction materials — basalt and sand from LAMACO quarries"
+
+    stats:
+        projects_completed: Projects Completed
+        heavy_units: Heavy Units
+        years_experience: Years Experience
+
+    testimonials:
+        subtitle: CLIENT REVIEWS
+        title: What Our Partners Say
+        quote: "LAMACO has been our primary supplier for the Diamniadio development project. Their reliability in delivering high-grade basalt and managing site logistics has been critical to our success. A truly professional partner in Senegal's growth."
+        name: Amadou Diallo
+        role: "Director, Senegal Urban Dev"
+        prev_testimonial: Previous testimonial
+        next_testimonial: Next testimonial
+        testimonial_nav: Testimonial navigation
+        testimonial_number: "Testimonial %index%"
+        photo_of: "Photo of %name%"
+
+    partners:
+        title: Strategic Partners
+        subtitle: "Trusted by Leading Developers & Contractors"
+        alt_logo: Strategic Partner Logo
+
+    contact:
+        title: Get In Touch
+        description: "Have questions about our inventory or rental availability? Our team is ready to provide you with detailed information and competitive pricing."
+        call_us: Call Us
+        email_us: Email Us
+        visit_us: Visit Us
+        first_name: First Name
+        last_name: Last Name
+        work_email: Work Email
+        service_required: Service Required
+        construction_materials: Construction Materials
+        equipment_rental: Equipment Rental
+        logistics: Logistics
+        general_inquiry: General Inquiry
+        message: Message
+
+    cta:
+        title: "Ready to start your next big project?"
+        description: "Get a customized material and logistics quote within 24 hours."
+        btn_quote: Request Quote
+
+# ── Products Page ──
+products:
+    meta:
+        title: "Products & Materials Catalog | LAMACO Construction Senegal"
+        description: "Explore LAMACO's full catalog of construction materials — flint, sand, limestone, basalt aggregates — and heavy equipment rental in Senegal."
+        og_title: "Products & Materials Catalog | LAMACO Construction"
+        og_description: "High-quality aggregates, sands, and heavy machinery for Senegal's most ambitious construction projects."
+
+    hero:
+        title: "Our Materials & Equipment"
+        description: "Reliable supply chains for Senegal's most ambitious construction projects. High-quality aggregates, sands, and heavy machinery delivered with precision."
+        btn_catalog: Explore Catalog
+
+    catalog_nav:
+        flint: Flint Concrete
+        sand: Sand Varieties
+        limestone: Limestone
+        basalt: "Basalt (Reinforced)"
+        equipment: Equipment Rental
+
+    flint:
+        title: Flint or Mapaté Concrete
+        badge: General Construction
+        product_8_16: "Granulometry 8/16"
+        alt_8_16: "Aggregates 8/16 — Flint concrete for structural use"
+        desc_8_16: "Superior quality, dust-free aggregates ideal for structural concrete and road foundations."
+        product_3_8: "Granulometry 3/8"
+        alt_3_8: "Aggregates 3/8 — Fine rice grains for concrete"
+        desc_3_8: "Perfectly fine rice grains for specialized finishes and high-density concrete mixes."
+        product_0_3: "Granulometry 0/3"
+        alt_0_3: "Aggregates 0/3 — Powdered aggregate for earthworks"
+        desc_0_3: "Powdered aggregate, ideal for earthworks, leveling, and high-quality mortar preparation."
+        stocked: STOCKED
+        order_now: Order Now
+
+    sand:
+        title: Sand Varieties
+        badge: "Masonry & Foundations"
+        tasseb_name: Tasseb Sand
+        tasseb_alt: "Tasseb Sand — Fine high-purity sand for masonry"
+        tasseb_desc: "Fine, high-purity sand specifically selected for professional masonry and plastering work."
+        dakar_name: Dakar Sand
+        dakar_alt: "Dakar Sand — Coarse durable sand for foundations"
+        dakar_desc: "Coarse, durable sand engineered for solid foundations and heavy masonry structural components."
+        request_quote: Request Quote
+
+    limestone:
+        title: Limestone or White Concrete
+        badge: Infrastructure
+        gravel_5_15: "Gravel 5/15"
+        sub_5_15: Limestone Aggregate
+        desc_5_15: "Premium white limestone sized for standard construction and structural base layers."
+        gravel_3_8: "Gravel 3/8"
+        sub_3_8: Top-quality grains
+        desc_3_8: "Fine white limestone grains for specialized architectural finishes and decorative concrete."
+        gravel_15_25: "Gravel 15/25"
+        sub_15_25: Heavy Infrastructure
+        desc_15_25: "Large-format limestone aggregate designed for heavy-duty foundations and road building."
+        gravel_0_3: "Gravel 0/3"
+        sub_0_3: Limestone Sand
+        desc_0_3: "High-purity white limestone sand ideal for premium mortar mixes and finishing works."
+        order_now: Order Now
+
+    basalt:
+        badge: Premium Choice
+        title: Basalt or Reinforced Concrete
+        subtitle: "Commonly known as Black Concrete – The strongest choice for longevity."
+        product_8_16: "Basalt 8/16"
+        desc_8_16: "Highly reliable for heavy-duty reinforced structures and high-traffic pavements."
+        product_3_8: "Basalt 3/8"
+        desc_3_8: "The finest basalt grains available for detailed industrial casting and pre-cast concrete."
+        product_0_3: "Basalt 0/3"
+        desc_0_3: "Premium filler for earthworks and heavy-duty brickmaking applications."
+        order: "Order %name%"
+
+    equipment:
+        title: Heavy Equipment Rental
+        alt_image: "Professional excavator available for hire at LAMACO"
+        badge: "Available for Hire"
+        rental_title: Professional Excavator Rental
+        rental_desc: "High-performance excavators ready for earthmoving, trenching, and site clearing across Senegal. Maintained to the highest industrial standards with experienced operators available."
+        feature_support: "24/7 Support & Maintenance"
+        feature_terms: "Flexible Rental Terms (Daily/Monthly)"
+        feature_delivery: "On-site Delivery & Setup"
+        check_availability: Check Availability
+
+    consulting:
+        title: Material Quantity Consulting
+        description: "Not sure how much you need? Our experts provide precise assessment services for concrete and sand requirements based on your technical blueprints, ensuring zero waste and optimal budgeting."
+        expert_audit: Expert Audit
+        audit_desc: Detailed site assessments
+        save_15: "Save 15%"
+        save_desc: Average waste reduction
+        book_consultation: Book a Consultation
+
+    detail:
+        bulk_pricing: Inquire for Bulk Pricing
+        request_quote: Request Quote for this Product
+        order_whatsapp: Order via WhatsApp
+        whatsapp_message: "Hello, I would like to order "
+        project_context: Project Context
+        recently_used: "Recently used in:"
+        related_products: Related Products
+        view_details: View Details
+        breadcrumb_home: Home
+        breadcrumb_catalog: Catalog
+        tech_specs: Technical Specifications
+        closeup_view: "Close-up view"
+        view_index: "View %index%"
+
+    cta:
+        title: "Ready to start your project?"
+        description: "Request a comprehensive quote including delivery costs to your site anywhere in Dakar or the inland regions."
+        btn_quote: Get a Custom Quote
+        btn_contact: Contact Sales Team
+
+# ── About Page ──
+about:
+    meta:
+        title: "About LAMACO | Construction & Logistics Expertise in Senegal"
+        description: "Learn about LAMACO's mission, vision, values, and leadership. A trusted Senegalese construction partner since 2009."
+        og_title: "About LAMACO | Construction & Logistics Expertise"
+        og_description: "Discover our journey, core values, and the team behind Senegal's most reliable construction logistics company."
+
+    hero:
+        subtitle: Our Journey
+        title: About LAMACO
+        description: "Building the future of Senegal through reliable construction logistics, premium materials, and unwavering commitment to excellence."
+
+    story:
+        alt_image: "LAMACO Headquarters in Dakar, Senegal"
+        badge: Established
+        badge_year: "2009"
+        title: "Founded on Reliability, Grown through Excellence"
+        paragraph1: "LAMACO began its journey in Dakar with a clear vision: to bridge the gap in Senegal's construction supply chain. Starting with a single logistics unit, we have grown into a multi-faceted industry leader providing essential materials and heavy equipment to the nation's most critical infrastructure projects."
+        paragraph2: "Our story is one of consistent commitment to our partners. We understand that in construction, time and material quality are the foundations of success. By investing in a modern fleet and securing the best basalt and sand sources, LAMACO has become the trusted backbone for international developers and local contractors alike."
+        quote: "\"Our mission is to build the future of Senegal by ensuring no site ever stops moving due to logistics or supply.\""
+
+    mission:
+        title: Our Mission
+        description: "To provide world-class construction materials and logistical solutions that empower developers to complete projects safely, on time, and within budget. We strive to be the most reliable link in the Senegalese construction supply chain."
+
+    vision:
+        title: Our Vision
+        description: "To become the undisputed leader in construction logistics in West Africa, recognized for our innovation, operational excellence, and our contribution to building a modern, sustainable infrastructure for the next generation."
+
+    values:
+        subtitle: Core Principles
+        title: The Values that Drive Us
+        reliability: Reliability
+        reliability_desc: "We deliver what we promise, when we promise it. Consistency is the hallmark of our service."
+        innovation: Innovation
+        innovation_desc: "We optimize logistics through technology and modern fleet management for maximum efficiency."
+        professionalism: Professionalism
+        professionalism_desc: "Our team embodies the highest standards of integrity and expertise in every interaction."
+        safety: Safety
+        safety_desc: "Zero-compromise approach to site safety and the well-being of our operators and partners."
+
+    leadership:
+        subtitle: Management
+        title: Our Leadership
+        managing_director: Managing Director
+        head_operations: Head of Operations
+        logistics_director: Logistics Director
+
+    partners:
+        title: Strategic Partners
+        subtitle: "Trusted by Leading Developers & Contractors"
+        alt_logo: Strategic Partner Logo
+
+# ── Contact Page ──
+contact:
+    meta:
+        title: "Contact Us | LAMACO Construction & Logistics Senegal"
+        description: "Contact LAMACO for construction materials, heavy equipment rental, and logistics in Senegal. Get a quote or reach us via phone, email, or WhatsApp."
+        og_title: "Contact Us | LAMACO Construction & Logistics"
+        og_description: "Reach out to LAMACO for quotes, consultations, or equipment inquiries. Our team is ready to support your next project in Senegal."
+
+    hero:
+        title: Get in Touch
+        description: "Our team is ready to support your next major infrastructure project in Senegal. Reach out to us for quotes, consultations, or equipment inquiries."
+
+    info:
+        headquarters: Headquarters
+        address: "Avenue Cheikh Anta Diop, BP 5005,"
+        address2: "Dakar, Senegal"
+        view_map: View on Google Maps
+        phone_whatsapp: "Phone & WhatsApp"
+        email_hours: "Email & Hours"
+        business_hours: Business Hours
+        hours_weekday: "Mon – Fri: 08:00 – 18:00"
+        hours_saturday: "Sat: 09:00 – 13:00"
+
+    map:
+        title: "LAMACO Location — Dakar, Senegal"
+
+# ── Quote Page ──
+quote:
+    meta:
+        title: "Request a Quote | LAMACO Construction & Logistics Senegal"
+        description: "Request a professional quote for construction materials, heavy equipment rental, or full logistics services from LAMACO in Senegal."
+        og_title: "Request a Quote | LAMACO Construction & Logistics"
+        og_description: "Get a free estimation for basalt, sand, equipment rental, and site logistics. Our team responds within 24 hours."
+
+    hero:
+        title: Request a Quote
+        description: "Tell us about your project requirements and get a professional estimation from our experts."
+
+    form:
+        select_service: Select Service Category
+        materials_supply: Materials Supply
+        materials_supply_desc: "Basalt, Sand, Laterite delivery"
+        equipment_rental: Equipment Rental
+        equipment_rental_desc: "Excavators, Graders, Loaders"
+        both_services: Both Services
+        both_services_desc: "Full project logistics & supply"
+        project_location: Project Location
+        select_region: Select Senegalese Region
+        start_date: Estimated Start Date
+        requirements: "Requirements (Quantity/Type)"
+        requirements_placeholder: "Describe the materials or machinery needed (e.g., 500 tons of 0/31.5 Basalt, 2x 20T Excavators for 3 months)"
+        contact_info: Contact Information
+        company_name: Company Name
+        company_placeholder: "Enter company name"
+        contact_person: Contact Person
+        contact_placeholder: Full name
+        phone_number: Phone Number
+        email_address: Email Address
+        submit: Submit Request
+        legal: "By submitting, you agree to our Terms of Service and Privacy Policy."
+
+    sidebar:
+        why_partner: "Why Partner with LAMACO?"
+        reliability_title: "Reliability since 2009"
+        reliability_desc: "Over a decade of uninterrupted supply to major construction sites across Senegal."
+        support_title: Real-time Support
+        support_desc: "Direct WhatsApp assistance for urgent requests and fleet tracking updates."
+        quality_title: Quality Guaranteed
+        quality_desc: "Materials sourced from premium quarries and machinery maintained to highest standards."
+        project_hubs: Recent Project Hubs
+        alt_hq: LAMACO Headquarters
+        need_help: "Need help with this form?"
+        team_ready: Our logistics team is ready to assist.
+
+# ── Projects Page ──
+projects:
+    meta:
+        title: "Projects | LAMACO Construction Senegal"
+        description: "Discover LAMACO's portfolio of construction projects across Senegal — infrastructure, residential, commercial, and industrial developments built with excellence."
+
+    hero:
+        title: Our Projects
+        description: "A portfolio of structural excellence across West Africa — from infrastructure hubs to premium developments."
+        btn_portfolio: View Portfolio
+
+    cta:
+        title: "Ready to Build the Future?"
+        description: "Contact LAMACO today for comprehensive construction and logistics solutions tailored to your project's unique demands."
+        btn_quote: Request a Quote
+        btn_contact: Contact Sales
+
+    detail:
+        duration: Duration
+        category: Category
+        location: Location
+        status: Status
+        narrative: Project Narrative
+        highlights: Project Highlights
+        gallery: Project Gallery
+        resources: LAMACO Resources Utilized
+        inspired: "Inspired by this project?"
+        btn_similar_quote: Get a Similar Quote
+        btn_chat_expert: Chat with an Expert
