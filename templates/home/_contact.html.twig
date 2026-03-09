@@ -8,17 +8,17 @@
             {# Contact Info #}
             <div class="opacity-0" data-scroll-reveal-target="item">
                 <h2 id="contact-heading" class="text-4xl font-bold text-primary dark:text-white font-display mb-8">
-                    Get In Touch
+                    {{ 'home.contact.title'|trans }}
                 </h2>
                 <p class="text-gray-600 dark:text-gray-400 mb-10 text-lg">
-                    Have questions about our inventory or rental availability? Our team is ready to provide you with detailed information and competitive pricing.
+                    {{ 'home.contact.description'|trans }}
                 </p>
 
                 <div class="space-y-6">
                     {% set contact_items = [
-                        { icon: 'phone', label: 'Call Us', value: '+221 33 800 00 00', href: 'tel:+221338000000' },
-                        { icon: 'mail', label: 'Email Us', value: 'contact@lamaco.sn', href: 'mailto:contact@lamaco.sn' },
-                        { icon: 'location_on', label: 'Visit Us', value: 'Avenue Cheikh Anta Diop, Dakar, Senegal', href: null },
+                        { icon: 'phone', label: 'home.contact.call_us'|trans, value: '+221 33 800 00 00', href: 'tel:+221338000000' },
+                        { icon: 'mail', label: 'home.contact.email_us'|trans, value: 'contact@lamaco.sn', href: 'mailto:contact@lamaco.sn' },
+                        { icon: 'location_on', label: 'home.contact.visit_us'|trans, value: 'Avenue Cheikh Anta Diop, Dakar, Senegal', href: null },
                     ] %}
                     {% for item in contact_items %}
                         <div class="flex items-center gap-4">
@@ -46,7 +46,7 @@
                 <form action="#" method="post" class="space-y-4" novalidate>
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
-                            <label for="contact-first-name" class="block text-xs font-bold uppercase text-gray-500 mb-2">First Name</label>
+                            <label for="contact-first-name" class="block text-xs font-bold uppercase text-gray-500 mb-2">{{ 'home.contact.first_name'|trans }}</label>
                             <input id="contact-first-name"
                                    name="first_name"
                                    type="text"
@@ -55,7 +55,7 @@
                                    class="w-full bg-gray-50 dark:bg-background-dark border-gray-200 dark:border-gray-800 rounded p-3 text-sm focus:ring-accent focus:border-accent">
                         </div>
                         <div>
-                            <label for="contact-last-name" class="block text-xs font-bold uppercase text-gray-500 mb-2">Last Name</label>
+                            <label for="contact-last-name" class="block text-xs font-bold uppercase text-gray-500 mb-2">{{ 'home.contact.last_name'|trans }}</label>
                             <input id="contact-last-name"
                                    name="last_name"
                                    type="text"
@@ -66,7 +66,7 @@
                     </div>
 
                     <div>
-                        <label for="contact-email" class="block text-xs font-bold uppercase text-gray-500 mb-2">Work Email</label>
+                        <label for="contact-email" class="block text-xs font-bold uppercase text-gray-500 mb-2">{{ 'home.contact.work_email'|trans }}</label>
                         <input id="contact-email"
                                name="email"
                                type="email"
@@ -76,20 +76,20 @@
                     </div>
 
                     <div>
-                        <label for="contact-service" class="block text-xs font-bold uppercase text-gray-500 mb-2">Service Required</label>
+                        <label for="contact-service" class="block text-xs font-bold uppercase text-gray-500 mb-2">{{ 'home.contact.service_required'|trans }}</label>
                         <select id="contact-service"
                                 name="service"
                                 required
                                 class="w-full bg-gray-50 dark:bg-background-dark border-gray-200 dark:border-gray-800 rounded p-3 text-sm focus:ring-accent focus:border-accent">
-                            <option value="construction_materials">Construction Materials</option>
-                            <option value="equipment_rental">Equipment Rental</option>
-                            <option value="logistics">Logistics</option>
-                            <option value="general">General Inquiry</option>
+                            <option value="construction_materials">{{ 'home.contact.construction_materials'|trans }}</option>
+                            <option value="equipment_rental">{{ 'home.contact.equipment_rental'|trans }}</option>
+                            <option value="logistics">{{ 'home.contact.logistics'|trans }}</option>
+                            <option value="general">{{ 'home.contact.general_inquiry'|trans }}</option>
                         </select>
                     </div>
 
                     <div>
-                        <label for="contact-message" class="block text-xs font-bold uppercase text-gray-500 mb-2">Message</label>
+                        <label for="contact-message" class="block text-xs font-bold uppercase text-gray-500 mb-2">{{ 'home.contact.message'|trans }}</label>
                         <textarea id="contact-message"
                                   name="message"
                                   rows="4"
@@ -99,7 +99,7 @@
 
                     <button type="submit"
                             class="w-full bg-primary text-white font-bold py-4 rounded uppercase tracking-widest hover:bg-opacity-95 transition-all">
-                        Send Message
+                        {{ 'form.send_message'|trans }}
                     </button>
                 </form>
             </div>

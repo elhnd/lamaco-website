@@ -2,7 +2,7 @@
 <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-controller="scroll-reveal">
     <h2 class="text-3xl font-bold text-primary mb-12 opacity-0"
         data-scroll-reveal-target="item">
-        LAMACO Resources Utilized
+        {{ 'projects.detail.resources'|trans }}
     </h2>
     <div class="grid md:grid-cols-3 gap-8">
         {% for resource in project.resources %}

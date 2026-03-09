@@ -1,16 +1,16 @@
 {# About — Core Values Section #}
 {% set values = [
-    { icon: 'verified', title: 'Reliability', description: 'We deliver what we promise, when we promise it. Consistency is the hallmark of our service.' },
-    { icon: 'lightbulb', title: 'Innovation', description: 'We optimize logistics through technology and modern fleet management for maximum efficiency.' },
-    { icon: 'workspace_premium', title: 'Professionalism', description: 'Our team embodies the highest standards of integrity and expertise in every interaction.' },
-    { icon: 'health_and_safety', title: 'Safety', description: 'Zero-compromise approach to site safety and the well-being of our operators and partners.' },
+    { icon: 'verified', title: 'about.values.reliability'|trans, description: 'about.values.reliability_desc'|trans },
+    { icon: 'lightbulb', title: 'about.values.innovation'|trans, description: 'about.values.innovation_desc'|trans },
+    { icon: 'workspace_premium', title: 'about.values.professionalism'|trans, description: 'about.values.professionalism_desc'|trans },
+    { icon: 'health_and_safety', title: 'about.values.safety'|trans, description: 'about.values.safety_desc'|trans },
 ] %}
 
 <section class="py-24 bg-white" id="values" data-controller="scroll-reveal">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 opacity-0" data-scroll-reveal-target="item">
-            <span class="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">Core Principles</span>
-            <h2 class="text-4xl font-bold text-primary font-display">The Values that Drive Us</h2>
+            <span class="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">{{ 'about.values.subtitle'|trans }}</span>
+            <h2 class="text-4xl font-bold text-primary font-display">{{ 'about.values.title'|trans }}</h2>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {% for value in values %}

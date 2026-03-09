@@ -1,17 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Products &amp; Materials Catalog | LAMACO Construction Senegal{% endblock %}
-{% block meta_description %}Explore LAMACO's full catalog of construction materials — flint, sand, limestone, basalt aggregates — and heavy equipment rental in Senegal.{% endblock %}
-{% block og_title %}Products &amp; Materials Catalog | LAMACO Construction{% endblock %}
-{% block og_description %}High-quality aggregates, sands, and heavy machinery for Senegal's most ambitious construction projects.{% endblock %}
+{% block title %}{{ 'products.meta.title'|trans }}{% endblock %}
+{% block meta_description %}{{ 'products.meta.description'|trans }}{% endblock %}
+{% block og_title %}{{ 'products.meta.og_title'|trans }}{% endblock %}
+{% block og_description %}{{ 'products.meta.og_description'|trans }}{% endblock %}
 
 {% block header %}
     {% include 'partials/_navbar.html.twig' %}
     {% include 'partials/_hero.html.twig' with {
         hero_overlay: 'hero-industrial-overlay',
-        hero_title: 'Our Materials & Equipment',
-        hero_description: 'Reliable supply chains for Senegal\'s most ambitious construction projects. High-quality aggregates, sands, and heavy machinery delivered with precision.',
-        hero_cta: [{text: 'Explore Catalog', href: '#materials'}],
+        hero_title: 'products.hero.title'|trans,
+        hero_description: 'products.hero.description'|trans,
+        hero_cta: [{text: 'products.hero.btn_catalog'|trans, href: '#materials'}],
     } %}
     {% include 'products/_catalog_nav.html.twig' %}
 {% endblock %}
@@ -27,11 +27,11 @@
     </div>
     {% include 'partials/_cta_section.html.twig' with {
         cta_style: 'light',
-        cta_title: 'Ready to start your project?',
-        cta_description: 'Request a comprehensive quote including delivery costs to your site anywhere in Dakar or the inland regions.',
+        cta_title: 'products.cta.title'|trans,
+        cta_description: 'products.cta.description'|trans,
         cta_buttons: [
-            {text: 'Get a Custom Quote', href: path('app_quote'), style: 'primary'},
-            {text: 'Contact Sales Team', href: path('app_contact'), style: 'outline'},
+            {text: 'products.cta.btn_quote'|trans, href: path('app_quote'), style: 'primary'},
+            {text: 'products.cta.btn_contact'|trans, href: path('app_contact'), style: 'outline'},
         ],
     } %}
 {% endblock %}

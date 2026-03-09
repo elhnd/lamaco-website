@@ -7,10 +7,10 @@
             <div class="w-24 h-1 bg-accent mb-8"></div>
             <h2 id="partners-heading"
                 class="text-center text-sm font-bold uppercase tracking-[0.5em] text-gray-400 dark:text-gray-500 mb-4">
-                Strategic Partners
+                {{ 'about.partners.title'|trans }}
             </h2>
             <p class="text-center text-2xl md:text-3xl font-display font-bold text-primary dark:text-white">
-                Trusted by Leading Developers &amp; Contractors
+                {{ 'about.partners.subtitle'|trans }}
             </p>
         </div>
 
@@ -25,7 +25,7 @@
             ] %}
             {% for logo in partner_logos %}
                 <div class="flex-1 flex items-center justify-center">
-                    <img alt="Strategic Partner Logo"
+                    <img alt="{{ 'about.partners.alt_logo'|trans }}"
                          class="trust-logo h-16 md:h-20 lg:h-24 dark:invert"
                          loading="lazy"
                          src="{{ logo }}">

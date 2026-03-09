@@ -1,27 +1,61 @@
-{# Limestone / White Concrete Section — Grid of compact cards #}
+{# Limestone / White Concrete Section — Product cards with images #}
 <section id="limestone" aria-labelledby="limestone-heading" data-controller="scroll-reveal">
     <div class="flex items-center gap-4 mb-10 opacity-0" data-scroll-reveal-target="item">
-        <h2 id="limestone-heading" class="text-3xl font-bold text-primary font-display">Limestone or White Concrete</h2>
+        <h2 id="limestone-heading" class="text-3xl font-bold text-primary font-display">{{ 'products.limestone.title'|trans }}</h2>
         <div class="h-1 flex-grow bg-gray-200" aria-hidden="true"></div>
-        <span class="bg-accent/10 text-accent px-3 py-1 text-xs font-bold uppercase rounded">Infrastructure</span>
+        <span class="bg-accent/10 text-accent px-3 py-1 text-xs font-bold uppercase rounded">{{ 'products.limestone.badge'|trans }}</span>
     </div>
 
     {% set limestone_products = [
-        { name: 'Gravel 5/15', subtitle: 'Limestone Aggregate' },
-        { name: 'Gravel 3/8', subtitle: 'Top-quality grains' },
-        { name: 'Gravel 15/25', subtitle: 'Heavy Infrastructure' },
-        { name: 'Gravel 0/3', subtitle: 'Limestone Sand' },
+        {
+            name: 'products.limestone.gravel_5_15_name'|trans,
+            subtitle: 'products.limestone.gravel_5_15_subtitle'|trans,
+            description: 'products.limestone.gravel_5_15_desc'|trans,
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDpM_vD2X04iK29_9U5iUe6XzK6z_I0Y_I0Y_I0Y_I0Y_I0Y_I0Y_I0Y_I0Y_I0Y_I0Y_I0Y_I0Y_I0',
+        },
+        {
+            name: 'products.limestone.gravel_3_8_name'|trans,
+            subtitle: 'products.limestone.gravel_3_8_subtitle'|trans,
+            description: 'products.limestone.gravel_3_8_desc'|trans,
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD-0k1_2_3_4_5_6_7_8_9_0_1_2_3_4_5_6_7_8_9_0_1_2_3_4_5_6_7_8_9_0_1_2_3_4_5_6_7_8_9_0',
+        },
+        {
+            name: 'products.limestone.gravel_15_25_name'|trans,
+            subtitle: 'products.limestone.gravel_15_25_subtitle'|trans,
+            description: 'products.limestone.gravel_15_25_desc'|trans,
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDf1_2_3_4_5_6_7_8_9_0_1_2_3_4_5_6_7_8_9_0_1_2_3_4_5_6_7_8_9_0_1_2_3_4_5_6_7_8_9_0',
+        },
+        {
+            name: 'products.limestone.gravel_0_3_name'|trans,
+            subtitle: 'products.limestone.gravel_0_3_subtitle'|trans,
+            description: 'products.limestone.gravel_0_3_desc'|trans,
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDg1_2_3_4_5_6_7_8_9_0_1_2_3_4_5_6_7_8_9_0_1_2_3_4_5_6_7_8_9_0_1_2_3_4_5_6_7_8_9_0',
+        },
     ] %}
 
-    <div class="grid md:grid-cols-4 gap-6">
+    <div class="grid md:grid-cols-3 gap-6">
         {% for product in limestone_products %}
-            <article class="bg-white p-6 shadow-sm border-t-2 border-accent opacity-0"
+            <article class="bg-white group overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 opacity-0"
                      data-scroll-reveal-target="item">
-                <h4 class="font-bold text-primary mb-2">{{ product.name }}</h4>
-                <p class="text-xs text-gray-500 mb-4 uppercase font-bold tracking-tighter">{{ product.subtitle }}</p>
-                <a href="{{ path('app_quote') }}" class="text-accent text-xs font-bold flex items-center gap-2 hover:gap-3 transition-all uppercase">
-                    Request Quote <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
-                </a>
+                <div class="overflow-hidden">
+                    <img alt="{{ product.name }} — {{ product.subtitle }}"
+                         class="product-card-img"
+                         loading="lazy"
+                         width="400"
+                         height="192"
+                         src="{{ product.image }}">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-primary">{{ product.name }}</h3>
+                        <span class="text-[10px] font-bold text-accent uppercase tracking-tighter">{{ product.subtitle }}</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-6">{{ product.description }}</p>
+                    <a href="{{ path('app_quote') }}"
+                       class="block w-full bg-primary text-white py-3 font-bold uppercase text-xs tracking-widest hover:bg-primary/90 transition-colors text-center">
+                        {{ 'products.limestone.order_now'|trans }}
+                    </a>
+                </div>
             </article>
         {% endfor %}
     </div>

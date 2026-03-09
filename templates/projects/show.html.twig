@@ -20,10 +20,10 @@
     {% include 'projects/detail/_testimonial.html.twig' %}
     {% include 'partials/_cta_section.html.twig' with {
         cta_style: 'minimal',
-        cta_title: 'Inspired by this project?',
+        cta_title: 'projects.detail.inspired'|trans,
         cta_buttons: [
-            {text: 'Get a Similar Quote', href: path('app_quote'), style: 'primary', icon: 'request_quote'},
-            {text: 'Chat with an Expert', href: 'https://wa.me/221770000000', style: 'whatsapp'},
+            {text: 'projects.detail.btn_similar_quote'|trans, href: path('app_quote'), style: 'primary', icon: 'request_quote'},
+            {text: 'projects.detail.btn_chat_expert'|trans, href: 'https://wa.me/221770000000', style: 'whatsapp'},
         ],
     } %}
 {% endblock %}

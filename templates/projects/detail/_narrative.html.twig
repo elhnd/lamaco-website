@@ -3,7 +3,7 @@
     <div class="grid lg:grid-cols-3 gap-16">
         {# Main narrative #}
         <div class="lg:col-span-2 opacity-0" data-scroll-reveal-target="item">
-            <h2 class="text-3xl font-bold text-primary mb-8">Project Narrative</h2>
+            <h2 class="text-3xl font-bold text-primary mb-8">{{ 'projects.detail.narrative'|trans }}</h2>
             <div class="space-y-6 text-lg leading-relaxed text-gray-700">
                 {% for paragraph in project.narrative %}
                     <p>{{ paragraph }}</p>
@@ -14,7 +14,7 @@
         {# Highlights sidebar #}
         <div class="bg-white p-8 border border-gray-100 shadow-sm rounded-lg h-fit opacity-0"
              data-scroll-reveal-target="item">
-            <h3 class="text-xl font-bold text-primary mb-6 border-b pb-4">Project Highlights</h3>
+            <h3 class="text-xl font-bold text-primary mb-6 border-b pb-4">{{ 'projects.detail.highlights'|trans }}</h3>
             <ul class="space-y-4">
                 {% for highlight in project.highlights %}
                     <li class="flex items-start gap-3">

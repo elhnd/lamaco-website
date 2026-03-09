@@ -2,27 +2,32 @@
 <section aria-labelledby="consulting-heading" class="relative" data-controller="scroll-reveal">
     <div class="bg-primary text-white rounded-2xl p-8 md:p-16 overflow-hidden relative opacity-0"
          data-scroll-reveal-target="item">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-20"
+             alt=""
+             aria-hidden="true"
+             loading="lazy"
+             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGye-z2W6BzTc9ibK54A6rUK8YWEm57nWxvhyQ1yDwCBIYlsAbuyWzwLwZQiUrr0IWMRymjgtYceQuLYCiR5a9YByFlH4mMvKuIgJV3PddCz0fWE2CuoENA3CNGZhf97KAoui_bQ0iKdzDPq4b6OO1qoNQTZjbufsGjRlkRTB72xnUycjklOmkgmZOWuuphSMiC-gHKB0BuYsDjyPyOT7PnMCAe-0SBcYqCw8eW1u5SHGO6Tc8FxeQmBqfw99KM7StGXjAFfaMlD0">
         <div class="absolute right-0 top-0 opacity-10 translate-x-1/4 -translate-y-1/4" aria-hidden="true">
             <span class="material-symbols-outlined text-[300px]">calculate</span>
         </div>
         <div class="max-w-2xl relative z-10">
-            <h2 id="consulting-heading" class="text-3xl font-bold mb-6 font-display">Material Quantity Consulting</h2>
+            <h2 id="consulting-heading" class="text-3xl font-bold mb-6 font-display">{{ 'products.consulting.title'|trans }}</h2>
             <p class="text-gray-300 text-lg mb-8">
-                Not sure how much you need? Our experts provide precise assessment services for concrete and sand requirements based on your technical blueprints, ensuring zero waste and optimal budgeting.
+                {{ 'products.consulting.description'|trans }}
             </p>
             <div class="flex flex-wrap gap-4">
                 <div class="bg-white/10 backdrop-blur-md p-4 rounded border border-white/20">
-                    <span class="block text-accent font-bold text-xl mb-1">Expert Audit</span>
-                    <span class="text-sm text-gray-300">Detailed site assessments</span>
+                    <span class="block text-accent font-bold text-xl mb-1">{{ 'products.consulting.expert_audit'|trans }}</span>
+                    <span class="text-sm text-gray-300">{{ 'products.consulting.audit_desc'|trans }}</span>
                 </div>
                 <div class="bg-white/10 backdrop-blur-md p-4 rounded border border-white/20">
-                    <span class="block text-accent font-bold text-xl mb-1">Save 15%</span>
-                    <span class="text-sm text-gray-300">Average waste reduction</span>
+                    <span class="block text-accent font-bold text-xl mb-1">{{ 'products.consulting.save_15'|trans }}</span>
+                    <span class="text-sm text-gray-300">{{ 'products.consulting.save_desc'|trans }}</span>
                 </div>
             </div>
             <a href="{{ path('app_contact') }}"
                class="mt-10 inline-block bg-accent text-white px-10 py-4 rounded font-bold uppercase tracking-widest hover:scale-105 transition-transform">
-                Book a Consultation
+                {{ 'products.consulting.book_consultation'|trans }}
             </a>
         </div>
     </div>

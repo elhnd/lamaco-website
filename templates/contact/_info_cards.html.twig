@@ -9,15 +9,15 @@
                     <div class="w-12 h-12 bg-primary/10 rounded flex items-center justify-center mb-6">
                         <span class="material-symbols-outlined text-primary text-3xl">location_on</span>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-4 font-display">Headquarters</h3>
+                    <h3 class="text-xl font-bold text-primary mb-4 font-display">{{ 'contact.info.headquarters'|trans }}</h3>
                     <p class="text-gray-600 mb-4 leading-relaxed">
-                        Avenue Cheikh Anta Diop, BP 5005,<br>Dakar, Senegal
+                        {{ 'contact.info.address'|trans }}<br>{{ 'contact.info.address2'|trans }}
                     </p>
                     <a class="text-accent font-bold text-sm uppercase tracking-wider flex items-center gap-2 hover:gap-3 transition-all"
                        href="https://www.google.com/maps/place/Dakar,+Senegal/@14.6928,-17.4677,15z"
                        target="_blank"
                        rel="noopener noreferrer">
-                        View on Google Maps
+                        {{ 'contact.info.view_map'|trans }}
                         <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </a>
                 </div>
@@ -29,7 +29,7 @@
                 <div class="w-12 h-12 bg-primary/10 rounded flex items-center justify-center mb-6">
                     <span class="material-symbols-outlined text-primary text-3xl">call</span>
                 </div>
-                <h3 class="text-xl font-bold text-primary mb-4 font-display">Phone &amp; WhatsApp</h3>
+                <h3 class="text-xl font-bold text-primary mb-4 font-display">{{ 'contact.info.phone_whatsapp'|trans }}</h3>
                 <div class="space-y-3">
                     <a href="tel:+221338000000" class="text-primary font-bold text-lg block hover:text-accent transition-colors">
                         +221 33 800 00 00
@@ -50,14 +50,14 @@
                 <div class="w-12 h-12 bg-primary/10 rounded flex items-center justify-center mb-6">
                     <span class="material-symbols-outlined text-primary text-3xl">mail</span>
                 </div>
-                <h3 class="text-xl font-bold text-primary mb-4 font-display">Email &amp; Hours</h3>
+                <h3 class="text-xl font-bold text-primary mb-4 font-display">{{ 'contact.info.email_hours'|trans }}</h3>
                 <a href="mailto:contact@lamaco-sn.com" class="text-gray-600 mb-2 font-medium block hover:text-accent transition-colors">
                     contact@lamaco-sn.com
                 </a>
                 <div class="mt-4 pt-4 border-t border-gray-100">
-                    <p class="text-xs text-gray-400 uppercase tracking-widest mb-1 font-bold">Business Hours</p>
-                    <p class="text-sm text-gray-600">Mon – Fri: 08:00 – 18:00</p>
-                    <p class="text-sm text-gray-600">Sat: 09:00 – 13:00</p>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest mb-1 font-bold">{{ 'contact.info.business_hours'|trans }}</p>
+                    <p class="text-sm text-gray-600">{{ 'contact.info.hours_weekday'|trans }}</p>
+                    <p class="text-sm text-gray-600">{{ 'contact.info.hours_saturday'|trans }}</p>
                 </div>
             </div>
         </div>

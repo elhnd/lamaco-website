@@ -3,9 +3,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <nav class="flex text-xs font-medium uppercase tracking-wider text-gray-500 gap-2 items-center"
              aria-label="Breadcrumb">
-            <a class="hover:text-primary transition-colors" href="{{ path('app_home') }}">Home</a>
+            <a class="hover:text-primary transition-colors" href="{{ path('app_home') }}">{{ 'products.detail.breadcrumb_home'|trans }}</a>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <a class="hover:text-primary transition-colors" href="{{ path('app_products_index') }}">Catalog</a>
+            <a class="hover:text-primary transition-colors" href="{{ path('app_products_index') }}">{{ 'products.detail.breadcrumb_catalog'|trans }}</a>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
             <a class="hover:text-primary transition-colors" href="{{ path('app_products_index') }}#{{ product.category|lower }}">{{ product.category }}</a>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>

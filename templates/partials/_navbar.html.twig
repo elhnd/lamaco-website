@@ -5,12 +5,12 @@
 <nav class="fixed top-0 left-0 right-0 z-50 nav-transparent"
      id="main-nav"
      role="navigation"
-     aria-label="Main navigation"
+     aria-label="{{ 'nav.aria_label'|trans }}"
      data-controller="nav">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
             {# Logo — switches between light (on hero) and principal (on scroll) #}
-            <a href="{{ path('app_home') }}" class="flex items-center gap-2" aria-label="LAMACO — Back to homepage">
+            <a href="{{ path('app_home') }}" class="flex items-center gap-2" aria-label="{{ 'nav.back_home'|trans }}">
                 <img src="{{ asset('images/logo/light.svg') }}"
                      alt="LAMACO"
                      class="h-10 transition-opacity duration-300"
@@ -22,20 +22,34 @@
             </a>
 
             {# Desktop Navigation Links #}
-            <div class="hidden md:flex items-center space-x-8 font-medium text-sm uppercase tracking-wide">
-                <a class="text-white hover:text-accent transition-colors duration-300" href="{{ path('app_home') }}" data-nav-target="link">Home</a>
-                <a class="text-white/80 hover:text-accent transition-colors duration-300" href="{{ path('app_products_index') }}" data-nav-target="link">Products</a>
-                <a class="text-white/80 hover:text-accent transition-colors duration-300" href="{{ path('app_home') }}#services" data-nav-target="link">Services</a>
-                <a class="text-white/80 hover:text-accent transition-colors duration-300" href="{{ path('app_projects_index') }}" data-nav-target="link">Projects</a>
-                <a class="text-white/80 hover:text-accent transition-colors duration-300" href="{{ path('app_about') }}" data-nav-target="link">About</a>
-                <a class="text-white/80 hover:text-accent transition-colors duration-300" href="{{ path('app_contact') }}" data-nav-target="link">Contact</a>
+            {% set r = app.request.attributes.get('_route') %}
+            <div class="hidden md:flex items-center space-x-8 font-bold text-sm uppercase tracking-wide">
+                <a class="pb-1 border-b-2 transition-all duration-300 {{ r == 'app_home' ? 'text-white border-accent' : 'text-white/80 border-transparent hover:border-accent hover:text-accent' }}" href="{{ path('app_home') }}" data-nav-target="link" {{ r == 'app_home' ? 'data-active' : '' }}>{{ 'nav.home'|trans }}</a>
+                <a class="pb-1 border-b-2 transition-all duration-300 {{ r starts with 'app_products' ? 'text-white border-accent' : 'text-white/80 border-transparent hover:border-accent hover:text-accent' }}" href="{{ path('app_products_index') }}" data-nav-target="link" {{ r starts with 'app_products' ? 'data-active' : '' }}>{{ 'nav.products'|trans }}</a>
+                <a class="pb-1 border-b-2 border-transparent hover:border-accent text-white/80 hover:text-accent transition-all duration-300" href="{{ path('app_home') }}#services" data-nav-target="link">{{ 'nav.services'|trans }}</a>
+                <a class="pb-1 border-b-2 transition-all duration-300 {{ r starts with 'app_projects' ? 'text-white border-accent' : 'text-white/80 border-transparent hover:border-accent hover:text-accent' }}" href="{{ path('app_projects_index') }}" data-nav-target="link" {{ r starts with 'app_projects' ? 'data-active' : '' }}>{{ 'nav.projects'|trans }}</a>
+                <a class="pb-1 border-b-2 transition-all duration-300 {{ r == 'app_about' ? 'text-white border-accent' : 'text-white/80 border-transparent hover:border-accent hover:text-accent' }}" href="{{ path('app_about') }}" data-nav-target="link" {{ r == 'app_about' ? 'data-active' : '' }}>{{ 'nav.about'|trans }}</a>
+                <a class="pb-1 border-b-2 transition-all duration-300 {{ r == 'app_contact' ? 'text-white border-accent' : 'text-white/80 border-transparent hover:border-accent hover:text-accent' }}" href="{{ path('app_contact') }}" data-nav-target="link" {{ r == 'app_contact' ? 'data-active' : '' }}>{{ 'nav.contact'|trans }}</a>
             </div>
 
-            {# CTA Button #}
+            {# CTA + Language Switcher #}
             <div class="flex items-center gap-4">
-                <a class="bg-primary hover:bg-opacity-90 text-white px-6 py-3 rounded text-sm font-bold transition-all uppercase tracking-wider"
+                {# Locale Switcher #}
+                <div class="flex items-center gap-1 text-xs font-bold uppercase tracking-wider">
+                    {% if app.request.locale == 'fr' %}
+                        <span class="text-accent">FR</span>
+                        <span class="text-white/40 transition-colors duration-300" data-nav-target="localeSep">|</span>
+                        <a href="{{ path('app_switch_locale', {locale: 'en'}) }}" class="text-white/60 hover:text-accent transition-colors duration-300" data-nav-target="localeInactive">EN</a>
+                    {% else %}
+                        <a href="{{ path('app_switch_locale', {locale: 'fr'}) }}" class="text-white/60 hover:text-accent transition-colors duration-300" data-nav-target="localeInactive">FR</a>
+                        <span class="text-white/40 transition-colors duration-300" data-nav-target="localeSep">|</span>
+                        <span class="text-accent">EN</span>
+                    {% endif %}
+                </div>
+
+                <a class="bg-primary hover:bg-opacity-90 text-white px-6 py-3 rounded text-sm font-bold transition-all transition-colors duration-300 uppercase tracking-wider"
                    href="{{ path('app_quote') }}">
-                    Request a Quote
+                    {{ 'nav.request_quote'|trans }}
                 </a>
             </div>
         </div>

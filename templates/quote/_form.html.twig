@@ -1,8 +1,8 @@
 {# Quote — Multi-step form with service selection, project details, contact info #}
 {% set services = [
-    { icon: 'conveyor_belt', title: 'Materials Supply', description: 'Basalt, Sand, Laterite delivery' },
-    { icon: 'precision_manufacturing', title: 'Equipment Rental', description: 'Excavators, Graders, Loaders' },
-    { icon: 'home_repair_service', title: 'Both Services', description: 'Full project logistics & supply' },
+    { icon: 'conveyor_belt', title: 'quote.form.materials_supply'|trans, description: 'quote.form.materials_supply_desc'|trans },
+    { icon: 'precision_manufacturing', title: 'quote.form.equipment_rental'|trans, description: 'quote.form.equipment_rental_desc'|trans },
+    { icon: 'home_repair_service', title: 'quote.form.both_services'|trans, description: 'quote.form.both_services_desc'|trans },
 ] %}
 
 {% set regions = [
@@ -20,7 +20,7 @@
                     <form action="#" method="post" class="space-y-8">
                         {# Step 1 — Service Category #}
                         <div>
-                            <h3 class="text-2xl font-bold text-primary mb-8">Select Service Category</h3>
+                            <h3 class="text-2xl font-bold text-primary mb-8">{{ 'quote.form.select_service'|trans }}</h3>
                             <div class="grid md:grid-cols-3 gap-6">
                                 {% for service in services %}
                                     <label class="card-selection border-2 border-gray-100 p-6 rounded text-left transition-all cursor-pointer block">
@@ -39,19 +39,19 @@
                         {# Step 2 — Project Details #}
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="space-y-2">
-                                <label for="quote_region" class="block text-sm font-bold text-primary uppercase tracking-wide">Project Location</label>
+                                <label for="quote_region" class="block text-sm font-bold text-primary uppercase tracking-wide">{{ 'quote.form.project_location'|trans }}</label>
                                 <select id="quote_region"
                                         name="region"
                                         required
                                         class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent text-gray-600">
-                                    <option value="">Select Senegalese Region</option>
+                                    <option value="">{{ 'quote.form.select_region'|trans }}</option>
                                     {% for region in regions %}
                                         <option value="{{ region }}">{{ region }}</option>
                                     {% endfor %}
                                 </select>
                             </div>
                             <div class="space-y-2">
-                                <label for="quote_date" class="block text-sm font-bold text-primary uppercase tracking-wide">Estimated Start Date</label>
+                                <label for="quote_date" class="block text-sm font-bold text-primary uppercase tracking-wide">{{ 'quote.form.start_date'|trans }}</label>
                                 <input id="quote_date"
                                        name="start_date"
                                        type="date"
@@ -60,40 +60,40 @@
                         </div>
 
                         <div class="space-y-2">
-                            <label for="quote_requirements" class="block text-sm font-bold text-primary uppercase tracking-wide">Requirements (Quantity/Type)</label>
+                            <label for="quote_requirements" class="block text-sm font-bold text-primary uppercase tracking-wide">{{ 'quote.form.requirements'|trans }}</label>
                             <textarea id="quote_requirements"
                                       name="requirements"
                                       rows="4"
                                       required
                                       class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
-                                      placeholder="Describe the materials or machinery needed (e.g., 500 tons of 0/31.5 Basalt, 2x 20T Excavators for 3 months)"></textarea>
+                                      placeholder="{{ 'quote.form.requirements_placeholder'|trans }}"></textarea>
                         </div>
 
                         {# Step 3 — Contact Information #}
                         <div class="pt-8 border-t border-gray-100">
-                            <h3 class="text-xl font-bold text-primary mb-6">Contact Information</h3>
+                            <h3 class="text-xl font-bold text-primary mb-6">{{ 'quote.form.contact_info'|trans }}</h3>
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
-                                    <label for="quote_company" class="block text-sm font-bold text-primary uppercase tracking-wide">Company Name</label>
+                                    <label for="quote_company" class="block text-sm font-bold text-primary uppercase tracking-wide">{{ 'quote.form.company_name'|trans }}</label>
                                     <input id="quote_company"
                                            name="company"
                                            type="text"
                                            autocomplete="organization"
                                            class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
-                                           placeholder="Enter company name">
+                                           placeholder="{{ 'quote.form.company_placeholder'|trans }}">
                                 </div>
                                 <div class="space-y-2">
-                                    <label for="quote_name" class="block text-sm font-bold text-primary uppercase tracking-wide">Contact Person</label>
+                                    <label for="quote_name" class="block text-sm font-bold text-primary uppercase tracking-wide">{{ 'quote.form.contact_person'|trans }}</label>
                                     <input id="quote_name"
                                            name="contact_person"
                                            type="text"
                                            autocomplete="name"
                                            required
                                            class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
-                                           placeholder="Full name">
+                                           placeholder="{{ 'quote.form.contact_placeholder'|trans }}">
                                 </div>
                                 <div class="space-y-2">
-                                    <label for="quote_phone" class="block text-sm font-bold text-primary uppercase tracking-wide">Phone Number</label>
+                                    <label for="quote_phone" class="block text-sm font-bold text-primary uppercase tracking-wide">{{ 'quote.form.phone_number'|trans }}</label>
                                     <input id="quote_phone"
                                            name="phone"
                                            type="tel"
@@ -103,7 +103,7 @@
                                            placeholder="+221 ...">
                                 </div>
                                 <div class="space-y-2">
-                                    <label for="quote_email" class="block text-sm font-bold text-primary uppercase tracking-wide">Email Address</label>
+                                    <label for="quote_email" class="block text-sm font-bold text-primary uppercase tracking-wide">{{ 'quote.form.email_address'|trans }}</label>
                                     <input id="quote_email"
                                            name="email"
                                            type="email"
@@ -119,10 +119,10 @@
                         <div class="pt-6">
                             <button type="submit"
                                     class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-5 rounded transition-all uppercase tracking-widest text-lg shadow-lg">
-                                Submit Request
+                                {{ 'quote.form.submit'|trans }}
                             </button>
                             <p class="text-center text-gray-400 text-xs mt-4 italic">
-                                By submitting, you agree to our Terms of Service and Privacy Policy.
+                                {{ 'quote.form.legal'|trans }}
                             </p>
                         </div>
                     </form>

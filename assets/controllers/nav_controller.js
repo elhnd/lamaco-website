@@ -7,7 +7,7 @@ import { Controller } from '@hotwired/stimulus';
  * Transitions link colors from white to dark on scroll.
  */
 export default class extends Controller {
-    static targets = ['logoLight', 'logoPrincipal', 'link'];
+    static targets = ['logoLight', 'logoPrincipal', 'link', 'localeSep', 'localeInactive'];
 
     connect() {
         this._onScroll = this._handleScroll.bind(this);
@@ -30,9 +30,25 @@ export default class extends Controller {
             if (this.hasLogoLightTarget) this.logoLightTarget.classList.add('hidden');
             if (this.hasLogoPrincipalTarget) this.logoPrincipalTarget.classList.remove('hidden');
 
+            // Nav links — active links get primary color, inactive get gray
             this.linkTargets.forEach((link) => {
-                link.classList.remove('text-white', 'text-white/80');
-                link.classList.add('text-gray-600', 'dark:text-gray-400');
+                if (link.hasAttribute('data-active')) {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-primary');
+                } else {
+                    link.classList.remove('text-white/80');
+                    link.classList.add('text-gray-600');
+                }
+            });
+
+            // Locale switcher — separator and inactive link
+            this.localeSepTargets.forEach((el) => {
+                el.classList.remove('text-white/40');
+                el.classList.add('text-gray-300');
+            });
+            this.localeInactiveTargets.forEach((el) => {
+                el.classList.remove('text-white/60');
+                el.classList.add('text-gray-500');
             });
         } else {
             this.element.classList.add('nav-transparent');
@@ -42,9 +58,25 @@ export default class extends Controller {
             if (this.hasLogoLightTarget) this.logoLightTarget.classList.remove('hidden');
             if (this.hasLogoPrincipalTarget) this.logoPrincipalTarget.classList.add('hidden');
 
+            // Nav links — restore white tones
             this.linkTargets.forEach((link) => {
-                link.classList.add('text-white', 'text-white/80');
-                link.classList.remove('text-gray-600', 'dark:text-gray-400');
+                if (link.hasAttribute('data-active')) {
+                    link.classList.remove('text-primary');
+                    link.classList.add('text-white');
+                } else {
+                    link.classList.remove('text-gray-600');
+                    link.classList.add('text-white/80');
+                }
+            });
+
+            // Locale switcher — restore white tones
+            this.localeSepTargets.forEach((el) => {
+                el.classList.remove('text-gray-300');
+                el.classList.add('text-white/40');
+            });
+            this.localeInactiveTargets.forEach((el) => {
+                el.classList.remove('text-gray-500');
+                el.classList.add('text-white/60');
             });
         }
     }

@@ -18,21 +18,21 @@
             <span class="font-bold text-sm text-gray-800 uppercase tracking-widest">{{ product.status }}</span>
         </div>
         <div class="h-4 w-px bg-gray-200"></div>
-        <p class="text-sm font-medium text-primary italic">Inquire for Bulk Pricing</p>
+        <p class="text-sm font-medium text-primary italic">{{ 'products.detail.bulk_pricing'|trans }}</p>
     </div>
 
     {# CTA Buttons #}
     <div class="flex flex-col sm:flex-row gap-4">
         <a href="{{ path('app_quote') }}"
            class="flex-1 bg-primary text-white py-5 px-8 rounded font-bold uppercase text-xs tracking-[0.15em] hover:bg-opacity-95 transition-all shadow-lg text-center">
-            Request Quote for this Product
+            {{ 'products.detail.request_quote'|trans }}
         </a>
-        <a href="https://wa.me/221770000000?text={{ ('Hello, I would like to order ' ~ product.name)|url_encode }}"
+        <a href="https://wa.me/221770000000?text={{ ('products.detail.whatsapp_message'|trans ~ product.name)|url_encode }}"
            target="_blank"
            rel="noopener noreferrer"
            class="flex-none bg-accent text-white py-5 px-10 rounded font-bold uppercase text-xs tracking-[0.15em] hover:brightness-105 transition-all flex items-center justify-center gap-2 shadow-lg">
             <span class="material-symbols-outlined text-sm">chat</span>
-            Order via WhatsApp
+            {{ 'products.detail.order_whatsapp'|trans }}
         </a>
     </div>
 
@@ -44,9 +44,9 @@
                  loading="lazy"
                  src="{{ product.projectContext.image }}">
             <div>
-                <h4 class="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Project Context</h4>
+                <h4 class="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">{{ 'products.detail.project_context'|trans }}</h4>
                 <p class="text-sm font-bold text-primary">
-                    Recently used in:
+                    {{ 'products.detail.recently_used'|trans }}
                     <span class="underline underline-offset-4 decoration-accent">{{ product.projectContext.name }}</span>
                 </p>
             </div>

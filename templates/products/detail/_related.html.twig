@@ -2,7 +2,7 @@
 {% if relatedProducts|length > 0 %}
 <section data-controller="scroll-reveal">
     <div class="flex items-center justify-between mb-10 opacity-0" data-scroll-reveal-target="item">
-        <h2 class="text-2xl font-bold text-primary uppercase tracking-wider">Related Products</h2>
+        <h2 class="text-2xl font-bold text-primary uppercase tracking-wider">{{ 'products.detail.related_products'|trans }}</h2>
     </div>
     <div class="flex gap-8 overflow-x-auto pb-8 custom-scrollbar scrollbar-hide opacity-0"
          data-scroll-reveal-target="item">
@@ -17,7 +17,7 @@
                     <span class="text-[10px] font-bold text-accent uppercase tracking-[0.2em] mb-2 block">{{ related.category }}</span>
                     <h3 class="text-xl font-bold text-primary mb-4">{{ related.name }}</h3>
                     <span class="text-xs font-bold text-primary border-b-2 border-accent pb-1 uppercase tracking-widest group-hover:border-primary transition-all">
-                        View Details
+                        {{ 'products.detail.view_details'|trans }}
                     </span>
                 </div>
             </a>
