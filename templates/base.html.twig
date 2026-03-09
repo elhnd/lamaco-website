@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}LAMACO Construction | Building Senegal's Future{% endblock %}</title>
+        <link rel="icon" type="image/svg+xml" href="{{ asset('images/icon/principal.svg') }}">
+        <link rel="icon" type="image/png" href="{{ asset('images/icon/principal.png') }}">
+        <meta name="description" content="{% block meta_description %}LAMACO is the premier partner for high-grade construction materials, heavy equipment logistics, and site management across Senegal and West Africa.{% endblock %}">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="{{ app.request.uri }}">
+
+        {# Turbo: disable preview to avoid flash-then-reanimate on navigation #}
+        <meta name="turbo-cache-control" content="no-preview">
+
+        {# Open Graph #}
+        <meta property="og:title" content="{% block og_title %}LAMACO Construction | Building Senegal's Future{% endblock %}">
+        <meta property="og:description" content="{% block og_description %}Premier partner for construction materials, heavy equipment and site logistics in Senegal.{% endblock %}">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="en">
+
+        {# Preconnect for performance #}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        {# Fonts: Montserrat (headings) + DM Sans (body) + Material Symbols #}
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+        {# Tailwind CSS via CDN + plugins #}
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#1F4E79",
+                            accent: "#F5A623",
+                            "background-light": "#FAFAFA",
+                            "background-dark": "#121212",
+                            "neutral-dark": "#3C3C3C",
+                        },
+                        fontFamily: {
+                            display: ["Montserrat", "sans-serif"],
+                            body: ["DM Sans", "sans-serif"],
+                        },
+                        borderRadius: {
+                            DEFAULT: "4px",
+                        },
+                    },
+                },
+            };
+        </script>
+
+        {% block stylesheets %}{% endblock %}
+
+        {% block javascripts %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body class="bg-background-light dark:bg-background-dark text-neutral-dark dark:text-gray-300">
+        {% block header %}
+            {% include 'partials/_navbar.html.twig' %}
+        {% endblock %}
+
+        <main id="main-content">
+            {% block body %}{% endblock %}
+        </main>
+
+        {% block footer %}
+            {% include 'partials/_footer.html.twig' %}
+        {% endblock %}
+
+        {# Floating WhatsApp Button #}
+        {% include 'partials/_whatsapp_fab.html.twig' %}
+
+        {# Three.js Construction Vehicles — both sides, all pages #}
+        <div data-controller="vehicles"></div>
+    </body>
+</html>

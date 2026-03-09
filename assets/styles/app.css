@@ -1,0 +1,254 @@
+/* ===================================================================
+   LAMACO — Global Styles
+   Brand: Primary #1F4E79 | Accent #F5A623 | Light #FAFAFA | Dark #3C3C3C
+   Fonts: Montserrat (headings) + DM Sans (body)
+   =================================================================== */
+
+/* --- Base Typography --- */
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- Material Symbols --- */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* --- Hero Gradient Overlay --- */
+.hero-gradient {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url('https://images.unsplash.com/photo-1541888946425-d81bb19480c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- Trust Partner Logos --- */
+.trust-logo {
+    filter: grayscale(100%);
+    opacity: 0.35;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    width: auto;
+    object-fit: contain;
+}
+
+.trust-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* --- Navbar Transitions --- */
+#main-nav {
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+}
+
+.nav-transparent {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/* --- Scroll Reveal: CSS-based initial hidden state ---
+   Hides elements IMMEDIATELY on HTML parse (before JS runs)
+   so there is zero flash-of-content before animations fire.
+   Revealed elements (Turbo cache / after animation) stay visible. */
+[data-scroll-reveal-target="item"]:not([data-revealed]) {
+    opacity: 0 !important;
+    transform: translateY(30px);
+}
+
+/* --- Scroll Reveal Animation Keyframes --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* --- Smooth Scroll Behavior --- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Products Page: Industrial Hero Overlay --- */
+.hero-industrial-overlay {
+    background:
+        linear-gradient(rgba(31, 78, 121, 0.85), rgba(31, 78, 121, 0.85)),
+        url('https://images.unsplash.com/photo-1517646331032-9e8563c520a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- About Page: Hero Overlay --- */
+.hero-about-overlay {
+    background:
+        linear-gradient(rgba(31, 78, 121, 0.85), rgba(31, 78, 121, 0.85)),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- Contact Page: Hero Overlay --- */
+.hero-contact-overlay {
+    background:
+        linear-gradient(rgba(31, 78, 121, 0.9), rgba(31, 78, 121, 0.9)),
+        url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- Quote Page: Hero Overlay --- */
+.hero-quote-overlay {
+    background:
+        linear-gradient(rgba(31, 78, 121, 0.88), rgba(31, 78, 121, 0.88)),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- Quote Page: Service Card Selection --- */
+.card-selection:hover {
+    border-color: #F5A623;
+    background-color: rgba(245, 166, 35, 0.05);
+}
+
+.card-selection:has(input:checked) {
+    border-color: #F5A623;
+    background-color: rgba(245, 166, 35, 0.05);
+    box-shadow: 0 0 0 1px #F5A623;
+}
+
+/* --- Products Page: Product Card Image --- */
+.product-card-img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card-img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Projects Page: Hero Overlay --- */
+.hero-projects-overlay {
+    background:
+        linear-gradient(rgba(31, 78, 121, 0.85), rgba(31, 78, 121, 0.85)),
+        url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- Projects Page: Card Gradient & Parallax --- */
+.project-card-gradient {
+    background: linear-gradient(to top, rgba(31, 78, 121, 0.9) 0%, rgba(31, 78, 121, 0.4) 40%, transparent 100%);
+}
+
+.parallax-img {
+    transition: transform 0.5s ease-out;
+    height: 110%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-card:hover .parallax-img {
+    transform: translateY(-5%);
+}
+
+/* --- Project Detail: Hero Overlay --- */
+.hero-project-detail-overlay {
+    background:
+        linear-gradient(rgba(31, 78, 121, 0.85), rgba(31, 78, 121, 0.85)),
+        url('https://images.unsplash.com/photo-1590487949411-27f1dc5e60d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- Project Detail: Masonry Gallery Grid --- */
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 200px;
+    gap: 1.5rem;
+}
+
+.masonry-item-tall {
+    grid-row: span 2;
+}
+
+.masonry-item-wide {
+    grid-column: span 2;
+}
+
+/* --- Product Detail: Hero Overlay --- */
+.hero-product-detail-overlay {
+    background:
+        linear-gradient(rgba(31, 78, 121, 0.88), rgba(31, 78, 121, 0.88)),
+        url('https://images.unsplash.com/photo-1517646331032-9e8563c520a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- Product Detail: Zoom Container --- */
+.zoom-container:hover img {
+    transform: scale(1.5);
+}
+
+.zoom-container img {
+    transition: transform 0.5s ease-in-out;
+    cursor: zoom-in;
+}
+
+/* --- Product Detail: Custom Scrollbar --- */
+.custom-scrollbar::-webkit-scrollbar {
+    height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #1F4E79;
+    border-radius: 2px;
+}
+
+/* --- Hide scrollbar for catalog nav --- */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- Focus Styles for Accessibility --- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #F5A623;
+    outline-offset: 2px;
+}

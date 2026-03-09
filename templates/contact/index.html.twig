@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact Us | LAMACO Construction &amp; Logistics Senegal{% endblock %}
+{% block meta_description %}Contact LAMACO for construction materials, heavy equipment rental, and logistics in Senegal. Get a quote or reach us via phone, email, or WhatsApp.{% endblock %}
+{% block og_title %}Contact Us | LAMACO Construction &amp; Logistics{% endblock %}
+{% block og_description %}Reach out to LAMACO for quotes, consultations, or equipment inquiries. Our team is ready to support your next project in Senegal.{% endblock %}
+
+{% block header %}
+    {% include 'partials/_navbar.html.twig' %}
+    {% include 'partials/_hero.html.twig' with {
+        hero_overlay: 'hero-contact-overlay',
+        hero_title: 'Get in Touch',
+        hero_description: 'Our team is ready to support your next major infrastructure project in Senegal. Reach out to us for quotes, consultations, or equipment inquiries.',
+        hero_accent_line: true,
+    } %}
+{% endblock %}
+
+{% block body %}
+    {% include 'contact/_info_cards.html.twig' %}
+    {% include 'partials/_contact_form.html.twig' %}
+    {% include 'contact/_map.html.twig' %}
+{% endblock %}

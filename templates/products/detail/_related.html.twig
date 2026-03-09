@@ -1,0 +1,27 @@
+{# Product detail — Related Products horizontal scroll #}
+{% if relatedProducts|length > 0 %}
+<section data-controller="scroll-reveal">
+    <div class="flex items-center justify-between mb-10 opacity-0" data-scroll-reveal-target="item">
+        <h2 class="text-2xl font-bold text-primary uppercase tracking-wider">Related Products</h2>
+    </div>
+    <div class="flex gap-8 overflow-x-auto pb-8 custom-scrollbar scrollbar-hide opacity-0"
+         data-scroll-reveal-target="item">
+        {% for related in relatedProducts %}
+            <a href="{{ path('app_products_show', {slug: related.slug}) }}"
+               class="min-w-[300px] flex-1 bg-white border border-gray-100 group shadow-sm hover:shadow-lg transition-all block">
+                <img alt="{{ related.name }}"
+                     class="w-full h-48 object-cover"
+                     loading="lazy"
+                     src="{{ related.mainImage }}">
+                <div class="p-6">
+                    <span class="text-[10px] font-bold text-accent uppercase tracking-[0.2em] mb-2 block">{{ related.category }}</span>
+                    <h3 class="text-xl font-bold text-primary mb-4">{{ related.name }}</h3>
+                    <span class="text-xs font-bold text-primary border-b-2 border-accent pb-1 uppercase tracking-widest group-hover:border-primary transition-all">
+                        View Details
+                    </span>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}

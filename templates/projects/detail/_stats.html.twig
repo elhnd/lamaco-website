@@ -1,0 +1,22 @@
+{# Project Stats Bar — Key metrics below hero #}
+<div class="bg-primary text-white py-8 relative z-10 -mt-10 shadow-2xl mx-4 lg:mx-auto max-w-7xl rounded-lg"
+     data-controller="scroll-reveal">
+    <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+        <div class="px-8 text-center md:text-left py-4 opacity-0" data-scroll-reveal-target="item">
+            <p class="text-accent text-xs font-bold uppercase tracking-widest mb-1">Duration</p>
+            <p class="text-xl font-bold">{{ project.duration }}</p>
+        </div>
+        <div class="px-8 text-center md:text-left py-4 opacity-0" data-scroll-reveal-target="item">
+            <p class="text-accent text-xs font-bold uppercase tracking-widest mb-1">Category</p>
+            <p class="text-xl font-bold">{{ project.category }}</p>
+        </div>
+        <div class="px-8 text-center md:text-left py-4 opacity-0" data-scroll-reveal-target="item">
+            <p class="text-accent text-xs font-bold uppercase tracking-widest mb-1">Location</p>
+            <p class="text-xl font-bold">{{ project.location }}</p>
+        </div>
+        <div class="px-8 text-center md:text-left py-4 opacity-0" data-scroll-reveal-target="item">
+            <p class="text-accent text-xs font-bold uppercase tracking-widest mb-1">Status</p>
+            <p class="text-xl font-bold">{{ project.status }}</p>
+        </div>
+    </div>
+</div>

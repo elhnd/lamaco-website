@@ -1,0 +1,83 @@
+{#
+    Shared Hero Component — Configurable overlay banner
+    ====================================================
+    Include with variables to customize per page:
+
+    Required:
+      - hero_overlay   (string)  CSS class for background overlay (e.g. 'hero-industrial-overlay')
+      - hero_title     (string)  Main heading text
+
+    Optional:
+      - hero_subtitle      (string|null)  Small accent text above the title
+      - hero_description   (string|null)  Paragraph below the title
+      - hero_cta           (array|null)   CTA buttons: [{text, href}]
+      - hero_badges        (array|null)   Badge pills: [{text, style}]  style = 'accent' | 'ghost'
+      - hero_accent_line   (bool)         Show gold accent line below content (default: false)
+
+    Usage:
+      {% include 'partials/_hero.html.twig' with {
+          hero_overlay: 'hero-industrial-overlay',
+          hero_title: 'Our Materials & Equipment',
+          hero_description: 'Reliable supply chains for …',
+          hero_cta: [{text: 'Explore Catalog', href: '#materials'}],
+      } %}
+#}
+<header class="{{ hero_overlay }} relative py-28 min-h-[400px] flex items-center"
+        role="banner"
+        data-controller="scroll-reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
+
+        {# Subtitle / Location badge #}
+        {% if hero_subtitle is defined and hero_subtitle %}
+            <span class="text-accent font-bold uppercase tracking-[0.2em] text-sm mb-4 block opacity-0"
+                  data-scroll-reveal-target="item">
+                {{ hero_subtitle }}
+            </span>
+        {% endif %}
+
+        {# Main title #}
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 font-display uppercase tracking-tight opacity-0"
+            data-scroll-reveal-target="item">
+            {{ hero_title }}
+        </h1>
+
+        {# Description #}
+        {% if hero_description is defined and hero_description %}
+            <p class="text-gray-100 text-lg md:text-xl max-w-3xl mx-auto font-light leading-relaxed opacity-0"
+               data-scroll-reveal-target="item">
+                {{ hero_description }}
+            </p>
+        {% endif %}
+
+        {# Badges (e.g. category + status on project detail) #}
+        {% if hero_badges is defined and hero_badges %}
+            <div class="flex justify-center gap-4 mt-4 opacity-0" data-scroll-reveal-target="item">
+                {% for badge in hero_badges %}
+                    {% if badge.style|default('accent') == 'accent' %}
+                        <span class="bg-accent text-white px-4 py-1 rounded text-xs font-bold uppercase">{{ badge.text }}</span>
+                    {% else %}
+                        <span class="bg-white/20 backdrop-blur-sm text-white px-4 py-1 rounded text-xs font-bold uppercase">{{ badge.text }}</span>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {# CTA button(s) #}
+        {% if hero_cta is defined and hero_cta %}
+            <div class="mt-10 flex justify-center gap-4 opacity-0" data-scroll-reveal-target="item">
+                {% for btn in hero_cta %}
+                    <a class="bg-accent text-white px-8 py-4 rounded font-bold uppercase tracking-widest hover:brightness-110 transition-all"
+                       href="{{ btn.href }}">
+                        {{ btn.text }}
+                    </a>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {# Gold accent line #}
+        {% if hero_accent_line is defined and hero_accent_line %}
+            <div class="w-24 h-1 bg-accent mx-auto mt-8 opacity-0" data-scroll-reveal-target="item"></div>
+        {% endif %}
+
+    </div>
+</header>

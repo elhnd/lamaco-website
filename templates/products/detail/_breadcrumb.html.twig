@@ -1,0 +1,15 @@
+{# Breadcrumb navigation for product detail #}
+<div class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="flex text-xs font-medium uppercase tracking-wider text-gray-500 gap-2 items-center"
+             aria-label="Breadcrumb">
+            <a class="hover:text-primary transition-colors" href="{{ path('app_home') }}">Home</a>
+            <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+            <a class="hover:text-primary transition-colors" href="{{ path('app_products_index') }}">Catalog</a>
+            <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+            <a class="hover:text-primary transition-colors" href="{{ path('app_products_index') }}#{{ product.category|lower }}">{{ product.category }}</a>
+            <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+            <span class="text-primary font-bold italic">{{ product.name }}</span>
+        </nav>
+    </div>
+</div>

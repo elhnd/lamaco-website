@@ -1,0 +1,14 @@
+{# Product detail — Key Features / Benefits cards #}
+<section class="grid md:grid-cols-3 gap-12 mb-24 py-12 bg-white rounded-xl shadow-sm border border-gray-100"
+         data-controller="scroll-reveal">
+    {% for feature in product.features %}
+        <div class="text-center px-8 flex flex-col items-center {{ not loop.first and not loop.last ? 'border-x border-gray-100' : '' }} opacity-0"
+             data-scroll-reveal-target="item">
+            <div class="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mb-6 text-primary">
+                <span class="material-symbols-outlined text-3xl">{{ feature.icon }}</span>
+            </div>
+            <h3 class="text-lg font-bold text-primary mb-2 uppercase tracking-wide">{{ feature.title }}</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">{{ feature.description }}</p>
+        </div>
+    {% endfor %}
+</section>

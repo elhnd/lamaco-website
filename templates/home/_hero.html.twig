@@ -1,0 +1,31 @@
+{# Hero Section — Home page header with CTA
+   Uses Stimulus `scroll-reveal` controller for entrance animation
+#}
+<header class="hero-gradient relative h-screen w-full flex items-center justify-center overflow-hidden"
+        role="banner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center"
+         data-controller="scroll-reveal"
+         data-scroll-reveal-class-value="animate-fade-in-up">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-8 font-display opacity-0"
+                data-scroll-reveal-target="item">
+                Building <span class="text-accent">Senegal's</span> Future with Reliability.
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed font-body max-w-2xl mx-auto opacity-0"
+               data-scroll-reveal-target="item">
+                LAMACO is the premier partner for high-grade construction materials, heavy equipment logistics, and site management across West Africa.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center opacity-0"
+                 data-scroll-reveal-target="item">
+                <a class="bg-primary text-white px-12 py-5 rounded font-bold text-center uppercase tracking-widest hover:bg-opacity-90 transition-all text-sm"
+                   href="#services">
+                    Our Services
+                </a>
+                <a class="border-2 border-white text-white hover:bg-white hover:text-primary px-12 py-5 rounded font-bold text-center uppercase tracking-widest transition-all text-sm"
+                   href="#contact">
+                    Get a Quote
+                </a>
+            </div>
+        </div>
+    </div>
+</header>

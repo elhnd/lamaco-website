@@ -1,0 +1,26 @@
+{# Stats Section — Key figures counter bar #}
+<section class="bg-neutral-dark py-16"
+         aria-label="Key statistics"
+         data-controller="scroll-reveal counter">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            {% set stats = [
+                { value: 500, suffix: '+', label: 'Projects Completed' },
+                { value: 50, suffix: '+', label: 'Heavy Units' },
+                { value: 15, suffix: '+', label: 'Years Experience' },
+            ] %}
+            {% for stat in stats %}
+                <div class="{{ loop.index == 2 ? 'border-y md:border-y-0 md:border-x border-gray-700 py-8 md:py-0' : '' }} opacity-0"
+                     data-scroll-reveal-target="item">
+                    <p class="text-accent text-5xl font-bold font-display mb-2"
+                       data-counter-target="number"
+                       data-counter-value="{{ stat.value }}"
+                       data-counter-suffix="{{ stat.suffix }}">
+                        0{{ stat.suffix }}
+                    </p>
+                    <p class="text-gray-400 uppercase tracking-widest text-xs font-bold">{{ stat.label }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

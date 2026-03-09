@@ -1,0 +1,138 @@
+{# Quote — Multi-step form with service selection, project details, contact info #}
+{% set services = [
+    { icon: 'conveyor_belt', title: 'Materials Supply', description: 'Basalt, Sand, Laterite delivery' },
+    { icon: 'precision_manufacturing', title: 'Equipment Rental', description: 'Excavators, Graders, Loaders' },
+    { icon: 'home_repair_service', title: 'Both Services', description: 'Full project logistics & supply' },
+] %}
+
+{% set regions = [
+    'Dakar', 'Thiès', 'Saint-Louis', 'Diourbel', 'Kaolack',
+    'Ziguinchor', 'Kolda', 'Fatick', 'Matam', 'Kaffrine',
+    'Kédougou', 'Sédhiou', 'Tambacounda', 'Louga',
+] %}
+
+<section class="py-16" data-controller="scroll-reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-3 gap-12">
+            {# ── Left column: Form ── #}
+            <div class="lg:col-span-2 opacity-0" data-scroll-reveal-target="item">
+                <div class="bg-white p-8 md:p-12 rounded shadow-sm border border-gray-100">
+                    <form action="#" method="post" class="space-y-8">
+                        {# Step 1 — Service Category #}
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary mb-8">Select Service Category</h3>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                {% for service in services %}
+                                    <label class="card-selection border-2 border-gray-100 p-6 rounded text-left transition-all cursor-pointer block">
+                                        <input type="radio"
+                                               name="service_category"
+                                               value="{{ service.title }}"
+                                               class="sr-only peer">
+                                        <span class="material-symbols-outlined text-accent text-3xl mb-4 block">{{ service.icon }}</span>
+                                        <h4 class="font-bold text-primary mb-2">{{ service.title }}</h4>
+                                        <p class="text-xs text-gray-500">{{ service.description }}</p>
+                                    </label>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        {# Step 2 — Project Details #}
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="quote_region" class="block text-sm font-bold text-primary uppercase tracking-wide">Project Location</label>
+                                <select id="quote_region"
+                                        name="region"
+                                        required
+                                        class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent text-gray-600">
+                                    <option value="">Select Senegalese Region</option>
+                                    {% for region in regions %}
+                                        <option value="{{ region }}">{{ region }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label for="quote_date" class="block text-sm font-bold text-primary uppercase tracking-wide">Estimated Start Date</label>
+                                <input id="quote_date"
+                                       name="start_date"
+                                       type="date"
+                                       class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="quote_requirements" class="block text-sm font-bold text-primary uppercase tracking-wide">Requirements (Quantity/Type)</label>
+                            <textarea id="quote_requirements"
+                                      name="requirements"
+                                      rows="4"
+                                      required
+                                      class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
+                                      placeholder="Describe the materials or machinery needed (e.g., 500 tons of 0/31.5 Basalt, 2x 20T Excavators for 3 months)"></textarea>
+                        </div>
+
+                        {# Step 3 — Contact Information #}
+                        <div class="pt-8 border-t border-gray-100">
+                            <h3 class="text-xl font-bold text-primary mb-6">Contact Information</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label for="quote_company" class="block text-sm font-bold text-primary uppercase tracking-wide">Company Name</label>
+                                    <input id="quote_company"
+                                           name="company"
+                                           type="text"
+                                           autocomplete="organization"
+                                           class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
+                                           placeholder="Enter company name">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="quote_name" class="block text-sm font-bold text-primary uppercase tracking-wide">Contact Person</label>
+                                    <input id="quote_name"
+                                           name="contact_person"
+                                           type="text"
+                                           autocomplete="name"
+                                           required
+                                           class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
+                                           placeholder="Full name">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="quote_phone" class="block text-sm font-bold text-primary uppercase tracking-wide">Phone Number</label>
+                                    <input id="quote_phone"
+                                           name="phone"
+                                           type="tel"
+                                           autocomplete="tel"
+                                           required
+                                           class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
+                                           placeholder="+221 ...">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="quote_email" class="block text-sm font-bold text-primary uppercase tracking-wide">Email Address</label>
+                                    <input id="quote_email"
+                                           name="email"
+                                           type="email"
+                                           autocomplete="email"
+                                           required
+                                           class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
+                                           placeholder="email@company.com">
+                                </div>
+                            </div>
+                        </div>
+
+                        {# Submit #}
+                        <div class="pt-6">
+                            <button type="submit"
+                                    class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-5 rounded transition-all uppercase tracking-widest text-lg shadow-lg">
+                                Submit Request
+                            </button>
+                            <p class="text-center text-gray-400 text-xs mt-4 italic">
+                                By submitting, you agree to our Terms of Service and Privacy Policy.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            {# ── Right column: Sidebar ── #}
+            <div class="lg:col-span-1 space-y-8 opacity-0" data-scroll-reveal-target="item">
+                {% include 'quote/_sidebar.html.twig' %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,46 @@
+{# Heavy Equipment Rental Section — Feature card with image #}
+<section id="equipment" aria-labelledby="equipment-heading" data-controller="scroll-reveal">
+    <div class="flex items-center gap-4 mb-10 opacity-0" data-scroll-reveal-target="item">
+        <h2 id="equipment-heading" class="text-3xl font-bold text-primary font-display">Heavy Equipment Rental</h2>
+        <div class="h-1 flex-grow bg-gray-200" aria-hidden="true"></div>
+    </div>
+
+    <div class="bg-white shadow-2xl rounded-xl overflow-hidden flex flex-col lg:flex-row opacity-0"
+         data-scroll-reveal-target="item">
+        <div class="lg:w-1/2 relative">
+            <img alt="Professional excavator available for hire at LAMACO"
+                 class="w-full h-full object-cover min-h-[400px]"
+                 loading="lazy"
+                 width="640"
+                 height="400"
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuChXRkxSBFm8rzaYpM3mdBJfjmGJCL3nCqteUuRt9xmlxo3UEMZ1gNMakAcHVQ8IVGduAqTIpBExP5RlQwnwsFroaWqr2zxaUtFfmRcB77iVefMXtGeGcQSeUJoxMIYG77eWSMoCW_6ugGOGhjkljGOlZEG1nJtJZqv8jiLrZTbp9ITCAeRDi0Lx-4vLuSLCmlMhYpF9emcWwlCI2aCCiBEvAJHTAYu6ctBhbqiOsXP59d9mCnq-Owrbw3GM3OBWcWxTXd9sBKIMAE">
+            <div class="absolute top-6 left-6 bg-accent text-white px-4 py-2 font-bold text-xs uppercase tracking-widest rounded shadow-lg">
+                Available for Hire
+            </div>
+        </div>
+        <div class="lg:w-1/2 p-12 flex flex-col justify-center">
+            <h3 class="text-3xl font-bold text-primary mb-4">Professional Excavator Rental</h3>
+            <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                High-performance excavators ready for earthmoving, trenching, and site clearing across Senegal. Maintained to the highest industrial standards with experienced operators available.
+            </p>
+            <ul class="space-y-4 mb-10 text-gray-700">
+                <li class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-accent" aria-hidden="true">check_circle</span>
+                    24/7 Support &amp; Maintenance
+                </li>
+                <li class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-accent" aria-hidden="true">check_circle</span>
+                    Flexible Rental Terms (Daily/Monthly)
+                </li>
+                <li class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-accent" aria-hidden="true">check_circle</span>
+                    On-site Delivery &amp; Setup
+                </li>
+            </ul>
+            <a class="bg-primary text-white text-center py-4 rounded font-bold uppercase tracking-widest hover:bg-primary/90 transition-all"
+               href="{{ path('app_quote') }}">
+                Check Availability
+            </a>
+        </div>
+    </div>
+</section>

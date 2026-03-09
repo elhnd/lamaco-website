@@ -1,0 +1,46 @@
+{# Sand Varieties Section — Horizontal product cards #}
+<section id="sand" aria-labelledby="sand-heading" data-controller="scroll-reveal">
+    <div class="flex items-center gap-4 mb-10 opacity-0" data-scroll-reveal-target="item">
+        <h2 id="sand-heading" class="text-3xl font-bold text-primary font-display">Sand Varieties</h2>
+        <div class="h-1 flex-grow bg-gray-200" aria-hidden="true"></div>
+        <span class="bg-accent/10 text-accent px-3 py-1 text-xs font-bold uppercase rounded">Masonry &amp; Foundations</span>
+    </div>
+
+    {% set sand_products = [
+        {
+            name: 'Tasseb Sand',
+            slug: 'tasseb-sand',
+            alt: 'Tasseb Sand — Fine high-purity sand for masonry',
+            description: 'Fine, high-purity sand specifically selected for professional masonry and plastering work.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDiLXsqC_CHqdj4vRFGSIAtifEnDe0pYtypqOe9-McynDc6c2TnCxmJv82nhM7eDis8nOvqMDauVmO0f-XRLmKDpZ7dH7Rq-3cs4F0E0YYCf3mg7If-kodK5Ph5EMSPYdoWQF6fKcVrXfoeCLxDX5Kmy02gSA-AuFBRPJjhMu3WJti1Vw-vusHGj2-u1GolszL6-8Yg4nRZM_BDn_MuGG_LzHEQQDWSBgYxb_AQL8ldhY_UL738uKZ7Kz1IaTJ2YhZC-mI7zbmbQMk',
+        },
+        {
+            name: 'Dakar Sand',
+            slug: null,
+            alt: 'Dakar Sand — Coarse durable sand for foundations',
+            description: 'Coarse, durable sand engineered for solid foundations and heavy masonry structural components.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCrdZruw9pdcDz0UKj-BBkn8RlT0uZKK9cmeVX1Hj4szBkDAPRjXb6wNm-SNFVx-WmC1CIOBkbAb_KYk976vdOWXG1iHwsoAfUvFHvPxES_NrwGP8PRag3ied27YEDkMMj3lZMUVPUEhht1cp5ehx7Q10GRJt6uzB5Osfpx3qoJyfM0W7Br7Rl1o2D4kZH2UN-b1_1Io3W2AQjwu-b3-vKkUTKY7TryOjSZv1TX-iId3CjvHwpK1N0_uZan3RT8ISNWIp7naCDr_ck',
+        },
+    ] %}
+
+    <div class="grid md:grid-cols-2 gap-8">
+        {% for product in sand_products %}
+            <article class="bg-white flex flex-col md:flex-row shadow-sm border border-gray-100 overflow-hidden opacity-0"
+                     data-scroll-reveal-target="item">
+                <img alt="{{ product.alt }}"
+                     class="w-full md:w-1/2 h-64 object-cover"
+                     loading="lazy"
+                     width="400"
+                     height="256"
+                     src="{{ product.image }}">
+                <div class="p-8 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-primary mb-2">{{ product.name }}</h3>
+                    <p class="text-gray-600 mb-6">{{ product.description }}</p>
+                    <a href="{{ product.slug ? path('app_products_show', {slug: product.slug}) : path('app_quote') }}" class="inline-block bg-primary text-white px-8 py-3 font-bold uppercase text-xs tracking-widest hover:bg-primary/90 transition-colors self-start text-center">
+                        {{ product.slug ? 'Order Now' : 'Request Quote' }}
+                    </a>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+</section>

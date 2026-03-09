@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ project.title }} | Project Details | LAMACO Senegal{% endblock %}
+{% block meta_description %}{{ project.narrative[0]|slice(0, 160) }}{% endblock %}
+
+{% block body %}
+    {% include 'partials/_hero.html.twig' with {
+        hero_overlay: 'hero-project-detail-overlay',
+        hero_subtitle: project.location,
+        hero_title: project.title,
+        hero_badges: [
+            {text: project.category, style: 'accent'},
+            {text: project.status ~ ' ' ~ project.year, style: 'ghost'},
+        ],
+    } %}
+    {% include 'projects/detail/_stats.html.twig' %}
+    {% include 'projects/detail/_narrative.html.twig' %}
+    {% include 'projects/detail/_gallery.html.twig' %}
+    {% include 'projects/detail/_resources.html.twig' %}
+    {% include 'projects/detail/_testimonial.html.twig' %}
+    {% include 'partials/_cta_section.html.twig' with {
+        cta_style: 'minimal',
+        cta_title: 'Inspired by this project?',
+        cta_buttons: [
+            {text: 'Get a Similar Quote', href: path('app_quote'), style: 'primary', icon: 'request_quote'},
+            {text: 'Chat with an Expert', href: 'https://wa.me/221770000000', style: 'whatsapp'},
+        ],
+    } %}
+{% endblock %}
