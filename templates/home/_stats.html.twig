@@ -5,9 +5,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             {% set stats = [
-                { value: 500, suffix: '+', label: 'Projects Completed' },
-                { value: 50, suffix: '+', label: 'Heavy Units' },
-                { value: 15, suffix: '+', label: 'Years Experience' },
+                { value: 500, suffix: '+', label: 'home.stats.projects_completed'|trans },
+                { value: 50, suffix: '+', label: 'home.stats.heavy_units'|trans },
+                { value: 15, suffix: '+', label: 'home.stats.years_experience'|trans },
             ] %}
             {% for stat in stats %}
                 <div class="{{ loop.index == 2 ? 'border-y md:border-y-0 md:border-x border-gray-700 py-8 md:py-0' : '' }} opacity-0"

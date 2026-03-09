@@ -1,15 +1,15 @@
 {# Quote — Sidebar: Why LAMACO + Project Hubs + Help #}
 {% set benefits = [
-    { icon: 'verified', title: 'Reliability since 2009', description: 'Over a decade of uninterrupted supply to major construction sites across Senegal.' },
-    { icon: 'chat_bubble', title: 'Real-time Support', description: 'Direct WhatsApp assistance for urgent requests and fleet tracking updates.' },
-    { icon: 'high_quality', title: 'Quality Guaranteed', description: 'Materials sourced from premium quarries and machinery maintained to highest standards.' },
+    { icon: 'verified', title: 'quote.sidebar.reliability_title'|trans, description: 'quote.sidebar.reliability_desc'|trans },
+    { icon: 'chat_bubble', title: 'quote.sidebar.support_title'|trans, description: 'quote.sidebar.support_desc'|trans },
+    { icon: 'high_quality', title: 'quote.sidebar.quality_title'|trans, description: 'quote.sidebar.quality_desc'|trans },
 ] %}
 
 {% set project_hubs = ['Dakar Plateau', 'Diamniadio', 'AIBD Airport', 'Thiès', 'Saint-Louis'] %}
 
 {# Why Partner card #}
 <div class="bg-primary p-8 rounded text-white">
-    <h3 class="text-xl font-bold mb-8 font-display border-l-4 border-accent pl-4">Why Partner with LAMACO?</h3>
+    <h3 class="text-xl font-bold mb-8 font-display border-l-4 border-accent pl-4">{{ 'quote.sidebar.why_partner'|trans }}</h3>
     <div class="space-y-8">
         {% for benefit in benefits %}
             <div class="flex items-start gap-4">
@@ -27,7 +27,7 @@
 
 {# Recent Project Hubs #}
 <div class="bg-white p-8 border border-gray-100 rounded">
-    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Recent Project Hubs</p>
+    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">{{ 'quote.sidebar.project_hubs'|trans }}</p>
     <div class="flex flex-wrap gap-2">
         {% for hub in project_hubs %}
             <span class="bg-background-light px-3 py-1 rounded text-xs font-medium text-primary border border-gray-100">{{ hub }}</span>
@@ -37,12 +37,12 @@
 
 {# Help card #}
 <div class="text-center p-6 bg-accent/5 rounded border border-accent/20">
-    <img alt="LAMACO Headquarters"
+    <img alt="{{ 'quote.sidebar.alt_hq'|trans }}"
          class="w-full h-32 object-cover rounded mb-4"
          loading="lazy"
          src="https://lh3.googleusercontent.com/aida-public/AB6AXuATZw85lA-bBx_tJ5sJJuGf1FXuL-wtGpqZj90ZgsWRNuL2TS_q5jzcqOZh6GcFDbTwXt89n8-jRydjxxrKg9dDzbkXeaBYny6VtPU3tDrz-syfUDgJY64peD2CFBlgMmBDIx8UIKXQUkkGvyd2MVnv0GyPdif2SU7irDy_lSbe3AmrQcHBB1v9x2-bAsNgLP5fKE5-w65JbNl2qmT2AZ0EN8qXUoCJMChQ3AN-VqJ4f3aQmJxr6gMF5qSCCKSmKePSDYw3XEDWMKc">
-    <p class="text-sm text-primary font-bold">Need help with this form?</p>
-    <p class="text-xs text-gray-500 mb-4">Our logistics team is ready to assist.</p>
+    <p class="text-sm text-primary font-bold">{{ 'quote.sidebar.need_help'|trans }}</p>
+    <p class="text-xs text-gray-500 mb-4">{{ 'quote.sidebar.team_ready'|trans }}</p>
     <a class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest hover:underline"
        href="tel:+221338000000">
         <span class="material-symbols-outlined text-sm">call</span> +221 33 800 00 00

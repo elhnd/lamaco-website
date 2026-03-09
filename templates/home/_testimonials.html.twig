@@ -6,17 +6,17 @@
          data-controller="scroll-reveal testimonial">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 opacity-0" data-scroll-reveal-target="item">
-            <span class="text-[#F5A623] font-bold uppercase tracking-widest text-sm mb-4 block">CLIENT REVIEWS</span>
+            <span class="text-[#F5A623] font-bold uppercase tracking-widest text-sm mb-4 block">{{ 'home.testimonials.subtitle'|trans }}</span>
             <h2 id="testimonials-heading" class="text-4xl font-bold text-primary dark:text-white font-display">
-                What Our Partners Say
+                {{ 'home.testimonials.title'|trans }}
             </h2>
         </div>
 
         {% set testimonials = [
             {
-                quote: "LAMACO has been our primary supplier for the Diamniadio development project. Their reliability in delivering high-grade basalt and managing site logistics has been critical to our success. A truly professional partner in Senegal's growth.",
-                name: 'Amadou Diallo',
-                role: 'Director, Senegal Urban Dev',
+                quote: 'home.testimonials.quote'|trans,
+                name: 'home.testimonials.name'|trans,
+                role: 'home.testimonials.role'|trans,
                 avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCBpgDYLmdjP4tyVz_IXklXLYacCDJCwFxUwyJyWG2LUh052Dy711auZ_IHSv-lDL1OhkC73SMq_QYaxjM2B-H0IL06qa41qQROZ2F6Xhe84aS0v157wt3SRqp_jCFQn5z-4-L1E1pUgN0wS1XG7f3vhotmtOYydJiZKLpPIwCSvzBSSFL3hMr8OvqdVDZWCADqTPe3kPoccuRG0K_xaW8ExA0O40xAwxC1On3UQGwFNi2yinjBr-HbVZIiN4Vq1dSGackOiPxjnDw',
             },
         ] %}
@@ -25,7 +25,7 @@
             <div class="flex items-center">
                 <button class="absolute -left-12 lg:-left-20 top-1/2 -translate-y-1/2 p-2 text-primary hover:text-accent transition-colors hidden md:block"
                         type="button"
-                        aria-label="Previous testimonial"
+                        aria-label="{{ 'home.testimonials.prev_testimonial'|trans }}"
                         data-action="testimonial#previous">
                     <span class="material-symbols-outlined text-4xl" aria-hidden="true">chevron_left</span>
                 </button>
@@ -55,14 +55,14 @@
 
                 <button class="absolute -right-12 lg:-right-20 top-1/2 -translate-y-1/2 p-2 text-primary hover:text-accent transition-colors hidden md:block"
                         type="button"
-                        aria-label="Next testimonial"
+                        aria-label="{{ 'home.testimonials.next_testimonial'|trans }}"
                         data-action="testimonial#next">
                     <span class="material-symbols-outlined text-4xl" aria-hidden="true">chevron_right</span>
                 </button>
             </div>
 
             {# Dots Indicator #}
-            <div class="flex justify-center gap-2 mt-12" role="tablist" aria-label="Testimonial navigation">
+            <div class="flex justify-center gap-2 mt-12" role="tablist" aria-label="{{ 'home.testimonials.testimonial_nav'|trans }}">
                 {% for testimonial in testimonials %}
                     <button class="w-2.5 h-2.5 rounded-full {{ loop.first ? 'bg-accent' : 'bg-gray-300 hover:bg-accent/50' }} transition-all"
                             type="button"

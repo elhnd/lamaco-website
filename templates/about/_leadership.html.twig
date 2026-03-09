@@ -2,17 +2,17 @@
 {% set leaders = [
     {
         name: 'Ousmane Diop',
-        role: 'Managing Director',
+        role: 'about.leadership.managing_director'|trans,
         image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC1MO7QCpkkZTqtkS4IHBvEHwFKa1x5VdzAt1U2GSbLn9ROXP7or9aY5wMwgrNdllWzZKxpShd9fl9lNt5MJVYgjfrq32FI2xHmOIqdhU9zxNhFaRYYbHqPyUT4dVCe5dWWywc9e0JL5MA0G6QuFeuPOBiKRuA8jiENSwJTHEbz4F1mb7JX75nhbs_fXxT6NAaNc1iX6yBly3txb4BRqxEEIhWHkHdGnfu-PlAEmFutlq4cbjvp4xV9wb0XdvEzp2sFXAYF3fTMS34',
     },
     {
         name: 'Mariama Sow',
-        role: 'Head of Operations',
+        role: 'about.leadership.head_operations'|trans,
         image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAD-l47uLuZzEiU3gHZZ2t9IanqnVdB0_fiGcMWnKxTUWyFEflPEvlgSSCitsWpVNDFxeNX4RBsOdGhGLigbgJUCkq8mrWiEP-nUmaFqQCq1hdJYPeldCgdIuySHS4m0p6esokMtYJige7De4tBO-a7gkNbJMDhXiWMEmm205wASMAjZKG5Em_lxkhUTzs3OzRg8GM9fLTv4UcuaWezyJ239iQh_Fe6VuojOMv2e_g3Ciol--EQU_VBpKjvFrcA25JovP2ENkQ4qtM',
     },
     {
         name: 'Amadou Fall',
-        role: 'Logistics Director',
+        role: 'about.leadership.logistics_director'|trans,
         image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDbTC9kOnzIQ7SC52jRaTmlXqB4pl0id08QA-CfkkJZuyLuMmjlPbhASb_dpdsWbKk_nM1g6eKI_PplkqamTZYwGNwDt3oMb9scInBAs90dkjTtGTaN6MzrANKURtDhoqPVABiVPRFnJLUMxSK6a1ksAScb_tf4GscdfYriMUe8oEu3M8beg4TAe3OMimfjbXkGPDPCWhAUlzlWXRH9SbzyhjqaShNogp9k2dhoHjv63BTiXVDp9wDJRW66eC4dHMdSCr1PvdWOkTs',
     },
 ] %}
@@ -20,8 +20,8 @@
 <section class="py-24 bg-background-light" id="leadership" data-controller="scroll-reveal">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 opacity-0" data-scroll-reveal-target="item">
-            <span class="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">Management</span>
-            <h2 class="text-4xl font-bold text-primary font-display">Our Leadership</h2>
+            <span class="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">{{ 'about.leadership.subtitle'|trans }}</span>
+            <h2 class="text-4xl font-bold text-primary font-display">{{ 'about.leadership.title'|trans }}</h2>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
             {% for leader in leaders %}

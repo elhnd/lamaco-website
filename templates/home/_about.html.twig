@@ -8,7 +8,7 @@
             {# Image Block #}
             <div class="relative group opacity-0" data-scroll-reveal-target="item">
                 <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-accent opacity-50" aria-hidden="true"></div>
-                <img alt="Heavy machinery excavator on a LAMACO construction site in Senegal"
+                <img alt="{{ 'home.about.alt_image'|trans }}"
                      class="rounded-lg shadow-2xl relative z-10 w-full object-cover h-[500px]"
                      loading="lazy"
                      width="600"
@@ -22,24 +22,24 @@
 
             {# Text Content #}
             <div class="opacity-0" data-scroll-reveal-target="item">
-                <span class="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">Who We Are</span>
+                <span class="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">{{ 'home.about.subtitle'|trans }}</span>
                 <h2 id="about-heading" class="text-4xl font-bold text-primary dark:text-white mb-6 font-display leading-tight">
-                    Your Solid Partner in Construction
+                    {{ 'home.about.title'|trans }}
                 </h2>
                 <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
-                    LAMACO has built its reputation on the pillars of reliability, precision, and efficiency. Based in Dakar, we serve the entire Senegalese territory, providing the essential backbone for the nation's most ambitious real estate and infrastructure projects.
+                    {{ 'home.about.paragraph1'|trans }}
                 </p>
                 <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-8">
-                    Whether it's high-grade basalt and sand supply or complex heavy machinery logistics, we ensure your site never stops moving. Our commitment to quality is what makes us the preferred partner for leading international and local developers.
+                    {{ 'home.about.paragraph2'|trans }}
                 </p>
 
                 {# Value Props Grid #}
                 <div class="grid grid-cols-2 gap-4">
                     {% set value_props = [
-                        { icon: 'verified', label: 'Certified Materials' },
-                        { icon: 'local_shipping', label: 'Rapid Logistics' },
-                        { icon: 'engineering', label: 'Expert Team' },
-                        { icon: 'location_on', label: 'Nationwide Reach' },
+                        { icon: 'verified', label: 'home.about.certified_materials'|trans },
+                        { icon: 'local_shipping', label: 'home.about.rapid_logistics'|trans },
+                        { icon: 'engineering', label: 'home.about.expert_team'|trans },
+                        { icon: 'location_on', label: 'home.about.nationwide_reach'|trans },
                     ] %}
                     {% for prop in value_props %}
                         <div class="flex items-start gap-2">

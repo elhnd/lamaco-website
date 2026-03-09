@@ -1,35 +1,35 @@
 {# Flint / Mapaté Concrete Section — Product cards with images #}
 <section id="flint" aria-labelledby="flint-heading" data-controller="scroll-reveal">
     <div class="flex items-center gap-4 mb-10 opacity-0" data-scroll-reveal-target="item">
-        <h2 id="flint-heading" class="text-3xl font-bold text-primary font-display">Flint or Mapaté Concrete</h2>
+        <h2 id="flint-heading" class="text-3xl font-bold text-primary font-display">{{ 'products.flint.title'|trans }}</h2>
         <div class="h-1 flex-grow bg-gray-200" aria-hidden="true"></div>
-        <span class="bg-accent/10 text-accent px-3 py-1 text-xs font-bold uppercase rounded">General Construction</span>
+        <span class="bg-accent/10 text-accent px-3 py-1 text-xs font-bold uppercase rounded">{{ 'products.flint.badge'|trans }}</span>
     </div>
 
     {% set flint_products = [
         {
-            name: 'Granulometry 8/16',
+            name: 'products.flint.product_8_16'|trans,
             slug: 'basalt-8-16',
-            alt: 'Aggregates 8/16 — Flint concrete for structural use',
-            description: 'Superior quality, dust-free aggregates ideal for structural concrete and road foundations.',
-            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDiLXsqC_CHqdj4vRFGSIAtifEnDe0pYtypqOe9-McynDc6c2TnCxmJv82nhM7eDis8nOvqMDauVmO0f-XRLmKDpZ7dH7Rq-3cs4F0E0YYCf3mg7If-kodK5Ph5EMSPYdoWQF6fKcVrXfoeCLxDX5Kmy02gSA-AuFBRPJjhMu3WJti1Vw-vusHGj2-u1GolszL6-8Yg4nRZM_BDn_MuGG_LzHEQQDWSBgYxb_AQL8ldhY_UL738uKZ7Kz1IaTJ2YhZC-mI7zbmbQMk',
-            status: 'STOCKED',
+            alt: 'products.flint.alt_8_16'|trans,
+            description: 'products.flint.desc_8_16'|trans,
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC3McL5hTcXxQ1tpTx9uCMtlkk4gywNbEEW7JPgwtej9PDS7fmRR5drT-9tgs5w4lZvcnKRRezuUXSeOz5Wy41Jle3jBT87LrSDyr4HN3LzgVa37RuRNf-I50RZArrgpfOeLfyyR17sk9Z6J1Lkzi86IoJ844NIsyB2kzH5EAzr2AGiYpotMMzx6jKgrMuzTwnHWq7S70aI72K4DX90G5b-VeI1eV4ygA3I-a9KapwbiuMJc6I_FU-91UVVPfT6o5FFioU2NWNDBRg',
+            status: 'products.flint.stocked'|trans,
         },
         {
-            name: 'Granulometry 3/8',
+            name: 'products.flint.product_3_8'|trans,
             slug: 'basalt-3-8',
-            alt: 'Aggregates 3/8 — Fine rice grains for concrete',
-            description: 'Perfectly fine rice grains for specialized finishes and high-density concrete mixes.',
-            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDiLXsqC_CHqdj4vRFGSIAtifEnDe0pYtypqOe9-McynDc6c2TnCxmJv82nhM7eDis8nOvqMDauVmO0f-XRLmKDpZ7dH7Rq-3cs4F0E0YYCf3mg7If-kodK5Ph5EMSPYdoWQF6fKcVrXfoeCLxDX5Kmy02gSA-AuFBRPJjhMu3WJti1Vw-vusHGj2-u1GolszL6-8Yg4nRZM_BDn_MuGG_LzHEQQDWSBgYxb_AQL8ldhY_UL738uKZ7Kz1IaTJ2YhZC-mI7zbmbQMk',
-            status: 'STOCKED',
+            alt: 'products.flint.alt_3_8'|trans,
+            description: 'products.flint.desc_3_8'|trans,
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDupnOz2zNNc-WoUcyetHBXj2peqRqUtOsc9OfqvHqxUPHgfWKmvB0xXnLKC2c2GBt1XTEqHLlt--8Tm7Ikr-81XWme3y6HkVk90cuiPLjbkIr-_NXa8ljgvXsJdzPSERB0ouS0vHgV9bNlnYQb5ox3j_FzYLcapk8Lx2VQaTo0PDHwN-n7QtiEptnpplvAGF0YXHDW2CF16Rrpv9fEMKIKV3NxAm9KB8lPFCTbXO2_iDyNuQsLT0UUuMQyEt90k5lcqduhyt715_Y',
+            status: 'products.flint.stocked'|trans,
         },
         {
-            name: 'Granulometry 0/3',
+            name: 'products.flint.product_0_3'|trans,
             slug: 'basalt-0-3',
-            alt: 'Aggregates 0/3 — Powdered aggregate for earthworks',
-            description: 'Powdered aggregate, ideal for earthworks, leveling, and high-quality mortar preparation.',
-            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDiLXsqC_CHqdj4vRFGSIAtifEnDe0pYtypqOe9-McynDc6c2TnCxmJv82nhM7eDis8nOvqMDauVmO0f-XRLmKDpZ7dH7Rq-3cs4F0E0YYCf3mg7If-kodK5Ph5EMSPYdoWQF6fKcVrXfoeCLxDX5Kmy02gSA-AuFBRPJjhMu3WJti1Vw-vusHGj2-u1GolszL6-8Yg4nRZM_BDn_MuGG_LzHEQQDWSBgYxb_AQL8ldhY_UL738uKZ7Kz1IaTJ2YhZC-mI7zbmbQMk',
-            status: 'STOCKED',
+            alt: 'products.flint.alt_0_3'|trans,
+            description: 'products.flint.desc_0_3'|trans,
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD9tIQ7yLg5dZ6hG2UUjGRZhscYp621ecQGMXzkwwrrvQNjQdpnLuVNZmToSloj2uDHZbMsDV1WqGEcU_neJHwhqSKYTpkOoHVaHqDDum1Re13T4quj341MszeSM6mYeph-G_GBYWPdCeGo7Df2NhH9rdIbYEndwkY_q1QWguEliDBxVy7dsPn9ZFdweTP1T1QRJDkv4bWHfwfuiX2YjjmWSWRj8cxxpjNYTLg-csEdx7HcMW2vaRXavjzj1eNFGgQD3LCH29ySBb0',
+            status: 'products.flint.stocked'|trans,
         },
     ] %}
 
@@ -52,7 +52,7 @@
                     </div>
                     <p class="text-gray-600 text-sm mb-6">{{ product.description }}</p>
                     <a href="{{ path('app_products_show', {slug: product.slug}) }}" class="block w-full bg-primary text-white py-3 font-bold uppercase text-xs tracking-widest hover:bg-primary/90 transition-colors text-center">
-                        Order Now
+                        {{ 'products.flint.order_now'|trans }}
                     </a>
                 </div>
             </article>

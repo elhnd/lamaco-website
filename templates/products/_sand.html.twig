@@ -1,25 +1,25 @@
 {# Sand Varieties Section — Horizontal product cards #}
 <section id="sand" aria-labelledby="sand-heading" data-controller="scroll-reveal">
     <div class="flex items-center gap-4 mb-10 opacity-0" data-scroll-reveal-target="item">
-        <h2 id="sand-heading" class="text-3xl font-bold text-primary font-display">Sand Varieties</h2>
+        <h2 id="sand-heading" class="text-3xl font-bold text-primary font-display">{{ 'products.sand.title'|trans }}</h2>
         <div class="h-1 flex-grow bg-gray-200" aria-hidden="true"></div>
-        <span class="bg-accent/10 text-accent px-3 py-1 text-xs font-bold uppercase rounded">Masonry &amp; Foundations</span>
+        <span class="bg-accent/10 text-accent px-3 py-1 text-xs font-bold uppercase rounded">{{ 'products.sand.badge'|trans }}</span>
     </div>
 
     {% set sand_products = [
         {
-            name: 'Tasseb Sand',
+            name: 'products.sand.tasseb_name'|trans,
             slug: 'tasseb-sand',
-            alt: 'Tasseb Sand — Fine high-purity sand for masonry',
-            description: 'Fine, high-purity sand specifically selected for professional masonry and plastering work.',
-            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDiLXsqC_CHqdj4vRFGSIAtifEnDe0pYtypqOe9-McynDc6c2TnCxmJv82nhM7eDis8nOvqMDauVmO0f-XRLmKDpZ7dH7Rq-3cs4F0E0YYCf3mg7If-kodK5Ph5EMSPYdoWQF6fKcVrXfoeCLxDX5Kmy02gSA-AuFBRPJjhMu3WJti1Vw-vusHGj2-u1GolszL6-8Yg4nRZM_BDn_MuGG_LzHEQQDWSBgYxb_AQL8ldhY_UL738uKZ7Kz1IaTJ2YhZC-mI7zbmbQMk',
+            alt: 'products.sand.tasseb_alt'|trans,
+            description: 'products.sand.tasseb_desc'|trans,
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD0Of2F3N8OniYJn5lb3Iv30Fnneo8ocFQ-NhFh1Zn27EosrxcSzHU51xUMr_qgILbVUW-6K_ib0JSu-UuQwAKCcjAqkxq3elascmzarNgolLLwYadWuxeE4r7mUn7ZSshZc9OneDXdMlKnO6EhKyo7wtMFB7W9xbyzm7TiMJuhxqCqysqw2M2ypNGKrYp-r_DufWRa6J-UzQ8_76-OHdgdwVVFlYTy4xmYbQq1CnPre1CCzFQDsyzdnIKIbXS5vPUvPTmcGIAYb6c',
         },
         {
-            name: 'Dakar Sand',
+            name: 'products.sand.dakar_name'|trans,
             slug: null,
-            alt: 'Dakar Sand — Coarse durable sand for foundations',
-            description: 'Coarse, durable sand engineered for solid foundations and heavy masonry structural components.',
-            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCrdZruw9pdcDz0UKj-BBkn8RlT0uZKK9cmeVX1Hj4szBkDAPRjXb6wNm-SNFVx-WmC1CIOBkbAb_KYk976vdOWXG1iHwsoAfUvFHvPxES_NrwGP8PRag3ied27YEDkMMj3lZMUVPUEhht1cp5ehx7Q10GRJt6uzB5Osfpx3qoJyfM0W7Br7Rl1o2D4kZH2UN-b1_1Io3W2AQjwu-b3-vKkUTKY7TryOjSZv1TX-iId3CjvHwpK1N0_uZan3RT8ISNWIp7naCDr_ck',
+            alt: 'products.sand.dakar_alt'|trans,
+            description: 'products.sand.dakar_desc'|trans,
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCLhVLFe0itU6I94NVVor6LoOmvm_eIq0fyYIvnJVY8JpTOe0Az-SjWjPWK0WxrQ9QmkGbm6ek25sEH3rS5Uvj7RGU9_QBRomDdN6_vU9fmkzlb-aOESeO_S-NBOVXw3rPtuAmfT-tZQ6J1LTb25WCIR8-ntdTlNUH1R6R0gg1Nr_5WcGKx7CG2tKUaoxXdT2aF7N6ZZcCjOQU7XHD3_m6OoSPaPWwuTwyrevTYBIFv48n09pv0yLU16MU682u__E7tdNbL-bXhxdQ',
         },
     ] %}
 
@@ -37,7 +37,7 @@
                     <h3 class="text-2xl font-bold text-primary mb-2">{{ product.name }}</h3>
                     <p class="text-gray-600 mb-6">{{ product.description }}</p>
                     <a href="{{ product.slug ? path('app_products_show', {slug: product.slug}) : path('app_quote') }}" class="inline-block bg-primary text-white px-8 py-3 font-bold uppercase text-xs tracking-widest hover:bg-primary/90 transition-colors self-start text-center">
-                        {{ product.slug ? 'Order Now' : 'Request Quote' }}
+                        {{ product.slug ? ('products.sand.order_now'|trans) : ('products.sand.request_quote'|trans) }}
                     </a>
                 </div>
             </article>

@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}LAMACO Construction | Building Senegal's Future{% endblock %}
-{% block meta_description %}LAMACO is the premier partner for high-grade construction materials, heavy equipment logistics, and site management across Senegal and West Africa.{% endblock %}
+{% block title %}{{ 'site.title'|trans }}{% endblock %}
+{% block meta_description %}{{ 'site.description'|trans }}{% endblock %}
 
 {% block body %}
     {% include 'home/_hero.html.twig' %}
@@ -13,9 +13,9 @@
     {% include 'home/_testimonials.html.twig' %}
     {% include 'partials/_cta_section.html.twig' with {
         cta_style: 'accent',
-        cta_title: 'Ready to start your next big project?',
-        cta_description: 'Get a customized material and logistics quote within 24 hours.',
-        cta_buttons: [{text: 'Request Quote', href: '#contact'}],
+        cta_title: 'home.cta.title'|trans,
+        cta_description: 'home.cta.description'|trans,
+        cta_buttons: [{text: 'home.cta.btn_quote'|trans, href: '#contact'}],
     } %}
     {% include 'home/_contact.html.twig' %}
 {% endblock %}

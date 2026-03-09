@@ -17,8 +17,8 @@
       } %}
 #}
 
-{% set _title = form_title|default('Send us a Message') %}
-{% set _desc = form_description|default('Fill out the form below and our specialists will contact you within 24 hours.') %}
+{% set _title = form_title|default('form.send_us_message'|trans) %}
+{% set _desc = form_description|default('form.form_default_description'|trans) %}
 {% set _bg = form_bg|default('bg-gray-100') %}
 {% set _action = form_action|default('#') %}
 {% set _id = form_id|default('contact-form') %}
@@ -32,36 +32,36 @@
         <div class="bg-white p-8 md:p-12 rounded-lg shadow-sm opacity-0" data-scroll-reveal-target="item">
             <form action="{{ _action }}" method="post" class="grid md:grid-cols-2 gap-6">
                 <div class="col-span-2 md:col-span-1">
-                    <label for="{{ _id }}_name" class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">Full Name</label>
+                    <label for="{{ _id }}_name" class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">{{ 'form.full_name'|trans }}</label>
                     <input id="{{ _id }}_name"
                            name="name"
                            type="text"
                            autocomplete="name"
                            required
                            class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
-                           placeholder="John Doe">
+                           placeholder="{{ 'form.placeholder_name'|trans }}">
                 </div>
                 <div class="col-span-2 md:col-span-1">
-                    <label for="{{ _id }}_company" class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">Company Name</label>
+                    <label for="{{ _id }}_company" class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">{{ 'form.company_name'|trans }}</label>
                     <input id="{{ _id }}_company"
                            name="company"
                            type="text"
                            autocomplete="organization"
                            class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
-                           placeholder="Your Company S.A.">
+                           placeholder="{{ 'form.placeholder_company'|trans }}">
                 </div>
                 <div class="col-span-2 md:col-span-1">
-                    <label for="{{ _id }}_email" class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">Email Address</label>
+                    <label for="{{ _id }}_email" class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">{{ 'form.email_address'|trans }}</label>
                     <input id="{{ _id }}_email"
                            name="email"
                            type="email"
                            autocomplete="email"
                            required
                            class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
-                           placeholder="email@company.com">
+                           placeholder="{{ 'form.placeholder_email'|trans }}">
                 </div>
                 <div class="col-span-2 md:col-span-1">
-                    <label for="{{ _id }}_phone" class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">Phone Number</label>
+                    <label for="{{ _id }}_phone" class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">{{ 'form.phone_number'|trans }}</label>
                     <input id="{{ _id }}_phone"
                            name="phone"
                            type="tel"
@@ -70,18 +70,18 @@
                            placeholder="+221 ...">
                 </div>
                 <div class="col-span-2">
-                    <label for="{{ _id }}_message" class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">Your Message</label>
+                    <label for="{{ _id }}_message" class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">{{ 'form.your_message'|trans }}</label>
                     <textarea id="{{ _id }}_message"
                               name="message"
                               rows="5"
                               required
                               class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
-                              placeholder="Tell us about your project requirements..."></textarea>
+                              placeholder="{{ 'form.placeholder_message'|trans }}"></textarea>
                 </div>
                 <div class="col-span-2 text-center pt-4">
                     <button type="submit"
                             class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-12 rounded uppercase tracking-widest transition-all">
-                        Send Message
+                        {{ 'form.send_message'|trans }}
                     </button>
                 </div>
             </form>

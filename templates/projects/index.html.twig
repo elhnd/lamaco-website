@@ -1,24 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Projects | LAMACO Construction Senegal{% endblock %}
-{% block meta_description %}Discover LAMACO's portfolio of construction projects across Senegal — infrastructure, residential, commercial, and industrial developments built with excellence.{% endblock %}
+{% block title %}{{ 'projects.meta.title'|trans }}{% endblock %}
+{% block meta_description %}{{ 'projects.meta.description'|trans }}{% endblock %}
 
 {% block body %}
     {% include 'partials/_hero.html.twig' with {
         hero_overlay: 'hero-projects-overlay',
-        hero_title: 'Our Projects',
-        hero_description: 'A portfolio of structural excellence across West Africa — from infrastructure hubs to premium developments.',
-        hero_cta: [{text: 'View Portfolio', href: '#gallery'}],
+        hero_title: 'projects.hero.title'|trans,
+        hero_description: 'projects.hero.description'|trans,
+        hero_cta: [{text: 'projects.hero.btn_portfolio'|trans, href: '#gallery'}],
     } %}
     {% include 'projects/_gallery.html.twig' %}
     {% include 'partials/_cta_section.html.twig' with {
         cta_style: 'blue',
         cta_show_grid: true,
-        cta_title: 'Ready to Build the Future?',
-        cta_description: 'Contact LAMACO today for comprehensive construction and logistics solutions tailored to your project\'s unique demands.',
+        cta_title: 'projects.cta.title'|trans,
+        cta_description: 'projects.cta.description'|trans,
         cta_buttons: [
-            {text: 'Request a Quote', href: path('app_quote'), style: 'primary'},
-            {text: 'Contact Sales', href: path('app_contact'), style: 'outline'},
+            {text: 'projects.cta.btn_quote'|trans, href: path('app_quote'), style: 'primary'},
+            {text: 'projects.cta.btn_contact'|trans, href: path('app_contact'), style: 'outline'},
         ],
     } %}
 {% endblock %}

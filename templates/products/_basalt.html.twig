@@ -6,30 +6,30 @@
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4 opacity-0"
          data-scroll-reveal-target="item">
         <div>
-            <span class="bg-primary text-white px-3 py-1 text-[10px] font-bold uppercase rounded mb-2 inline-block tracking-widest">Premium Choice</span>
-            <h2 id="basalt-heading" class="text-3xl font-bold text-primary font-display">Basalt or Reinforced Concrete</h2>
-            <p class="text-gray-500 font-medium">Commonly known as Black Concrete &ndash; The strongest choice for longevity.</p>
+            <span class="bg-primary text-white px-3 py-1 text-[10px] font-bold uppercase rounded mb-2 inline-block tracking-widest">{{ 'products.basalt.badge'|trans }}</span>
+            <h2 id="basalt-heading" class="text-3xl font-bold text-primary font-display">{{ 'products.basalt.title'|trans }}</h2>
+            <p class="text-gray-500 font-medium">{{ 'products.basalt.subtitle'|trans }}</p>
         </div>
     </div>
 
     {% set basalt_products = [
         {
-            name: 'Basalt 8/16',
+            name: 'products.basalt.product_8_16'|trans,
             slug: 'basalt-8-16',
-            icon: 'diamond',
-            description: 'Highly reliable for heavy-duty reinforced structures and high-traffic pavements.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDPCxg2rhjraWDbxnavi_iZ1TzCNx1amvLJwbstCA3aDIgKg84rCY4k32uKP8gW3VL0CXd4YMFxigjncI8WyAYIhFPHeyVul1iqozyMSNiraeRp0lSqLnuAVGj0AYKQ1spYazeDHtznadn5MEzGPneS4GCfGEAl9Gxm-or0AqbPedatncgqzafA-uJvalnKU8dks1-Y1lSswlv1XGvB2n9Eg1TiPQ-OIYtDmvhcGuooxJtkXzccNlCgvJhEsWiSy6eBmHvDIWHTuSQ',
+            description: 'products.basalt.desc_8_16'|trans,
         },
         {
-            name: 'Basalt 3/8',
+            name: 'products.basalt.product_3_8'|trans,
             slug: 'basalt-3-8',
-            icon: 'filter_list',
-            description: 'The finest basalt grains available for detailed industrial casting and pre-cast concrete.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAcVox9RWLY44JG2qn_QOG44rbD2ERaqop5FNfnnu322-2D6loXoOeicnIMvxc9AhZHo_Yx-RXJEPRLkC-wt5uqKX2RJCMEl6hpcvFD5WstQV8U3YJMhLiPOrKuDaSBfBnwXdCquR2_PeD0Xa5y_Z7-ZcCtA1MXSCHwCKGc-YeaJAhk3sanhw0pVxTR93JQsip9U1OXhLotZkJJF2holtbiWqK5zd6V135z-UPKMPQwkdWOX66a5eQlufyNJWxvSrRT0jv5ba0Yoi8',
+            description: 'products.basalt.desc_3_8'|trans,
         },
         {
-            name: 'Basalt 0/3',
+            name: 'products.basalt.product_0_3'|trans,
             slug: 'basalt-0-3',
-            icon: 'construction',
-            description: 'Premium filler for earthworks and heavy-duty brickmaking applications.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDAEytH2bPqAmnoPt0ngyF8caCpnOYA3hEr2KCFACnASIH5OESuDTunuJg3ZuNDIbgqEGHAASjwfMaeTI3hNsBG1VDxvhCmdNTFrtuHctat-CiyucXQMxDw4mQpDdsAh97Y-MhnFLzGbz3NHMJzk-N-sgaq2MiwQ3w4m_yg84eKkTY6cT2K-Dx3HBi4NZ-AkedyybvWgsLODGVRfsoMwdhXtOOuU3Obrrzp8TpuCfNtxLg43Zx288SB3mQEeYlB9YGcg3nDvHX2_2M',
+            description: 'products.basalt.desc_0_3'|trans,
         },
     ] %}
 
@@ -37,13 +37,16 @@
         {% for product in basalt_products %}
             <article class="bg-white p-8 rounded shadow-md border-b-4 border-primary group opacity-0"
                      data-scroll-reveal-target="item">
-                <div class="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                    <span class="material-symbols-outlined" aria-hidden="true">{{ product.icon }}</span>
+                <div class="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-all overflow-hidden">
+                    <img class="w-full h-full object-cover rounded-full"
+                         alt="{{ product.name }}"
+                         loading="lazy"
+                         src="{{ product.image }}">
                 </div>
                 <h3 class="text-xl font-bold text-primary mb-2">{{ product.name }}</h3>
                 <p class="text-sm text-gray-600 mb-6">{{ product.description }}</p>
                 <a href="{{ path('app_products_show', {slug: product.slug}) }}" class="text-sm font-bold text-primary border-b-2 border-accent pb-1">
-                    Order {{ product.name }}
+                    {{ 'products.basalt.order'|trans({'%name%': product.name}) }}
                 </a>
             </article>
         {% endfor %}
