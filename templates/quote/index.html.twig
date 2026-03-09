@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Request a Quote | LAMACO Construction &amp; Logistics Senegal{% endblock %}
+{% block meta_description %}Request a professional quote for construction materials, heavy equipment rental, or full logistics services from LAMACO in Senegal.{% endblock %}
+{% block og_title %}Request a Quote | LAMACO Construction &amp; Logistics{% endblock %}
+{% block og_description %}Get a free estimation for basalt, sand, equipment rental, and site logistics. Our team responds within 24 hours.{% endblock %}
+
+{% block header %}
+    {% include 'partials/_navbar.html.twig' %}
+    {% include 'partials/_hero.html.twig' with {
+        hero_overlay: 'hero-quote-overlay',
+        hero_title: 'Request a Quote',
+        hero_description: 'Tell us about your project requirements and get a professional estimation from our experts.',
+        hero_accent_line: true,
+    } %}
+{% endblock %}
+
+{% block body %}
+    {% include 'quote/_form.html.twig' %}
+{% endblock %}

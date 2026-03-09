@@ -1,0 +1,82 @@
+{# Footer — Reusable partial #}
+<footer class="bg-neutral-dark text-gray-400 py-16" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-12 mb-12">
+            {# Brand Column #}
+            <div class="col-span-1 md:col-span-1">
+                <a href="{{ path('app_home') }}" class="inline-block mb-6" aria-label="LAMACO Homepage">
+                    <img src="{{ asset('images/logo/light.svg') }}"
+                         alt="LAMACO"
+                         class="h-10"
+                         width="160"
+                         height="40"
+                         loading="lazy">
+                </a>
+                <p class="text-sm leading-relaxed mb-6">Providing high-end construction materials and logistics solutions throughout Senegal since 2009.</p>
+                <div class="flex gap-4">
+                    <a class="hover:text-accent transition-colors" href="#" aria-label="Visit our website">
+                        <span class="material-symbols-outlined" aria-hidden="true">public</span>
+                    </a>
+                    <a class="hover:text-accent transition-colors" href="#" aria-label="Share">
+                        <span class="material-symbols-outlined" aria-hidden="true">share</span>
+                    </a>
+                    <a class="hover:text-accent transition-colors" href="#" aria-label="Email us">
+                        <span class="material-symbols-outlined" aria-hidden="true">alternate_email</span>
+                    </a>
+                </div>
+            </div>
+
+            {# Services Column #}
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Services</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a class="hover:text-accent transition-colors" href="#">Basalt Supply</a></li>
+                    <li><a class="hover:text-accent transition-colors" href="#">Sand Delivery</a></li>
+                    <li><a class="hover:text-accent transition-colors" href="#">Excavator Rental</a></li>
+                    <li><a class="hover:text-accent transition-colors" href="#">Project Logistics</a></li>
+                </ul>
+            </div>
+
+            {# Company Column #}
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Company</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a class="hover:text-accent transition-colors" href="#">About Us</a></li>
+                    <li><a class="hover:text-accent transition-colors" href="#">Our Projects</a></li>
+                    <li><a class="hover:text-accent transition-colors" href="#">Fleet Details</a></li>
+                    <li><a class="hover:text-accent transition-colors" href="#">Careers</a></li>
+                </ul>
+            </div>
+
+            {# Headquarters Column #}
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Headquarters</h4>
+                <address class="not-italic">
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-xs text-accent" aria-hidden="true">location_on</span>
+                            <span>Avenue Cheikh Anta Diop, BP 5005, Dakar, Senegal</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-xs text-accent" aria-hidden="true">phone</span>
+                            <a href="tel:+221338000000" class="hover:text-accent transition-colors">+221 33 800 00 00</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-xs text-accent" aria-hidden="true">schedule</span>
+                            <span>Mon - Fri: 08:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+
+        {# Bottom Bar #}
+        <div class="pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium uppercase tracking-widest">
+            <p>&copy; {{ 'now'|date('Y') }} LAMACO Construction SARL. All Rights Reserved.</p>
+            <div class="flex gap-6">
+                <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>

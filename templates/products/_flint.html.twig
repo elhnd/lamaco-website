@@ -1,0 +1,61 @@
+{# Flint / Mapaté Concrete Section — Product cards with images #}
+<section id="flint" aria-labelledby="flint-heading" data-controller="scroll-reveal">
+    <div class="flex items-center gap-4 mb-10 opacity-0" data-scroll-reveal-target="item">
+        <h2 id="flint-heading" class="text-3xl font-bold text-primary font-display">Flint or Mapaté Concrete</h2>
+        <div class="h-1 flex-grow bg-gray-200" aria-hidden="true"></div>
+        <span class="bg-accent/10 text-accent px-3 py-1 text-xs font-bold uppercase rounded">General Construction</span>
+    </div>
+
+    {% set flint_products = [
+        {
+            name: 'Granulometry 8/16',
+            slug: 'basalt-8-16',
+            alt: 'Aggregates 8/16 — Flint concrete for structural use',
+            description: 'Superior quality, dust-free aggregates ideal for structural concrete and road foundations.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDiLXsqC_CHqdj4vRFGSIAtifEnDe0pYtypqOe9-McynDc6c2TnCxmJv82nhM7eDis8nOvqMDauVmO0f-XRLmKDpZ7dH7Rq-3cs4F0E0YYCf3mg7If-kodK5Ph5EMSPYdoWQF6fKcVrXfoeCLxDX5Kmy02gSA-AuFBRPJjhMu3WJti1Vw-vusHGj2-u1GolszL6-8Yg4nRZM_BDn_MuGG_LzHEQQDWSBgYxb_AQL8ldhY_UL738uKZ7Kz1IaTJ2YhZC-mI7zbmbQMk',
+            status: 'STOCKED',
+        },
+        {
+            name: 'Granulometry 3/8',
+            slug: 'basalt-3-8',
+            alt: 'Aggregates 3/8 — Fine rice grains for concrete',
+            description: 'Perfectly fine rice grains for specialized finishes and high-density concrete mixes.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDiLXsqC_CHqdj4vRFGSIAtifEnDe0pYtypqOe9-McynDc6c2TnCxmJv82nhM7eDis8nOvqMDauVmO0f-XRLmKDpZ7dH7Rq-3cs4F0E0YYCf3mg7If-kodK5Ph5EMSPYdoWQF6fKcVrXfoeCLxDX5Kmy02gSA-AuFBRPJjhMu3WJti1Vw-vusHGj2-u1GolszL6-8Yg4nRZM_BDn_MuGG_LzHEQQDWSBgYxb_AQL8ldhY_UL738uKZ7Kz1IaTJ2YhZC-mI7zbmbQMk',
+            status: 'STOCKED',
+        },
+        {
+            name: 'Granulometry 0/3',
+            slug: 'basalt-0-3',
+            alt: 'Aggregates 0/3 — Powdered aggregate for earthworks',
+            description: 'Powdered aggregate, ideal for earthworks, leveling, and high-quality mortar preparation.',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDiLXsqC_CHqdj4vRFGSIAtifEnDe0pYtypqOe9-McynDc6c2TnCxmJv82nhM7eDis8nOvqMDauVmO0f-XRLmKDpZ7dH7Rq-3cs4F0E0YYCf3mg7If-kodK5Ph5EMSPYdoWQF6fKcVrXfoeCLxDX5Kmy02gSA-AuFBRPJjhMu3WJti1Vw-vusHGj2-u1GolszL6-8Yg4nRZM_BDn_MuGG_LzHEQQDWSBgYxb_AQL8ldhY_UL738uKZ7Kz1IaTJ2YhZC-mI7zbmbQMk',
+            status: 'STOCKED',
+        },
+    ] %}
+
+    <div class="grid md:grid-cols-3 gap-8">
+        {% for product in flint_products %}
+            <article class="bg-white group overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 opacity-0"
+                     data-scroll-reveal-target="item">
+                <div class="overflow-hidden">
+                    <img alt="{{ product.alt }}"
+                         class="product-card-img"
+                         loading="lazy"
+                         width="400"
+                         height="192"
+                         src="{{ product.image }}">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-primary">{{ product.name }}</h3>
+                        <span class="text-xs font-bold text-accent">{{ product.status }}</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-6">{{ product.description }}</p>
+                    <a href="{{ path('app_products_show', {slug: product.slug}) }}" class="block w-full bg-primary text-white py-3 font-bold uppercase text-xs tracking-widest hover:bg-primary/90 transition-colors text-center">
+                        Order Now
+                    </a>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+</section>

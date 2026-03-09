@@ -1,0 +1,51 @@
+{# Basalt / Reinforced Concrete Section — Premium product cards #}
+<section class="bg-slate-50 p-10 rounded-lg border border-slate-200"
+         id="basalt"
+         aria-labelledby="basalt-heading"
+         data-controller="scroll-reveal">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4 opacity-0"
+         data-scroll-reveal-target="item">
+        <div>
+            <span class="bg-primary text-white px-3 py-1 text-[10px] font-bold uppercase rounded mb-2 inline-block tracking-widest">Premium Choice</span>
+            <h2 id="basalt-heading" class="text-3xl font-bold text-primary font-display">Basalt or Reinforced Concrete</h2>
+            <p class="text-gray-500 font-medium">Commonly known as Black Concrete &ndash; The strongest choice for longevity.</p>
+        </div>
+    </div>
+
+    {% set basalt_products = [
+        {
+            name: 'Basalt 8/16',
+            slug: 'basalt-8-16',
+            icon: 'diamond',
+            description: 'Highly reliable for heavy-duty reinforced structures and high-traffic pavements.',
+        },
+        {
+            name: 'Basalt 3/8',
+            slug: 'basalt-3-8',
+            icon: 'filter_list',
+            description: 'The finest basalt grains available for detailed industrial casting and pre-cast concrete.',
+        },
+        {
+            name: 'Basalt 0/3',
+            slug: 'basalt-0-3',
+            icon: 'construction',
+            description: 'Premium filler for earthworks and heavy-duty brickmaking applications.',
+        },
+    ] %}
+
+    <div class="grid md:grid-cols-3 gap-8">
+        {% for product in basalt_products %}
+            <article class="bg-white p-8 rounded shadow-md border-b-4 border-primary group opacity-0"
+                     data-scroll-reveal-target="item">
+                <div class="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                    <span class="material-symbols-outlined" aria-hidden="true">{{ product.icon }}</span>
+                </div>
+                <h3 class="text-xl font-bold text-primary mb-2">{{ product.name }}</h3>
+                <p class="text-sm text-gray-600 mb-6">{{ product.description }}</p>
+                <a href="{{ path('app_products_show', {slug: product.slug}) }}" class="text-sm font-bold text-primary border-b-2 border-accent pb-1">
+                    Order {{ product.name }}
+                </a>
+            </article>
+        {% endfor %}
+    </div>
+</section>

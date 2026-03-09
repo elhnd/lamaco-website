@@ -1,0 +1,36 @@
+{# Strategic Partners Section — Trust Logos Banner #}
+<section class="bg-white dark:bg-neutral-dark py-24 border-b border-gray-100 dark:border-gray-800"
+         aria-labelledby="partners-heading"
+         data-controller="scroll-reveal">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center mb-16 opacity-0" data-scroll-reveal-target="item">
+            <div class="w-24 h-1 bg-accent mb-8"></div>
+            <h2 id="partners-heading"
+                class="text-center text-sm font-bold uppercase tracking-[0.5em] text-gray-400 dark:text-gray-500 mb-4">
+                Strategic Partners
+            </h2>
+            <p class="text-center text-2xl md:text-3xl font-display font-bold text-primary dark:text-white">
+                Trusted by Leading Developers &amp; Contractors
+            </p>
+        </div>
+
+        <div class="flex flex-row justify-between items-center w-full gap-8 md:gap-12 lg:gap-20 opacity-0"
+             data-scroll-reveal-target="item">
+            {% set partner_logos = [
+                'https://lh3.googleusercontent.com/aida-public/AB6AXuBQ8L167jZ-t3gJlLB-U8NsMllgiBOJSO9jzWDJ7PILTf2RSTXKze_Ae-rz3TKbfTjilNJQh6Dutz2gsppxW6ZsXApMWUDj_OhrRheEwMAHgO4pdaETUz52jMroTtHlIXfyLVr7rCJgZkVdjiGwF2bxfUiPOBxn4gxplpaSHYCg54INPasQxRGpX7LgfEO8V-WSE0tWJjtWruGP2s9QLBUpAXRljLxcOJB6tyX9feVLCp_euD5AE57Xk0veGAnTaJY2Vw6oBDsCfck',
+                'https://lh3.googleusercontent.com/aida-public/AB6AXuA2oxXWdSpsczLPQx2fUV_tLdSUCTSwwoVqQbT1fhHNRYCl6SkE-nLHd1cVwjQpqqXbo8YpJwkge7PFnbKG6w3ZlZLq8P26nzLmPHRlSYYzUZsQAXUU1qRWrh-MkGVRZKUXUEjggfLwP0_LyTX4G4FmIMnMfWURg11ieloLBzL0ZBWXnVk3tgY5jiOP_wjft9tG_VP4g0BcZJnIyJhvS2223DsOrbleDm0mBvZYsEFsfOQkpt2uwYI4N9aj7TXZLxn5lD6-6CIMouw',
+                'https://lh3.googleusercontent.com/aida-public/AB6AXuBDUiCCDW2oXLp0GUbrV6rUWAjJnjkGY9FTQzH-SIh90YdL4jqW_ubpz-pSuCvDaR6HHZxaANdMb2VQiN6YKYXpAs0qg2ZbECrYn_u-M_64VguE61Rj3xWBkwh8p_CgdTHTHEGFoi7t2G1VJnudkL8OPivboF2Fgy7up-PQ4hu1y-T3IytqS2LbhlxSSsOxHUhIoEQaX9ooaqMCf4K6oMs8XWTZ2qAvqu_uTcbynjaXb6nGf1C2iu52UyZDYr_LgKDbd1Ld6yMEL44',
+                'https://lh3.googleusercontent.com/aida-public/AB6AXuBsy0h4Zjv18j9kwDjdUSUhMRNtAq3uCFuQInVQ_r6Gg013u8Vg6TDDfHwm_XXFh-bxd1uPm2z911Kq58v4AfWqImyUxXyfvpDfCVgC1EkP8qanrkoKelSKwFyIxmk9ThFtV8gbs-B-wTFkgrFu2TQ1zowImraXYZ6p8pBgxSz2MaglaeciGo6LzibDCujtngY5yxX1tGkE_cqHVTwSH3nT2kOM17KCd6U2wXV_OI4uPQI34jxCATda4BXfzMpwpwu0HbBC0RIY1Ho',
+                'https://lh3.googleusercontent.com/aida-public/AB6AXuAzY5QLNwhmH7ld9AoJgEpENvLpdaqwS2JmIXZtoJH_vDYN-zbJjGczBs3HgHIUc3eAo9FmHVwHCLKe8SwemJrPFgNNKyP7r4obBDy1C-C4oe8weQbhcKxHcVr51EGXf1I_R6akXkuYoQM07hRPTZaP7Zjrb66m1m3VyXAnriY9_87ieW5dXcsBJy7jkVVx2vxV3h5vnrjyxv6WunZIIH4qS2nVDaXHfqxQzun34AdYE7y2lFfXqAfxY3oH_EGadEB5a0OJEJxxg0o',
+            ] %}
+            {% for logo in partner_logos %}
+                <div class="flex-1 flex items-center justify-center">
+                    <img alt="Strategic Partner Logo"
+                         class="trust-logo h-16 md:h-20 lg:h-24 dark:invert"
+                         loading="lazy"
+                         src="{{ logo }}">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

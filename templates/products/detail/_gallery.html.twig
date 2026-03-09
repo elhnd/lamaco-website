@@ -1,0 +1,24 @@
+{# Product detail — Image gallery with zoom + thumbnails #}
+<div class="space-y-4">
+    {# Main image with zoom effect #}
+    <div class="zoom-container overflow-hidden bg-gray-200 rounded-lg aspect-[4/3] border border-gray-200 shadow-inner">
+        <img alt="{{ product.name }} — Close-up view"
+             class="w-full h-full object-cover"
+             loading="eager"
+             src="{{ product.mainImage }}">
+    </div>
+
+    {# Thumbnail grid #}
+    {% if product.thumbnails|length > 0 %}
+        <div class="grid grid-cols-4 gap-4">
+            {% for thumb in product.thumbnails %}
+                <div class="aspect-square bg-gray-200 rounded border border-gray-100 overflow-hidden cursor-pointer hover:border-primary transition-all {{ loop.index > 2 ? 'opacity-60' : '' }}">
+                    <img alt="{{ product.name }} — View {{ loop.index }}"
+                         class="w-full h-full object-cover"
+                         loading="lazy"
+                         src="{{ thumb }}">
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>

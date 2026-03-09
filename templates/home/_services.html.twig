@@ -1,0 +1,54 @@
+{# Services Section — Four core service offerings #}
+<section class="py-24 bg-background-light dark:bg-background-dark"
+         id="services"
+         aria-labelledby="services-heading"
+         data-controller="scroll-reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 opacity-0" data-scroll-reveal-target="item">
+            <span class="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">What We Offer</span>
+            <h2 id="services-heading" class="text-4xl font-bold text-primary dark:text-white font-display">
+                Specialized Solutions
+            </h2>
+        </div>
+
+        {% set services = [
+            {
+                icon: 'construction',
+                title: 'Construction Materials',
+                description: 'Top-tier supply of Basalt, Sand, and aggregate materials meeting rigorous quality standards.',
+            },
+            {
+                icon: 'minor_crash',
+                title: 'Equipment Rental',
+                description: 'Modern fleet of excavators, cranes, and specialized construction machinery for any project size.',
+            },
+            {
+                icon: 'local_shipping',
+                title: 'Construction Logistics',
+                description: 'Optimized transport and logistical coordination for seamless material delivery to remote sites.',
+            },
+            {
+                icon: 'inventory',
+                title: 'Site Supply Management',
+                description: 'Comprehensive inventory and supply chain oversight to prevent downtime and overstocking.',
+            },
+        ] %}
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {% for service in services %}
+                <article class="bg-background-light dark:bg-background-dark p-8 rounded border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all group opacity-0"
+                         data-scroll-reveal-target="item">
+                    <div class="w-16 h-16 bg-primary/10 rounded flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <span class="material-symbols-outlined text-primary group-hover:text-white text-3xl" aria-hidden="true">{{ service.icon }}</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary dark:text-white mb-4">{{ service.title }}</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">{{ service.description }}</p>
+                    <a class="text-accent font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all"
+                       href="#">
+                        Learn More <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
+                    </a>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

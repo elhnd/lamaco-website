@@ -1,0 +1,43 @@
+{# Navigation Bar — Reusable partial
+   Uses Stimulus `nav` controller for scroll-based style changes.
+   Brand colors: Primary #1F4E79, Accent #F5A623
+#}
+<nav class="fixed top-0 left-0 right-0 z-50 nav-transparent"
+     id="main-nav"
+     role="navigation"
+     aria-label="Main navigation"
+     data-controller="nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            {# Logo — switches between light (on hero) and principal (on scroll) #}
+            <a href="{{ path('app_home') }}" class="flex items-center gap-2" aria-label="LAMACO — Back to homepage">
+                <img src="{{ asset('images/logo/light.svg') }}"
+                     alt="LAMACO"
+                     class="h-10 transition-opacity duration-300"
+                     data-nav-target="logoLight">
+                <img src="{{ asset('images/logo/principal.svg') }}"
+                     alt="LAMACO"
+                     class="h-10 hidden transition-opacity duration-300"
+                     data-nav-target="logoPrincipal">
+            </a>
+
+            {# Desktop Navigation Links #}
+            <div class="hidden md:flex items-center space-x-8 font-medium text-sm uppercase tracking-wide">
+                <a class="text-white hover:text-accent transition-colors duration-300" href="{{ path('app_home') }}" data-nav-target="link">Home</a>
+                <a class="text-white/80 hover:text-accent transition-colors duration-300" href="{{ path('app_products_index') }}" data-nav-target="link">Products</a>
+                <a class="text-white/80 hover:text-accent transition-colors duration-300" href="{{ path('app_home') }}#services" data-nav-target="link">Services</a>
+                <a class="text-white/80 hover:text-accent transition-colors duration-300" href="{{ path('app_projects_index') }}" data-nav-target="link">Projects</a>
+                <a class="text-white/80 hover:text-accent transition-colors duration-300" href="{{ path('app_about') }}" data-nav-target="link">About</a>
+                <a class="text-white/80 hover:text-accent transition-colors duration-300" href="{{ path('app_contact') }}" data-nav-target="link">Contact</a>
+            </div>
+
+            {# CTA Button #}
+            <div class="flex items-center gap-4">
+                <a class="bg-primary hover:bg-opacity-90 text-white px-6 py-3 rounded text-sm font-bold transition-all uppercase tracking-wider"
+                   href="{{ path('app_quote') }}">
+                    Request a Quote
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,19 @@
+{# Floating WhatsApp CTA — Fixed button at bottom-right corner
+   Uses brand colors: accent #F5A623, primary #1F4E79
+   Links to WhatsApp with pre-filled message
+#}
+<a href="https://wa.me/221338000000?text=Bonjour%20LAMACO%2C%20je%20souhaite%20un%20devis."
+   class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(37,211,102,0.4)] transition-all duration-300 group"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contact us on WhatsApp"
+   title="Chat with us on WhatsApp">
+    <img src="{{ asset('images/icon/whatsapp.svg') }}"
+         alt=""
+         class="w-8 h-8 text-white"
+         width="32"
+         height="32"
+         style="filter: brightness(0) invert(1);">
+    {# Pulse ring animation #}
+    <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-30 animate-ping" aria-hidden="true"></span>
+</a>

@@ -1,0 +1,20 @@
+{# Project Gallery — Masonry image grid #}
+<section class="py-24 bg-gray-50" data-controller="scroll-reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-primary mb-12 text-center opacity-0"
+            data-scroll-reveal-target="item">
+            Project Gallery
+        </h2>
+        <div class="masonry-grid">
+            {% for image in project.gallery %}
+                <div class="{{ image.class }} overflow-hidden rounded-lg opacity-0"
+                     data-scroll-reveal-target="item">
+                    <img alt="{{ image.alt }}"
+                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                         loading="lazy"
+                         src="{{ image.src }}">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

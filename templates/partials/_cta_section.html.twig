@@ -1,0 +1,183 @@
+{#
+    Shared CTA Section Component — Configurable call-to-action block
+    =================================================================
+    Include with variables to customize per page:
+
+    Required:
+      - cta_title    (string)  Heading text
+
+    Optional:
+      - cta_style       (string)  'blue' | 'light' | 'minimal' | 'accent'  (default: 'blue')
+      - cta_description (string|null)  Paragraph below title
+      - cta_show_grid   (bool)         Show SVG grid pattern background (default: false)
+      - cta_buttons     (array)        [{text, href, style, icon}]
+                                       style = 'primary' | 'outline' | 'whatsapp'
+                                       icon  = Material icon name (optional)
+
+    Variants:
+      blue    → Blue bg, white text (projects, about)
+      light   → Gray bg, dark text (products)
+      minimal → White bg, border-top (project/product detail)
+      accent  → Gold bg, horizontal layout (home)
+
+    Usage:
+      {% include 'partials/_cta_section.html.twig' with {
+          cta_style: 'blue',
+          cta_title: 'Ready to Build the Future?',
+          cta_description: 'Contact LAMACO today …',
+          cta_show_grid: true,
+          cta_buttons: [
+              {text: 'Request a Quote', href: path('app_quote'), style: 'primary'},
+              {text: 'Contact Sales', href: path('app_contact'), style: 'outline'},
+          ],
+      } %}
+#}
+
+{% set style = cta_style|default('blue') %}
+
+{# ── Accent variant (horizontal gold banner) ── #}
+{% if style == 'accent' %}
+<section class="bg-accent py-16" aria-label="Call to action" data-controller="scroll-reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 opacity-0"
+         data-scroll-reveal-target="item">
+        <div>
+            <h2 class="text-3xl font-bold text-primary font-display mb-2">{{ cta_title }}</h2>
+            {% if cta_description is defined and cta_description %}
+                <p class="text-primary/80 font-medium">{{ cta_description }}</p>
+            {% endif %}
+        </div>
+        {% if cta_buttons is defined and cta_buttons %}
+            {% for btn in cta_buttons %}
+                <a class="bg-primary text-white px-10 py-4 rounded font-bold uppercase tracking-widest hover:bg-neutral-dark transition-colors shadow-lg"
+                   href="{{ btn.href }}">
+                    {{ btn.text }}
+                </a>
+            {% endfor %}
+        {% endif %}
+    </div>
+</section>
+
+{# ── Minimal variant (white bg with border-top, for detail pages) ── #}
+{% elseif style == 'minimal' %}
+<section class="py-20 border-t border-gray-100" data-controller="scroll-reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-primary mb-8 opacity-0"
+            data-scroll-reveal-target="item">
+            {{ cta_title }}
+        </h2>
+        {% if cta_buttons is defined and cta_buttons %}
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 opacity-0"
+                 data-scroll-reveal-target="item">
+                {% for btn in cta_buttons %}
+                    {% if btn.style|default('primary') == 'whatsapp' %}
+                        <a class="flex items-center gap-3 bg-white border-2 border-accent text-accent px-10 py-4 rounded font-bold uppercase tracking-widest hover:bg-accent hover:text-white transition-all shadow-md"
+                           href="{{ btn.href }}"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <img alt="WhatsApp" class="w-6 h-6" src="{{ asset('images/icon/whatsapp.svg') }}">
+                            {{ btn.text }}
+                        </a>
+                    {% elseif btn.style|default('primary') == 'outline' %}
+                        <a class="bg-white text-primary border-2 border-primary px-10 py-4 rounded font-bold uppercase tracking-widest text-sm hover:bg-primary hover:text-white transition-all"
+                           href="{{ btn.href }}">
+                            {{ btn.text }}
+                            {% if btn.icon is defined and btn.icon %}
+                                <span class="material-symbols-outlined ml-1 align-middle" aria-hidden="true">{{ btn.icon }}</span>
+                            {% endif %}
+                        </a>
+                    {% else %}
+                        <a class="bg-primary text-white px-10 py-4 rounded font-bold uppercase tracking-widest hover:bg-opacity-90 transition-all shadow-xl flex items-center gap-3"
+                           href="{{ btn.href }}">
+                            {{ btn.text }}
+                            {% if btn.icon is defined and btn.icon %}
+                                <span class="material-symbols-outlined" aria-hidden="true">{{ btn.icon }}</span>
+                            {% endif %}
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+{# ── Light variant (gray bg, for products) ── #}
+{% elseif style == 'light' %}
+<section class="bg-gray-100 py-20 border-t border-gray-200" aria-label="Call to action" data-controller="scroll-reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-primary mb-4 font-display opacity-0"
+            data-scroll-reveal-target="item">
+            {{ cta_title }}
+        </h2>
+        {% if cta_description is defined and cta_description %}
+            <p class="text-gray-600 max-w-2xl mx-auto mb-10 opacity-0"
+               data-scroll-reveal-target="item">
+                {{ cta_description }}
+            </p>
+        {% endif %}
+        {% if cta_buttons is defined and cta_buttons %}
+            <div class="flex flex-col sm:flex-row justify-center gap-4 opacity-0"
+                 data-scroll-reveal-target="item">
+                {% for btn in cta_buttons %}
+                    {% if btn.style|default('primary') == 'outline' %}
+                        <a class="bg-white text-primary border-2 border-primary px-10 py-5 rounded font-extrabold uppercase tracking-widest text-sm hover:bg-primary hover:text-white transition-all"
+                           href="{{ btn.href }}">
+                            {{ btn.text }}
+                        </a>
+                    {% else %}
+                        <a class="bg-primary text-white px-10 py-5 rounded font-extrabold uppercase tracking-widest text-sm hover:shadow-xl transition-all"
+                           href="{{ btn.href }}">
+                            {{ btn.text }}
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+{# ── Blue variant (default — dark bg with optional grid pattern) ── #}
+{% else %}
+<section class="py-24 bg-primary relative overflow-hidden" data-controller="scroll-reveal">
+    {% if cta_show_grid is defined and cta_show_grid %}
+        <div class="absolute inset-0 opacity-10 pointer-events-none" aria-hidden="true">
+            <svg fill="none" height="100%" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <pattern height="20" id="grid-cta" patternUnits="userSpaceOnUse" width="20">
+                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="white" stroke-width="0.5"></path>
+                </pattern>
+                <rect fill="url(#grid-cta)" height="100%" width="100%"></rect>
+            </svg>
+        </div>
+    {% endif %}
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h2 class="text-4xl md:text-6xl font-bold text-white font-display mb-8 uppercase tracking-tight opacity-0"
+            data-scroll-reveal-target="item">
+            {{ cta_title }}
+        </h2>
+        {% if cta_description is defined and cta_description %}
+            <p class="text-white/70 text-lg md:text-xl font-body mb-12 max-w-2xl mx-auto opacity-0"
+               data-scroll-reveal-target="item">
+                {{ cta_description }}
+            </p>
+        {% endif %}
+        {% if cta_buttons is defined and cta_buttons %}
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 opacity-0"
+                 data-scroll-reveal-target="item">
+                {% for btn in cta_buttons %}
+                    {% if btn.style|default('primary') == 'outline' %}
+                        <a class="w-full sm:w-auto px-12 py-5 border border-white text-white font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all text-center"
+                           href="{{ btn.href }}">
+                            {{ btn.text }}
+                        </a>
+                    {% else %}
+                        <a class="w-full sm:w-auto px-12 py-5 bg-accent text-primary font-bold uppercase tracking-widest hover:bg-white transition-all text-center"
+                           href="{{ btn.href }}">
+                            {{ btn.text }}
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}

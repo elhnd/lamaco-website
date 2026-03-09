@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ product.name }} | LAMACO Construction Senegal{% endblock %}
+{% block meta_description %}{{ product.description|slice(0, 160) }}{% endblock %}
+{% block og_title %}{{ product.name }} — {{ product.category }} | LAMACO{% endblock %}
+{% block og_description %}{{ product.description|slice(0, 200) }}{% endblock %}
+
+{% block header %}
+    {% include 'partials/_navbar.html.twig' %}
+    {% include 'partials/_hero.html.twig' with {
+        hero_overlay: 'hero-product-detail-overlay',
+        hero_subtitle: product.category,
+        hero_title: product.name,
+        hero_description: product.badge,
+        hero_accent_line: true,
+    } %}
+{% endblock %}
+
+{% block body %}
+    {% include 'products/detail/_breadcrumb.html.twig' %}
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {# Product Overview: Gallery + Info #}
+        <div class="grid lg:grid-cols-2 gap-12 items-start mb-24" data-controller="scroll-reveal">
+            <div class="opacity-0" data-scroll-reveal-target="item">
+                {% include 'products/detail/_gallery.html.twig' %}
+            </div>
+            <div class="opacity-0" data-scroll-reveal-target="item">
+                {% include 'products/detail/_info.html.twig' %}
+            </div>
+        </div>
+
+        {% include 'products/detail/_specs.html.twig' %}
+        {% include 'products/detail/_features.html.twig' %}
+        {% include 'products/detail/_related.html.twig' %}
+    </main>
+{% endblock %}

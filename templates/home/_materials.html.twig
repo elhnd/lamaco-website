@@ -1,0 +1,48 @@
+{# Materials Section — Sand & Stone quality showcase #}
+<section class="py-24 bg-white dark:bg-neutral-dark"
+         aria-labelledby="materials-heading"
+         data-controller="scroll-reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            {# Text Content #}
+            <div class="order-2 lg:order-1 opacity-0" data-scroll-reveal-target="item">
+                <span class="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">OUR MATERIALS</span>
+                <h2 id="materials-heading" class="text-4xl font-bold text-primary dark:text-white mb-6 font-display leading-tight">
+                    Superior Quality Sand &amp; Stone
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-8">
+                    LAMACO is committed to supplying high-grade flint, basalt, and sand essential for durable and safe construction. We source our materials from premium quarries to ensure they meet the highest technical standards required for modern infrastructure.
+                </p>
+
+                {# Material Features List #}
+                <div class="space-y-4">
+                    {% set material_features = [
+                        { icon: 'done_all', label: 'Dust-Free Materials' },
+                        { icon: 'inventory', label: 'Reliable Bulk Supply' },
+                        { icon: 'speed', label: 'Fast Site Delivery' },
+                    ] %}
+                    {% for feature in material_features %}
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-accent" aria-hidden="true">{{ feature.icon }}</span>
+                            </div>
+                            <span class="font-bold text-primary dark:text-white text-lg">{{ feature.label }}</span>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            {# Image Block #}
+            <div class="relative group order-1 lg:order-2 opacity-0" data-scroll-reveal-target="item">
+                <div class="absolute -top-4 -right-4 w-24 h-24 border-t-4 border-r-4 border-accent opacity-50" aria-hidden="true"></div>
+                <img alt="Premium construction materials — basalt and sand from LAMACO quarries"
+                     class="rounded-lg shadow-2xl relative z-10 w-full object-cover h-[500px]"
+                     loading="lazy"
+                     width="600"
+                     height="500"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQyHqgvwSgc3To3egHp1BOdahrDqt2y_5e6Eil-sWigjIY_bty5cajh426TIWYatLXHt6pmfxH42QvLHiNNKT0TBQ3YYAInq0WN1pgBqQ_7dhYMybfvtqeBA_rnqWEOudNOMKdeeDIzuCdAiGGjKR2BXXfCTNYQemQ7EZTIjnlIsXlf7hsgZAPEhjvSdkMjVqltn6FSiA-jsNAjMW8hH-gWC6coTCJf10VQxL7Op3fmMiMGHVqFlWQF5T6tzJ4NLVXr3w0EHdpHOY">
+                <div class="absolute inset-0 bg-primary/10 rounded-lg z-20 group-hover:bg-transparent transition-all duration-500" aria-hidden="true"></div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,23 @@
+{# LAMACO Resources Utilized — Cards linking to products #}
+<section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-controller="scroll-reveal">
+    <h2 class="text-3xl font-bold text-primary mb-12 opacity-0"
+        data-scroll-reveal-target="item">
+        LAMACO Resources Utilized
+    </h2>
+    <div class="grid md:grid-cols-3 gap-8">
+        {% for resource in project.resources %}
+            <div class="border border-gray-100 p-6 rounded-lg hover:shadow-lg transition-all opacity-0"
+                 data-scroll-reveal-target="item">
+                <div class="w-14 h-14 bg-primary/5 rounded-full flex items-center justify-center mb-4">
+                    <span class="material-symbols-outlined text-primary" aria-hidden="true">{{ resource.icon }}</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">{{ resource.title }}</h3>
+                <p class="text-gray-600 mb-4 text-sm">{{ resource.description }}</p>
+                <a class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all"
+                   href="{{ resource.linkUrl ? path('app_products_show', {slug: resource.linkUrl}) : path('app_products_index') }}">
+                    {{ resource.linkText }} <span class="material-symbols-outlined text-xs" aria-hidden="true">arrow_forward</span>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</section>

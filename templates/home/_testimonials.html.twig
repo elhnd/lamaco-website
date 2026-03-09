@@ -1,0 +1,80 @@
+{# Testimonials Section — Client reviews carousel
+   Uses Stimulus `testimonial` controller for navigation
+#}
+<section class="py-24 bg-[#FAFAFA] dark:bg-background-dark overflow-hidden"
+         aria-labelledby="testimonials-heading"
+         data-controller="scroll-reveal testimonial">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 opacity-0" data-scroll-reveal-target="item">
+            <span class="text-[#F5A623] font-bold uppercase tracking-widest text-sm mb-4 block">CLIENT REVIEWS</span>
+            <h2 id="testimonials-heading" class="text-4xl font-bold text-primary dark:text-white font-display">
+                What Our Partners Say
+            </h2>
+        </div>
+
+        {% set testimonials = [
+            {
+                quote: "LAMACO has been our primary supplier for the Diamniadio development project. Their reliability in delivering high-grade basalt and managing site logistics has been critical to our success. A truly professional partner in Senegal's growth.",
+                name: 'Amadou Diallo',
+                role: 'Director, Senegal Urban Dev',
+                avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCBpgDYLmdjP4tyVz_IXklXLYacCDJCwFxUwyJyWG2LUh052Dy711auZ_IHSv-lDL1OhkC73SMq_QYaxjM2B-H0IL06qa41qQROZ2F6Xhe84aS0v157wt3SRqp_jCFQn5z-4-L1E1pUgN0wS1XG7f3vhotmtOYydJiZKLpPIwCSvzBSSFL3hMr8OvqdVDZWCADqTPe3kPoccuRG0K_xaW8ExA0O40xAwxC1On3UQGwFNi2yinjBr-HbVZIiN4Vq1dSGackOiPxjnDw',
+            },
+        ] %}
+
+        <div class="relative max-w-4xl mx-auto opacity-0" data-scroll-reveal-target="item">
+            <div class="flex items-center">
+                <button class="absolute -left-12 lg:-left-20 top-1/2 -translate-y-1/2 p-2 text-primary hover:text-accent transition-colors hidden md:block"
+                        type="button"
+                        aria-label="Previous testimonial"
+                        data-action="testimonial#previous">
+                    <span class="material-symbols-outlined text-4xl" aria-hidden="true">chevron_left</span>
+                </button>
+
+                {% for testimonial in testimonials %}
+                    <div class="w-full text-center px-4" data-testimonial-target="slide">
+                        <div class="mb-8" aria-hidden="true">
+                            <span class="material-symbols-outlined text-6xl text-[#F5A623] opacity-30 select-none">format_quote</span>
+                        </div>
+                        <blockquote class="text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-body italic leading-relaxed mb-10">
+                            &ldquo;{{ testimonial.quote }}&rdquo;
+                        </blockquote>
+                        <figure class="flex flex-col items-center">
+                            <img alt="Photo of {{ testimonial.name }}"
+                                 class="w-16 h-16 rounded-full object-cover mb-4 border-2 border-accent p-0.5"
+                                 loading="lazy"
+                                 width="64"
+                                 height="64"
+                                 src="{{ testimonial.avatar }}">
+                            <figcaption>
+                                <h4 class="font-bold text-primary dark:text-white font-display text-lg">{{ testimonial.name }}</h4>
+                                <p class="text-sm text-gray-500 uppercase tracking-widest font-bold">{{ testimonial.role }}</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                {% endfor %}
+
+                <button class="absolute -right-12 lg:-right-20 top-1/2 -translate-y-1/2 p-2 text-primary hover:text-accent transition-colors hidden md:block"
+                        type="button"
+                        aria-label="Next testimonial"
+                        data-action="testimonial#next">
+                    <span class="material-symbols-outlined text-4xl" aria-hidden="true">chevron_right</span>
+                </button>
+            </div>
+
+            {# Dots Indicator #}
+            <div class="flex justify-center gap-2 mt-12" role="tablist" aria-label="Testimonial navigation">
+                {% for testimonial in testimonials %}
+                    <button class="w-2.5 h-2.5 rounded-full {{ loop.first ? 'bg-accent' : 'bg-gray-300 hover:bg-accent/50' }} transition-all"
+                            type="button"
+                            role="tab"
+                            aria-selected="{{ loop.first ? 'true' : 'false' }}"
+                            aria-label="Testimonial {{ loop.index }}"
+                            data-testimonial-target="dot"
+                            data-action="testimonial#goTo"
+                            data-index="{{ loop.index0 }}">
+                    </button>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

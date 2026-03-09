@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About LAMACO | Construction &amp; Logistics Expertise in Senegal{% endblock %}
+{% block meta_description %}Learn about LAMACO's mission, vision, values, and leadership. A trusted Senegalese construction partner since 2009.{% endblock %}
+{% block og_title %}About LAMACO | Construction &amp; Logistics Expertise{% endblock %}
+{% block og_description %}Discover our journey, core values, and the team behind Senegal's most reliable construction logistics company.{% endblock %}
+
+{% block header %}
+    {% include 'partials/_navbar.html.twig' %}
+    {% include 'partials/_hero.html.twig' with {
+        hero_overlay: 'hero-about-overlay',
+        hero_subtitle: 'Our Journey',
+        hero_title: 'About LAMACO',
+        hero_description: 'Building the future of Senegal through reliable construction logistics, premium materials, and unwavering commitment to excellence.',
+        hero_accent_line: true,
+    } %}
+{% endblock %}
+
+{% block body %}
+    {% include 'about/_story.html.twig' %}
+    {% include 'about/_mission_vision.html.twig' %}
+    {% include 'about/_values.html.twig' %}
+    {% include 'about/_leadership.html.twig' %}
+    {% include 'about/_partners.html.twig' %}
+{% endblock %}

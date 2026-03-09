@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projects | LAMACO Construction Senegal{% endblock %}
+{% block meta_description %}Discover LAMACO's portfolio of construction projects across Senegal — infrastructure, residential, commercial, and industrial developments built with excellence.{% endblock %}
+
+{% block body %}
+    {% include 'partials/_hero.html.twig' with {
+        hero_overlay: 'hero-projects-overlay',
+        hero_title: 'Our Projects',
+        hero_description: 'A portfolio of structural excellence across West Africa — from infrastructure hubs to premium developments.',
+        hero_cta: [{text: 'View Portfolio', href: '#gallery'}],
+    } %}
+    {% include 'projects/_gallery.html.twig' %}
+    {% include 'partials/_cta_section.html.twig' with {
+        cta_style: 'blue',
+        cta_show_grid: true,
+        cta_title: 'Ready to Build the Future?',
+        cta_description: 'Contact LAMACO today for comprehensive construction and logistics solutions tailored to your project\'s unique demands.',
+        cta_buttons: [
+            {text: 'Request a Quote', href: path('app_quote'), style: 'primary'},
+            {text: 'Contact Sales', href: path('app_contact'), style: 'outline'},
+        ],
+    } %}
+{% endblock %}

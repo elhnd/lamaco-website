@@ -1,0 +1,28 @@
+{# Limestone / White Concrete Section — Grid of compact cards #}
+<section id="limestone" aria-labelledby="limestone-heading" data-controller="scroll-reveal">
+    <div class="flex items-center gap-4 mb-10 opacity-0" data-scroll-reveal-target="item">
+        <h2 id="limestone-heading" class="text-3xl font-bold text-primary font-display">Limestone or White Concrete</h2>
+        <div class="h-1 flex-grow bg-gray-200" aria-hidden="true"></div>
+        <span class="bg-accent/10 text-accent px-3 py-1 text-xs font-bold uppercase rounded">Infrastructure</span>
+    </div>
+
+    {% set limestone_products = [
+        { name: 'Gravel 5/15', subtitle: 'Limestone Aggregate' },
+        { name: 'Gravel 3/8', subtitle: 'Top-quality grains' },
+        { name: 'Gravel 15/25', subtitle: 'Heavy Infrastructure' },
+        { name: 'Gravel 0/3', subtitle: 'Limestone Sand' },
+    ] %}
+
+    <div class="grid md:grid-cols-4 gap-6">
+        {% for product in limestone_products %}
+            <article class="bg-white p-6 shadow-sm border-t-2 border-accent opacity-0"
+                     data-scroll-reveal-target="item">
+                <h4 class="font-bold text-primary mb-2">{{ product.name }}</h4>
+                <p class="text-xs text-gray-500 mb-4 uppercase font-bold tracking-tighter">{{ product.subtitle }}</p>
+                <a href="{{ path('app_quote') }}" class="text-accent text-xs font-bold flex items-center gap-2 hover:gap-3 transition-all uppercase">
+                    Request Quote <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
+                </a>
+            </article>
+        {% endfor %}
+    </div>
+</section>

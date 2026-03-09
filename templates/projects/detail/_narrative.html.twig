@@ -1,0 +1,28 @@
+{# Project Narrative + Highlights sidebar #}
+<section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-controller="scroll-reveal">
+    <div class="grid lg:grid-cols-3 gap-16">
+        {# Main narrative #}
+        <div class="lg:col-span-2 opacity-0" data-scroll-reveal-target="item">
+            <h2 class="text-3xl font-bold text-primary mb-8">Project Narrative</h2>
+            <div class="space-y-6 text-lg leading-relaxed text-gray-700">
+                {% for paragraph in project.narrative %}
+                    <p>{{ paragraph }}</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        {# Highlights sidebar #}
+        <div class="bg-white p-8 border border-gray-100 shadow-sm rounded-lg h-fit opacity-0"
+             data-scroll-reveal-target="item">
+            <h3 class="text-xl font-bold text-primary mb-6 border-b pb-4">Project Highlights</h3>
+            <ul class="space-y-4">
+                {% for highlight in project.highlights %}
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-accent mt-0.5" aria-hidden="true">check_circle</span>
+                        <span class="font-medium text-gray-800">{{ highlight }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,54 @@
+{# About Section — Company Introduction & Value Props #}
+<section class="py-24 bg-background-light dark:bg-background-dark"
+         id="about"
+         aria-labelledby="about-heading"
+         data-controller="scroll-reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            {# Image Block #}
+            <div class="relative group opacity-0" data-scroll-reveal-target="item">
+                <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-accent opacity-50" aria-hidden="true"></div>
+                <img alt="Heavy machinery excavator on a LAMACO construction site in Senegal"
+                     class="rounded-lg shadow-2xl relative z-10 w-full object-cover h-[500px]"
+                     loading="lazy"
+                     width="600"
+                     height="500"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuATZw85lA-bBx_tJ5sJJuGf1FXuL-wtGpqZj90ZgsWRNuL2TS_q5jzcqOZh6GcFDbTwXt89n8-jRydjxxrKg9dDzbkXeaBYny6VtPU3tDrz-syfUDgJY64peD2CFBlgMmBDIx8UIKXQUkkGvyd2MVnv0GyPdif2SU7irDy_lSbe3AmrQcHBB1v9x2-bAsNgLP5fKE5-w65JbNl2qmT2AZ0EN8qXUoCJMChQ3AN-VqJ4f3aQmJxr6gMF5qSCCKSmKePSDYw3XEDWMKc">
+                {# <div class="absolute -bottom-6 -right-6 bg-primary p-8 rounded shadow-xl hidden md:block z-20">
+                    <span class="text-accent text-4xl font-bold font-display">15+</span>
+                    <p class="text-white text-xs uppercase tracking-widest font-bold">Years of Excellence</p>
+                </div> #}
+            </div>
+
+            {# Text Content #}
+            <div class="opacity-0" data-scroll-reveal-target="item">
+                <span class="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">Who We Are</span>
+                <h2 id="about-heading" class="text-4xl font-bold text-primary dark:text-white mb-6 font-display leading-tight">
+                    Your Solid Partner in Construction
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
+                    LAMACO has built its reputation on the pillars of reliability, precision, and efficiency. Based in Dakar, we serve the entire Senegalese territory, providing the essential backbone for the nation's most ambitious real estate and infrastructure projects.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-8">
+                    Whether it's high-grade basalt and sand supply or complex heavy machinery logistics, we ensure your site never stops moving. Our commitment to quality is what makes us the preferred partner for leading international and local developers.
+                </p>
+
+                {# Value Props Grid #}
+                <div class="grid grid-cols-2 gap-4">
+                    {% set value_props = [
+                        { icon: 'verified', label: 'Certified Materials' },
+                        { icon: 'local_shipping', label: 'Rapid Logistics' },
+                        { icon: 'engineering', label: 'Expert Team' },
+                        { icon: 'location_on', label: 'Nationwide Reach' },
+                    ] %}
+                    {% for prop in value_props %}
+                        <div class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-accent" aria-hidden="true">{{ prop.icon }}</span>
+                            <span class="font-bold text-primary dark:text-white">{{ prop.label }}</span>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

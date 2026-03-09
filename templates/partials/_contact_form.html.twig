@@ -1,0 +1,90 @@
+{#
+    Shared Contact Form Component — Reusable message form
+    =====================================================
+    Include with variables to customize per context:
+
+    Optional:
+      - form_title       (string)  Heading text (default: 'Send us a Message')
+      - form_description (string)  Paragraph below heading
+      - form_bg          (string)  Section background class (default: 'bg-gray-100')
+      - form_action      (string)  Form action URL (default: '#')
+      - form_id          (string)  Section id attribute (default: 'contact-form')
+
+    Usage:
+      {% include 'partials/_contact_form.html.twig' with {
+          form_title: 'Send us a Message',
+          form_description: 'Fill out the form below …',
+      } %}
+#}
+
+{% set _title = form_title|default('Send us a Message') %}
+{% set _desc = form_description|default('Fill out the form below and our specialists will contact you within 24 hours.') %}
+{% set _bg = form_bg|default('bg-gray-100') %}
+{% set _action = form_action|default('#') %}
+{% set _id = form_id|default('contact-form') %}
+
+<section class="py-20 {{ _bg }}" id="{{ _id }}" data-controller="scroll-reveal">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 opacity-0" data-scroll-reveal-target="item">
+            <h2 class="text-3xl font-bold text-primary font-display">{{ _title }}</h2>
+            <p class="text-gray-600 mt-2">{{ _desc }}</p>
+        </div>
+        <div class="bg-white p-8 md:p-12 rounded-lg shadow-sm opacity-0" data-scroll-reveal-target="item">
+            <form action="{{ _action }}" method="post" class="grid md:grid-cols-2 gap-6">
+                <div class="col-span-2 md:col-span-1">
+                    <label for="{{ _id }}_name" class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">Full Name</label>
+                    <input id="{{ _id }}_name"
+                           name="name"
+                           type="text"
+                           autocomplete="name"
+                           required
+                           class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
+                           placeholder="John Doe">
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <label for="{{ _id }}_company" class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">Company Name</label>
+                    <input id="{{ _id }}_company"
+                           name="company"
+                           type="text"
+                           autocomplete="organization"
+                           class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
+                           placeholder="Your Company S.A.">
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <label for="{{ _id }}_email" class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">Email Address</label>
+                    <input id="{{ _id }}_email"
+                           name="email"
+                           type="email"
+                           autocomplete="email"
+                           required
+                           class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
+                           placeholder="email@company.com">
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <label for="{{ _id }}_phone" class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">Phone Number</label>
+                    <input id="{{ _id }}_phone"
+                           name="phone"
+                           type="tel"
+                           autocomplete="tel"
+                           class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
+                           placeholder="+221 ...">
+                </div>
+                <div class="col-span-2">
+                    <label for="{{ _id }}_message" class="block text-sm font-bold text-primary uppercase tracking-wider mb-2">Your Message</label>
+                    <textarea id="{{ _id }}_message"
+                              name="message"
+                              rows="5"
+                              required
+                              class="w-full border-gray-200 rounded p-3 focus:ring-accent focus:border-accent"
+                              placeholder="Tell us about your project requirements..."></textarea>
+                </div>
+                <div class="col-span-2 text-center pt-4">
+                    <button type="submit"
+                            class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-12 rounded uppercase tracking-widest transition-all">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

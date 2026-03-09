@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Products &amp; Materials Catalog | LAMACO Construction Senegal{% endblock %}
+{% block meta_description %}Explore LAMACO's full catalog of construction materials — flint, sand, limestone, basalt aggregates — and heavy equipment rental in Senegal.{% endblock %}
+{% block og_title %}Products &amp; Materials Catalog | LAMACO Construction{% endblock %}
+{% block og_description %}High-quality aggregates, sands, and heavy machinery for Senegal's most ambitious construction projects.{% endblock %}
+
+{% block header %}
+    {% include 'partials/_navbar.html.twig' %}
+    {% include 'partials/_hero.html.twig' with {
+        hero_overlay: 'hero-industrial-overlay',
+        hero_title: 'Our Materials & Equipment',
+        hero_description: 'Reliable supply chains for Senegal\'s most ambitious construction projects. High-quality aggregates, sands, and heavy machinery delivered with precision.',
+        hero_cta: [{text: 'Explore Catalog', href: '#materials'}],
+    } %}
+    {% include 'products/_catalog_nav.html.twig' %}
+{% endblock %}
+
+{% block body %}
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-24" id="materials">
+        {% include 'products/_flint.html.twig' %}
+        {% include 'products/_sand.html.twig' %}
+        {% include 'products/_limestone.html.twig' %}
+        {% include 'products/_basalt.html.twig' %}
+        {% include 'products/_equipment.html.twig' %}
+        {% include 'products/_consulting.html.twig' %}
+    </div>
+    {% include 'partials/_cta_section.html.twig' with {
+        cta_style: 'light',
+        cta_title: 'Ready to start your project?',
+        cta_description: 'Request a comprehensive quote including delivery costs to your site anywhere in Dakar or the inland regions.',
+        cta_buttons: [
+            {text: 'Get a Custom Quote', href: path('app_quote'), style: 'primary'},
+            {text: 'Contact Sales Team', href: path('app_contact'), style: 'outline'},
+        ],
+    } %}
+{% endblock %}

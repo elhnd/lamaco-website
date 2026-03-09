@@ -1,0 +1,84 @@
+{# Projects Gallery — Masonry grid of project cards with parallax hover #}
+<section id="gallery" class="py-20 md:py-32" data-controller="scroll-reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {% set projects = [
+            {
+                title: 'Dakar Port Extension',
+                slug: 'dakar-port-expansion',
+                category: 'Infrastructure',
+                location: 'Dakar, Senegal',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuATZw85lA-bBx_tJ5sJJuGf1FXuL-wtGpqZj90ZgsWRNuL2TS_q5jzcqOZh6GcFDbTwXt89n8-jRydjxxrKg9dDzbkXeaBYny6VtPU3tDrz-syfUDgJY64peD2CFBlgMmBDIx8UIKXQUkkGvyd2MVnv0GyPdif2SU7irDy_lSbe3AmrQcHBB1v9x2-bAsNgLP5fKE5-w65JbNl2qmT2AZ0EN8qXUoCJMChQ3AN-VqJ4f3aQmJxr6gMF5qSCCKSmKePSDYw3XEDWMKc',
+                alt: 'Dakar Port Expansion — major infrastructure project by LAMACO',
+                span: 'lg:col-span-4',
+                height: 'h-[500px]',
+                titleSize: 'text-3xl md:text-4xl',
+            },
+            {
+                title: 'Almadies Heights',
+                slug: 'almadies-heights',
+                category: 'Residential',
+                location: 'Almadies',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC1MO7QCpkkZTqtkS4IHBvEHwFKa1x5VdzAt1U2GSbLn9ROXP7or9aY5wMwgrNdllWzZKxpShd9fl9lNt5MJVYgjfrq32FI2xHmOIqdhU9zxNhFaRYYbHqPyUT4dVCe5dWWywc9e0JL5MA0G6QuFeuPOBiKRuA8jiENSwJTHEbz4F1mb7JX75nhbs_fXxT6NAaNc1iX6yBly3txb4BRqxEEIhWHkHdGnfu-PlAEmFutlq4cbjvp4xV9wb0XdvEzp2sFXAYF3fTMS34',
+                alt: 'Almadies Heights — luxury residential towers by LAMACO',
+                span: 'lg:col-span-2',
+                height: 'h-[500px]',
+                titleSize: 'text-2xl',
+            },
+            {
+                title: 'Diamniadio Business Hub',
+                slug: 'diamniadio-business-hub',
+                category: 'Commercial',
+                location: 'Diamniadio',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAD-l47uLuZzEiU3gHZZ2t9IanqnVdB0_fiGcMWnKxTUWyFEflPEvlgSSCitsWpVNDFxeNX4RBsOdGhGLigbgJUCkq8mrWiEP-nUmaFqQCq1hdJYPeldCgdIuySHS4m0p6esokMtYJige7De4tBO-a7gkNbJMDhXiWMEmm205wASMAjZKG5Em_lxkhUTzs3OzRg8GM9fLTv4UcuaWezyJ239iQh_Fe6VuojOMv2e_g3Ciol--EQU_VBpKjvFrcA25JovP2ENkQ4qtM',
+                alt: 'Diamniadio Business Hub — corporate commercial project by LAMACO',
+                span: 'lg:col-span-3',
+                height: 'h-[450px]',
+                titleSize: 'text-2xl md:text-3xl',
+            },
+            {
+                title: 'Coastal Roadway Phase II',
+                slug: 'coastal-roadway-phase-ii',
+                category: 'Public Works',
+                location: 'Saint-Louis',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDbTC9kOnzIQ7SC52jRaTmlXqB4pl0id08QA-CfkkJZuyLuMmjlPbhASb_dpdsWbKk_nM1g6eKI_PplkqamTZYwGNwDt3oMb9scInBAs90dkjTtGTaN6MzrANKURtDhoqPVABiVPRFnJLUMxSK6a1ksAScb_tf4GscdfYriMUe8oEu3M8beg4TAe3OMimfjbXkGPDPCWhAUlzlWXRH9SbzyhjqaShNogp9k2dhoHjv63BTiXVDp9wDJRW66eC4dHMdSCr1PvdWOkTs',
+                alt: 'Coastal Roadway Phase II — public works road project by LAMACO',
+                span: 'lg:col-span-3',
+                height: 'h-[450px]',
+                titleSize: 'text-2xl md:text-3xl',
+            },
+            {
+                title: 'Thies Logistics & Distribution Center',
+                slug: 'thies-logistics-center',
+                category: 'Industrial',
+                location: 'Thies Industrial Zone',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDiLXsqC_CHqdj4vRFGSIAtifEnDe0pYtypqOe9-McynDc6c2TnCxmJv82nhM7eDis8nOvqMDauVmO0f-XRLmKDpZ7dH7Rq-3cs4F0E0YYCf3mg7If-kodK5Ph5EMSPYdoWQF6fKcVrXfoeCLxDX5Kmy02gSA-AuFBRPJjhMu3WJti1Vw-vusHGj2-u1GolszL6-8Yg4nRZM_BDn_MuGG_LzHEQQDWSBgYxb_AQL8ldhY_UL738uKZ7Kz1IaTJ2YhZC-mI7zbmbQMk',
+                alt: 'Thies Logistics Center — industrial distribution project by LAMACO',
+                span: 'lg:col-span-6',
+                height: 'h-[600px]',
+                titleSize: 'text-4xl md:text-5xl',
+            },
+        ] %}
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+            {% for project in projects %}
+                <a href="{{ path('app_projects_show', {slug: project.slug}) }}"
+                   class="{{ project.span }} {{ project.height }} relative group overflow-hidden project-card opacity-0 block"
+                   data-scroll-reveal-target="item">
+                    <img alt="{{ project.alt }}"
+                         class="parallax-img"
+                         loading="lazy"
+                         src="{{ project.image }}">
+                    <div class="absolute inset-0 project-card-gradient flex flex-col justify-end p-8 md:p-12">
+                        <span class="text-accent text-xs font-bold uppercase tracking-widest mb-2">{{ project.category }}</span>
+                        <h3 class="text-white {{ project.titleSize }} font-bold font-display uppercase tracking-tight">{{ project.title }}</h3>
+                        <p class="text-white/80 font-display text-sm mt-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm" aria-hidden="true">location_on</span> {{ project.location }}
+                        </p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
