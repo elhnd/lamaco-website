@@ -131,7 +131,7 @@ export default class extends Controller {
       rotOffset: type === "truck" ? Math.PI : 0,
       autonomous: true,
       _autoFixedX: x,
-      _autoTargetSpeed: 0.035 + Math.random() * 0.015,
+      _autoTargetSpeed: 0.010 + Math.random() * 0.005,
       _idleFrames: 0,
     });
   }
@@ -173,7 +173,7 @@ export default class extends Controller {
         const dx = cx - v.dragPrev.x;
         const dy = cy - v.dragPrev.y;
         v.angle -= dx * 0.018;
-        v.speed  = Math.min(0.14, Math.max(-0.14, v.speed - dy * 0.0015));
+        v.speed  = Math.min(0.07, Math.max(-0.07, v.speed - dy * 0.0008));
         v.dragPrev = { x: cx, y: cy };
       };
       const up = () => { v.dragging = false; el.style.cursor = "grab"; };
@@ -240,8 +240,8 @@ export default class extends Controller {
   _applyKeys() {
     const v = this._focus;
     if (!v || v.autonomous) return;
-    if (this._keys["ArrowUp"])    v.speed = Math.min(v.speed + 0.012, 0.14);
-    if (this._keys["ArrowDown"])  v.speed = Math.max(v.speed - 0.012, -0.14);
+    if (this._keys["ArrowUp"])    v.speed = Math.min(v.speed + 0.006, 0.07);
+    if (this._keys["ArrowDown"])  v.speed = Math.max(v.speed - 0.006, -0.07);
     if (this._keys["ArrowLeft"])  v.angle += 0.045;
     if (this._keys["ArrowRight"]) v.angle -= 0.045;
   }
