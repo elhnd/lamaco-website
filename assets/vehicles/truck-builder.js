@@ -448,22 +448,41 @@ export function buildTruck() {
     bed.add(hinge);
   }
 
-  /* gravel load */
-  const gravelColors = [0x888888, 0x777766, 0x999988, 0x6a6a5a, 0x8b8b7a];
-  for (let i = 0; i < 30; i++) {
-    const r   = 0.04 + Math.random() * 0.11;
-    const peb = new THREE.Mesh(
-      new THREE.SphereGeometry(r, 6, 5),
-      mat(gravelColors[i % gravelColors.length], { roughness: 0.95 }),
+  /* sand load */
+  // base fill — fills the bed interior exactly from floor (y=0.40) to wall top (y=1.08)
+  const sandBase = new THREE.Mesh(
+    new THREE.BoxGeometry(1.20, 0.68, 2.42),
+    mat(0xc8a85a, { roughness: 0.98, metalness: 0.0 }),
+  );
+  sandBase.position.set(0, 0.74, 0.60);
+  sandBase.castShadow = true;
+  bed.add(sandBase);
+
+  // overflowing heap above the walls (ellipsoid: bottom flush with wall top, peak ~0.44 above)
+  const sandHeap = new THREE.Mesh(
+    new THREE.SphereGeometry(1, 20, 12),
+    mat(0xd4a84b, { roughness: 1.0, metalness: 0.0 }),
+  );
+  sandHeap.scale.set(0.62, 0.22, 1.22);
+  sandHeap.position.set(0, 1.30, 0.60);
+  sandHeap.castShadow = true;
+  bed.add(sandHeap);
+
+  // fine sand grain scatter on top of heap
+  const sandColors = [0xd4a84b, 0xc8973e, 0xe0ba6a, 0xbf9438, 0xddb85e];
+  for (let i = 0; i < 90; i++) {
+    const r     = 0.018 + Math.random() * 0.038;
+    const grain = new THREE.Mesh(
+      new THREE.SphereGeometry(r, 4, 3),
+      mat(sandColors[i % sandColors.length], { roughness: 1.0 }),
     );
-    peb.position.set(
-      (Math.random() - 0.5) * 1.05,
-      0.42 + Math.random() * 0.2,
-      -0.48 + Math.random() * 2.15,
+    grain.position.set(
+      (Math.random() - 0.5) * 1.10,
+      1.08 + Math.random() * 0.38,
+      -0.50 + Math.random() * 2.20,
     );
-    peb.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, 0);
-    peb.castShadow = true;
-    bed.add(peb);
+    grain.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, 0);
+    bed.add(grain);
   }
 
   g.add(bed);
